@@ -1,0 +1,15 @@
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\bin\Debug\24.03.05_WPF_Controls_Project.exe.config
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\bin\Debug\24.03.05_WPF_Controls_Project.exe
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\bin\Debug\24.03.05_WPF_Controls_Project.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.csproj.AssemblyReference.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\MainWindow.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\App.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project_MarkupCompile.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project_MarkupCompile.lref
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\MainWindow.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.g.resources
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\_24._03._05_WPF_Controls_Project.Properties.Resources.resources
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.csproj.GenerateResource.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.csproj.CoreCompileInputs.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.exe
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.pdb

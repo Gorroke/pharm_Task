@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_24._03._05_WPF_Controls_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="400" Width="500">
     <Grid>
-        
+        <DataGrid x:Name="datagrid" Width="400" Height="250">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="고객 이름" Width="100" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="고객 성별" Width="100" Binding="{Binding Path=Sex}"/>
+                <DataGridTextColumn Header="고객 생년월일" Width="200" Binding="{Binding Path=Date_of_birth}"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
