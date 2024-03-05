@@ -1,0 +1,15 @@
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\bin\Debug\wpf 0305.exe.config
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\bin\Debug\wpf 0305.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\bin\Debug\wpf 0305.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.csproj.AssemblyReference.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\MainWindow.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\App.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305_MarkupCompile.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305_MarkupCompile.lref
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\MainWindow.baml
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.g.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf_0305.Properties.Resources.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.csproj.GenerateResource.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.csproj.CoreCompileInputs.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf 0305\wpf 0305\obj\Debug\wpf 0305.pdb
