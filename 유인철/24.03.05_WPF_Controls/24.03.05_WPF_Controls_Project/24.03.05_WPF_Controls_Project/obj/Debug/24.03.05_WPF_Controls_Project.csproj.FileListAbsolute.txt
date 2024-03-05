@@ -13,3 +13,11 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\2
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.csproj.CoreCompileInputs.cache
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.exe
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\24.03.05_WPF_Controls_Project.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Search.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Search.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Add.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Add.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Delete.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Delete.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Correction.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\24.03.05_WPF_Controls_Project\24.03.05_WPF_Controls_Project\obj\Debug\Correction.baml

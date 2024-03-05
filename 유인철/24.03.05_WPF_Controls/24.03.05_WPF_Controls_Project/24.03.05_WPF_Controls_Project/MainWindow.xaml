@@ -5,14 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_24._03._05_WPF_Controls_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="500">
+        Title="MainWindow" Height="500" Width="600">
     <Grid>
-        <DataGrid x:Name="datagrid" Width="400" Height="250">
+        <Button x:Name="Search" Width="70" Height="30" Margin="50,15,380,339" Content="검색" Click="Search_Click"/>
+        <Button x:Name="Correction" Width="70" Height="30" Margin="125,15,305,339" Content="수정" Click="Correction_Click"/>
+        <Button x:Name="Delete" Width="70" Height="30" Margin="200,15,230,339" Content="삭제" Click="Delete_Click"/>
+        <Button x:Name="Add" Width="70" Height="30" Margin="275,15,155,339" Content="추가" Click="Add_Click"/>
+        <Button x:Name="Reset" Width="70" Height="30" Margin="350,15,80,339" Content="초기화" Click="Reset_Click"/>
+        <DataGrid x:Name="datagrid" Height="250" CanUserAddRows="False" Margin="100,135,130,99">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="고객 이름" Width="100" Binding="{Binding Path=Name}"/>
                 <DataGridTextColumn Header="고객 성별" Width="100" Binding="{Binding Path=Sex}"/>
-                <DataGridTextColumn Header="고객 생년월일" Width="200" Binding="{Binding Path=Date_of_birth}"/>
-                
+                <DataGridTextColumn Header="고객 생년월일" Width="150" Binding="{Binding Path=Date_of_birth}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

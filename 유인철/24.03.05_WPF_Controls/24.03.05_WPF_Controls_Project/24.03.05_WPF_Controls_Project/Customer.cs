@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _24._03._05_WPF_Controls_Project
 {
-    internal class Customer
+    public class Customer
     {
         public string Name { get; set; }
         public string Sex { get; set; }

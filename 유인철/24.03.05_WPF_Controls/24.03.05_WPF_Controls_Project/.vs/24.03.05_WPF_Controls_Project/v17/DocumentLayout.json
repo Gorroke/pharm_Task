@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\correction.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\correction.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\correction.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\correction.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +38,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Customer.cs",
-              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Customer.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Customer.cs",
-              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Customer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "DocumentIndex": 2,
+              "Title": "Correction.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAA+wBQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T00:54:45.466Z",
+              "WhenOpened": "2024-03-05T04:51:52.064Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Correction.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Correction.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Correction.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-05T04:50:51.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Search.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Search.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Search.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Search.xaml.cs",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Search.xaml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAkwCYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T01:37:48.387Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Search.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Search.xaml",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Search.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Search.xaml",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Search.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-05T01:33:35.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAwBwAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T00:49:03.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml",
               "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml",
               "RelativeToolTip": "24.03.05_WPF_Controls_Project\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-05T00:49:04.66Z",
+              "WhenOpened": "2024-03-05T01:27:18.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
-              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAJAAAA",
+              "DocumentIndex": 6,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Customer.cs",
+              "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Customer.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Customer.cs",
+              "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T00:49:03.189Z",
+              "WhenOpened": "2024-03-05T00:54:45.466Z",
               "EditorCaption": ""
             }
           ]
