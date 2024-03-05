@@ -23,6 +23,6 @@
         <TextBlock Text="생년월일:" Grid.Row="2"/>
         <DatePicker x:Name="BirthDatePicker" Grid.Row="2" Margin="80,0,0,0"/>
 
-        <Button Content="추가" Grid.Row="4" HorizontalAlignment="Center" Click="Add_Click"/>
+        <Button Content="추가" Grid.Row="4" HorizontalAlignment="Center" />
     </Grid>
 </Window>

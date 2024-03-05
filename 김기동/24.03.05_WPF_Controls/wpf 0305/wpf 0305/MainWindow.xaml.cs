@@ -69,11 +69,20 @@ namespace wpf_0305
             {
                 Customer selectedCustomer = (Customer)DG.SelectedItem;
                 selectedCustomer.Name = TB.Text;
+                UpdateDataGrid();
             }
             else
             {
                 MessageBox.Show("수정할 항목을 선택하세요.");
             }
+        }
+
+        /// <summary>
+        /// DataGrid 초기화
+        /// </summary>
+        private void UpdateDataGrid()
+        {
+            CollectionViewSource.GetDefaultView(DG.ItemsSource).Refresh();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)
@@ -82,6 +91,8 @@ namespace wpf_0305
             {
                 Customer selectedCustomer = (Customer)DG.SelectedItem;
                 dummyCustomer.Remove(selectedCustomer);
+
+                UpdateDataGrid();
             }
             else
             {
@@ -93,11 +104,21 @@ namespace wpf_0305
         {
             if (!string.IsNullOrEmpty(TB.Text))
             {
-                // 새로운 고객 생성
-                Customer newCustomer = new Customer(TB.Text, "", "");
+                string[] words = TB.Text.Split(',');
+                if(words.Length == 3)
+                {
+                Customer newCustomer = new Customer(words[0], words[1], words[2]);
 
                 dummyCustomer.Add(newCustomer);
-                DG.ItemsSource = dummyCustomer;
+
+                }
+                else
+                {
+                    MessageBox.Show("입력을 확인해주세요");
+                }
+                // 새로운 고객 생성
+                UpdateDataGrid();
+
             }
             else
             {
