@@ -1,0 +1,15 @@
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\bin\Debug\Chatting-App.exe.config
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\bin\Debug\Chatting-App.exe
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\bin\Debug\Chatting-App.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.csproj.AssemblyReference.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\MainWindow.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\App.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App_MarkupCompile.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App_MarkupCompile.lref
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\MainWindow.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.g.resources
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting_App.Properties.Resources.resources
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.csproj.GenerateResource.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.csproj.CoreCompileInputs.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.exe
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\Chatting-App\obj\Debug\Chatting-App.pdb

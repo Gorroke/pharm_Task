@@ -1,0 +1,83 @@
+﻿<Window x:Class="Chatting_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chatting_App"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="1400">
+    <Window.Resources>
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Background" Value="DarkSlateBlue"/>
+            <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="40*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Fill="DarkSlateBlue"/>
+        <Image Source="C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\123.png" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,18,0,0"/>
+        <Label Content="CORVA" FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,20,0,0"/>
+        <TextBox Width="190" Height="30" VerticalAlignment="Top" Margin="30,82,32,0" Background="DarkSlateBlue" BorderBrush="DarkSlateBlue" Foreground="White" FontSize="15" Text="Search..." TextAlignment="Left" VerticalContentAlignment="Center"/>
+        <StackPanel Height="400" VerticalAlignment="Top" Margin="0,117,0,0">
+            <Button Style="{StaticResource ButtonStyle}" Content="Dashboards"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Tasks"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Approval Requests"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Service Requests"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Applications"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="People"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Devices"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Sites"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Company"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="E-commerce"/>
+        </StackPanel>
+        <StackPanel Height="126" VerticalAlignment="Top" Margin="0,562,0,0">
+            <Button Style="{StaticResource ButtonStyle}" Content="Notifications"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Help Center"/>
+            <Button Style="{StaticResource ButtonStyle}" Content="Support"/>
+        </StackPanel>
+        <Image Source="C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\person.png" Width="50" Height="50" VerticalAlignment="Top" Margin="17,717,196,0"/>
+        <Button Style="{StaticResource ButtonStyle}" Width="150" Margin="75,722,38,0" Foreground="White" Content="You In Cheol"/>
+        <Button Grid.Column="1" Width="35" Height="35" VerticalAlignment="Top" Margin="32,21,690,0" Content="←" FontSize="20" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="1" Width="150" Height="30" VerticalAlignment="Top" Margin="102,23,530,0" Content="Ticket 652345" FontSize="17" VerticalContentAlignment="Center"/>
+        <Label Grid.Column="1" Width="76" Height="30" VerticalAlignment="Top" Content="Scheduled" Background="Aqua" FontSize="14" VerticalContentAlignment="Center" Margin="224,23,470,0"/>
+        <Button Grid.Column="1" Width="100" Height="24" VerticalAlignment="Top" Content="Cancel Ticket" Background="Red" Margin="572,26,110,0" BorderThickness="0.5"/>
+        <Button Grid.Column="1" Width="80" Height="24" VerticalAlignment="Top" Content="Expand" Background="White" Margin="686,26,10,0" BorderThickness="0.5"/>
+        <StackPanel Height="600" Grid.ColumnSpan="2" Margin="262,97,0,137" Background="LightGray" >
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White"/>
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Background="LightPink" BorderBrush="LightGray"/>
+            <Label Content="sounds great!" Width="120" Height="38" FontSize="15" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White"/>
+        </StackPanel>
+        <TextBox Grid.Column="1" Width="640" Height="50" VerticalAlignment="Bottom" BorderBrush="Black" Text="Enter a message" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
+        <Button Grid.Column="1" Width="100" Height="50" VerticalAlignment="Bottom" BorderBrush="LightGray" BorderThickness="0.5" Content="Send" FontSize="20" HorizontalAlignment="Right" Margin="0,0,11,0"/>
+        <Label Grid.Column="2" Content="Summary" FontWeight="Bold" FontSize="15" Width="80" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,17,0,0"/>
+        <Label Grid.Column="2" Content="Outlook-'invalid value for registry error'" Width="250" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,45,0,0"/>
+        <Label Grid.Column="2" Content="Status" FontWeight="Bold" FontSize="15" Width="80" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,97,0,0"/>
+        <ComboBox Grid.Column="2" Width="150" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,132,0,0" SelectedIndex="0">
+            <ComboBoxItem Content="Scheduled" Background="Aqua"/>
+            <ComboBoxItem Content="Free" Background="Green"/>
+        </ComboBox>
+        <Label Grid.Column="2" Content="Submittd" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,241,0,0"/>
+        <Label Grid.Column="2" Content="10/1/2021, 10:46:0" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="25,276,0,0" FontWeight="Bold"/>
+        <Label Grid.Column="2" Content="Contact" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,332,0,0" />
+        <Label Grid.Column="2" Content="Kevin Dukkon" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,367,0,0" FontWeight="Bold"/>
+        <Label Grid.Column="2" Content="Techniclan Assigned" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,417,0,0" />
+        <Label Grid.Column="2" Content="Stephen Humanick" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="33,452,0,0" FontWeight="Bold"/>
+        <Label Grid.Column="2" Content="Priority" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="33,496,0,0" />
+        <Label Grid.Column="2" Content="Priority 3 - Normal Response" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="33,531,0,0" FontWeight="Bold"/>
+
+        <Label Grid.Column="2" Content="Attached Applications" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="30,595,0,0"/>
+        <Label Grid.Column="2" Content="Slack" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="33,630,0,0" />
+
+        <Label Grid.Column="2" Content="Attached Assets" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="15" FontWeight="Bold" Margin="30,676,0,0"/>
+        <Label Grid.Column="2" Content="Microsoft Intune" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="30,711,0,0" />
+    </Grid>
+</Window>
