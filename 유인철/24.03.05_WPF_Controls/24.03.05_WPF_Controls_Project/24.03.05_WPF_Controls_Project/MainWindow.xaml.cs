@@ -83,7 +83,7 @@ namespace _24._03._05_WPF_Controls_Project
             if(delete.OK_Cancel)
             {
                 datagrid.ItemsSource = null;
-                var result = CustomersList.FindAll(x => x.Name != delete.DeleteName);
+                var result = CustomersList.Where(x => x.Name != delete.DeleteName).ToList();
                 datagrid.ItemsSource = result;
             }
         }

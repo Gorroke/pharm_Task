@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\chatting-app\\chatting-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|solutionrelative:chatting-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\chatting-app\\chatting-app\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\chatting-app\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|solutionrelative:chatting-app\\mainwindow.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\chatting-app\\chatting-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\chatting-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|solutionrelative:chatting-app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\chatting-app\\chatting-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03D4EAF5-1102-4F29-8B2B-4788299DD098}|Chatting-App\\Chatting-App.csproj|solutionrelative:chatting-app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\Chatting-App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Chatting-App\\MainWindow.xaml",
@@ -38,20 +38,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\Chatting-App\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Chatting-App\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\Chatting-App\\MainWindow.xaml",
               "RelativeToolTip": "Chatting-App\\MainWindow.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAANAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADoAAABhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-05T07:39:47.961Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\Chatting-App\\Chatting-App\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Chatting-App\\MainWindow.xaml.cs",
