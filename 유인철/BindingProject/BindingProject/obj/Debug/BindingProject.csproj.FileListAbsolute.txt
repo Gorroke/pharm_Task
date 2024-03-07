@@ -16,3 +16,5 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingP
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingProject\obj\Debug\BindingProject.csproj.CoreCompileInputs.cache
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingProject\obj\Debug\BindingProject.exe
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingProject\obj\Debug\BindingProject.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingProject\obj\Debug\TestViewTwo.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\BindingProject\BindingProject\obj\Debug\TestViewTwo.baml

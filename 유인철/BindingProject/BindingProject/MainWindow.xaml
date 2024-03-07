@@ -28,6 +28,7 @@
     </Grid>
     -->
     <Grid>
-        <local:TestView/>
+        <!--<local:TestView/>-->
+        <local:TestViewTwo/>
     </Grid>
 </Window>

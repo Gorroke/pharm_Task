@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:BindingProject"
         mc:Ignorable="d"
         d:DesignHeight="200" d:DesignWidth="300">
-    
+    <!--첫번째 Textbox string 값에 따른 label 값 변경 / 버튼 클릭시 ICommand 사용하여 MessageBox 출력-->
     <UserControl.DataContext>
         <local:TestViewModel/>
     </UserControl.DataContext>
