@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\correction.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -15,8 +15,8 @@
       "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\correction.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\search.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.05_wpf_controls\\24.03.05_wpf_controls_project\\24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|solutionrelative:24.03.05_wpf_controls_project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0146125D-9E17-4F54-A832-583E39841FD8}|24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_wpf_controls_project\\search.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -38,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -48,9 +48,10 @@
               "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
               "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Correction.xaml.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAA+wBQAAAAFAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowBQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T04:51:52.064Z"
+              "WhenOpened": "2024-03-05T04:51:52.064Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -61,11 +62,12 @@
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Correction.xaml",
               "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Correction.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-05T04:50:51.47Z"
+              "WhenOpened": "2024-03-05T04:50:51.47Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Search.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\Search.xaml.cs",
               "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\Search.xaml.cs",
@@ -73,7 +75,8 @@
               "RelativeToolTip": "24.03.05_WPF_Controls_Project\\Search.xaml.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAkwCYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T01:37:48.387Z"
+              "WhenOpened": "2024-03-05T01:37:48.387Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -88,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.05_WPF_Controls\\24.03.05_WPF_Controls_Project\\24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "24.03.05_WPF_Controls_Project\\MainWindow.xaml.cs",
