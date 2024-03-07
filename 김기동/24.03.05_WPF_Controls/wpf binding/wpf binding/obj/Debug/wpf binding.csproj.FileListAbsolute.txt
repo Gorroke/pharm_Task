@@ -1,0 +1,16 @@
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\bin\Debug\wpf binding.exe.config
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\bin\Debug\wpf binding.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\bin\Debug\wpf binding.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.csproj.AssemblyReference.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\MainWindow.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\App.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding_MarkupCompile.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding_MarkupCompile.lref
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\MainWindow.baml
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.g.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf_binding.Properties.Resources.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.csproj.GenerateResource.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.csproj.CoreCompileInputs.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\wpf binding.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\24.03.05_WPF_Controls\wpf binding\wpf binding\obj\Debug\GeneratedInternalTypeHelper.g.cs
