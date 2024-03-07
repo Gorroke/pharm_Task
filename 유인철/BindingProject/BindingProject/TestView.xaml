@@ -25,7 +25,7 @@
             <!-- TwoWay = Source에서 Target, Target에서 Source 양방향 가능-->
             <!-- OneTime = Source에서 Target방향이나 단 한번만 가능-->
             <!-- OneWayToSource = Target에서 Source방향만 가능-->
-            <!-- UpdateSourceTrigger는 총 3가지-->
+            <!-- UpdateSourceTrigger는 총 3가지(Target에서 Source로 변경할 때 사용)-->
             <!-- Explicit = 기본적으로 Source에서 직접 업데이트를 하지 않으면 내용 변경 X-->
             <!-- LostFocus = Control이 Focus를 잃을 때마다 값 변경(Default 값)-->
             <!-- PropertyChanged = 즉시 값 변경-->
