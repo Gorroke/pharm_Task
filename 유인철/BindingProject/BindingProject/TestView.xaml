@@ -20,6 +20,15 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <TextBox Width="200" Height="30" Text="{Binding Path=TestText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <!-- Mode는 총 4가지 -->
+            <!-- OneWay = Source에서 Target 방향으로만 가능-->
+            <!-- TwoWay = Source에서 Target, Target에서 Source 양방향 가능-->
+            <!-- OneTime = Source에서 Target방향이나 단 한번만 가능-->
+            <!-- OneWayToSource = Target에서 Source방향만 가능-->
+            <!-- UpdateSourceTrigger는 총 3가지-->
+            <!-- Explicit = 기본적으로 Source에서 직접 업데이트를 하지 않으면 내용 변경 X-->
+            <!-- LostFocus = Control이 Focus를 잃을 때마다 값 변경(Default 값)-->
+            <!-- PropertyChanged = 즉시 값 변경-->
         </Grid>
         <Grid Grid.Row="1">
             <TextBlock Width="200" Height="30" Text="{Binding TestText}"/>
