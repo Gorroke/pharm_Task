@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chatting_App"
         mc:Ignorable="d"
-        Title="MainWindow" Height="850" Width="1400">
+        Title="MainWindow" Height="825" Width="1400">
     <Window.Resources>
         <Style TargetType="Button" x:Key="ButtonStyle">
-            <Setter Property="Background" Value="DarkSlateBlue"/>
-            <Setter Property="BorderBrush" Value="DarkSlateBlue"/>
+            <Setter Property="Background" Value="#111111"/>
+            <Setter Property="BorderBrush" Value="#111111"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="FontSize" Value="15"/>
-            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
             <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="50,0,0,0"/>
         </Style>
     </Window.Resources>
     <Grid>
@@ -23,10 +24,10 @@
             <ColumnDefinition Width="90*"/>
             <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Grid.Column="0" Grid.Row="0" Fill="DarkSlateBlue"/>
+        <Rectangle Grid.Column="0" Grid.Row="0" Fill="#111111"/>
         <Image Source="C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.05_WPF_Controls\Chatting-App\123.png" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,18,0,0"/>
         <Label Content="CORVA" FontSize="20" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="55,20,0,0"/>
-        <TextBox Width="190" Height="30" VerticalAlignment="Top" Margin="30,82,32,0" Background="DarkSlateBlue" BorderBrush="DarkSlateBlue" Foreground="White" FontSize="15" Text="Search..." TextAlignment="Left" VerticalContentAlignment="Center"/>
+        <TextBox Width="190" Height="30" VerticalAlignment="Top" Margin="30,82,32,0" Background="#111111" BorderBrush="#333333" Foreground="White" FontSize="15" Text="Search..." TextAlignment="Left" VerticalContentAlignment="Center"/>
         <StackPanel Height="400" VerticalAlignment="Top" Margin="0,117,0,0">
             <Button Style="{StaticResource ButtonStyle}" Content="Dashboards"/>
             <Button Style="{StaticResource ButtonStyle}" Content="Tasks"/>
@@ -49,15 +50,31 @@
         <Button Grid.Column="1" Width="35" Height="35" VerticalAlignment="Top" Margin="32,21,690,0" Content="←" FontSize="20" VerticalContentAlignment="Center"/>
         <Label Grid.Column="1" Width="150" Height="30" VerticalAlignment="Top" Margin="102,23,530,0" Content="Ticket 652345" FontSize="17" VerticalContentAlignment="Center"/>
         <Label Grid.Column="1" Width="76" Height="30" VerticalAlignment="Top" Content="Scheduled" Background="Aqua" FontSize="14" VerticalContentAlignment="Center" Margin="224,23,470,0"/>
-        <Button Grid.Column="1" Width="100" Height="24" VerticalAlignment="Top" Content="Cancel Ticket" Background="Red" Margin="572,26,110,0" BorderThickness="0.5"/>
+        <Button Grid.Column="1" Width="90" Height="24" VerticalAlignment="Top" Content="Cancel Ticket" Background="Red" Margin="572,26,90,0" BorderThickness="0.5"/>
         <Button Grid.Column="1" Width="80" Height="24" VerticalAlignment="Top" Content="Expand" Background="White" Margin="686,26,10,0" BorderThickness="0.5"/>
-        <StackPanel Height="600" Grid.ColumnSpan="2" Margin="262,97,0,137" Background="LightGray" >
-            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White"/>
-            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Background="LightPink" BorderBrush="LightGray"/>
-            <Label Content="sounds great!" Width="120" Height="38" FontSize="15" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White"/>
+        <StackPanel Height="600" Grid.Column="1" Margin="0" Background="LightGray">
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook. Is this resolved, please?&#10;If so, I will happily close this ticket." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White" Margin="20,20,0,0"/>
+            <Label Content="Payton Kelley" FontWeight="Bold" Margin="20,0,0,0"/>
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook. Is this resolved, please?&#10;If so, I will happily close this ticket." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FFCCFF" BorderBrush="LightGray" Margin="0,0,20,0"/>
+            <Label Content="ME" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+            <Label Content="sounds great!" Width="120" Height="38" FontSize="15" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White" Margin="20,0,0,0"/>
+            <Label Content="Payton Kelley" FontWeight="Bold" Margin="20,0,0,0"/>
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook. Is this resolved, please?&#10;If so, I will happily close this ticket." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Right" Background="#FFCCFF" BorderBrush="LightGray" Margin="0,0,20,0"/>
+            <Label Content="ME" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,0,20,0"/>
+            <Label Content="Good Afternoon Lori &#10;I hope all is well. There is a ticket on the board for an issue that you seem to&#10;have experienced a few days ago with you Outlook. Is this resolved, please?&#10;If so, I will happily close this ticket." Width="545" Height="100" FontSize="15" VerticalAlignment="Top" HorizontalAlignment="Left" BorderBrush="LightGray" Background="White" Margin="20,0,0,0"/>
+            <Label Content="Payton Kelley" FontWeight="Bold" Margin="20,0,0,0"/>
         </StackPanel>
-        <TextBox Grid.Column="1" Width="640" Height="50" VerticalAlignment="Bottom" BorderBrush="Black" Text="Enter a message" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0"/>
-        <Button Grid.Column="1" Width="100" Height="50" VerticalAlignment="Bottom" BorderBrush="LightGray" BorderThickness="0.5" Content="Send" FontSize="20" HorizontalAlignment="Right" Margin="0,0,11,0"/>
+        <StackPanel Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,50" Orientation="Horizontal">
+            <Button Content="B" FontWeight="Bold" Width="42" Height="42" />
+            <Button Content="I" FontWeight="Bold" Width="42" Height="42" />
+            <Button FontWeight="Bold" Width="42" Height="42">
+                <TextBlock>
+                    <Underline>U</Underline>
+                </TextBlock>
+            </Button>
+        </StackPanel>
+        <TextBox Grid.Column="1" Width="687" Height="50" VerticalAlignment="Bottom" BorderBrush="Black" Text="Enter a message" FontSize="20" VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
+        <Button Grid.Column="1" Width="100" Height="50" VerticalAlignment="Bottom" BorderBrush="LightGray" BorderThickness="0.5" Content="Send" FontSize="20" HorizontalAlignment="Right"/>
         <Label Grid.Column="2" Content="Summary" FontWeight="Bold" FontSize="15" Width="80" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,17,0,0"/>
         <Label Grid.Column="2" Content="Outlook-'invalid value for registry error'" Width="250" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="0,45,0,0"/>
         <Label Grid.Column="2" Content="Status" FontWeight="Bold" FontSize="15" Width="80" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="10,97,0,0"/>

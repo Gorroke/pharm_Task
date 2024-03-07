@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="BindingProject.TestView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BindingProject"
+        mc:Ignorable="d"
+        d:DesignHeight="200" d:DesignWidth="300">
+    <!--첫번째 Textbox string 값에 따른 label 값 변경 / 버튼 클릭시 ICommand 사용하여 MessageBox 출력-->
+    <UserControl.DataContext>
+        <local:TestViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <TextBox Width="200" Height="30" Text="{Binding Path=TestText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            <!-- Mode는 총 4가지 -->
+            <!-- OneWay = Source에서 Target 방향으로만 가능-->
+            <!-- TwoWay = Source에서 Target, Target에서 Source 양방향 가능-->
+            <!-- OneTime = Source에서 Target방향으로 단 한번만 가능-->
+            <!-- OneWayToSource = Target에서 Source방향만 가능-->
+            <!-- UpdateSourceTrigger는 총 3가지(Target에서 Source로 변경할 때 사용)-->
+            <!-- Explicit = 기본적으로 Source에서 직접 업데이트를 하지 않으면 내용 변경 X-->
+            <!-- LostFocus = Control이 Focus를 잃을 때마다 값 변경(Default 값)-->
+            <!-- PropertyChanged = 즉시 값 변경-->
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBlock Width="200" Height="30" Text="{Binding TestText}"/>
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBox Width="200" Height="30" Text="실험"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button Width="200" Height="30" Content="Testbutton" Command="{Binding ButtonICommand}"/>
+        </Grid>
+    </Grid>
+</UserControl>
