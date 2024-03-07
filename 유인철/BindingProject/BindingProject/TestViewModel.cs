@@ -4,12 +4,22 @@ using System.Linq;
 using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace BindingProject
 {
     internal class TestViewModel : INotifyPropertyChanged
     {
         string testtext;
+        private ICommand buttonICommand;
+        public ICommand ButtonICommand
+        {
+            get
+            {
+                buttonICommand = new RelayCommand();
+                return buttonICommand;
+            }
+        }
         public string TestText
         {
             get { return testtext; }
@@ -27,5 +37,6 @@ namespace BindingProject
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        
     }
 }

@@ -16,15 +16,19 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <TextBox Width="200" Height="30" Text="{Binding Path=TestText, Mode=TwoWay}"/>
+            <TextBox Width="200" Height="30" Text="{Binding Path=TestText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
         </Grid>
         <Grid Grid.Row="1">
             <TextBlock Width="200" Height="30" Text="{Binding TestText}"/>
         </Grid>
         <Grid Grid.Row="2">
             <TextBox Width="200" Height="30" Text="실험"/>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Button Width="200" Height="30" Content="Testbutton" Command="{Binding ButtonICommand}"/>
         </Grid>
     </Grid>
 </UserControl>
