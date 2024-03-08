@@ -5,20 +5,40 @@ using System.ComponentModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace BindingProject
 {
     internal class TestViewModel : INotifyPropertyChanged
     {
-        private ICommand buttonICommand;
-        public ICommand ButtonICommand
-        {
-            get
-            {
-                buttonICommand = new RelayCommand();
-                return buttonICommand;
-            }
+
+        public ICommand ButtonICommand { get; set; }
+        public TestViewModel() 
+        { 
+            ButtonICommand = new RelayCommand(TestMessageBox);
+            
         }
+        private void TestMessageBox(object sender)
+        {
+            MessageBox.Show(can.GetType().ToString());
+        }
+
+        Button can;
+        public Button Can
+        {
+            get { return can; }
+            set { can = value; }
+        }
+
+        string buttonText;
+        public string ButtonText
+        {
+            get { return buttonText; }
+            set { buttonText = value; }
+        }
+
+
         string testtext;
         public string TestText
         {
@@ -29,6 +49,7 @@ namespace BindingProject
                 OnPropertyChanged("TestText"); // TestText 속성 명 값을 매개변수로 입력
             }
         }
+
         public event PropertyChangedEventHandler PropertyChanged; // 속성 값이 변경될 때 이벤트가 발생한다.
         protected void OnPropertyChanged(string propertyName)
         {

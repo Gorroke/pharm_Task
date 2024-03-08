@@ -1,0 +1,92 @@
+﻿<UserControl x:Class="PictuerDrawing.DrawingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PictuerDrawing"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        
+        <Style TargetType="Button" x:Key="ButtonStyle">
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Background" Value="White"/>
+        </Style>
+        
+        <Style TargetType="WrapPanel" x:Key="WrapStyle">
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <local:DrawingViewModel/>
+    </UserControl.DataContext>
+    
+    <Grid Background="White">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <WrapPanel Style="{StaticResource WrapStyle}">
+                    <Button x:Name="PenButton" Style="{StaticResource ButtonStyle}" Content="펜" CommandParameter="Pen"/>
+                    <Button x:Name="RectButton" Style="{StaticResource ButtonStyle}" Content="사각형" CommandParameter="Square"/>
+                    <Button x:Name="PolyButton" Style="{StaticResource ButtonStyle}" Content="삼각형" CommandParameter="Angle"/>
+                    <Button x:Name="CircleButton" Style="{StaticResource ButtonStyle}" Content="원" CommandParameter="Circle"/>
+                </WrapPanel>
+            </Grid>
+
+            <Grid Grid.Column="1">
+                <WrapPanel Style="{StaticResource WrapStyle}">
+                    <Button x:Name="RedButton" Style="{StaticResource ButtonStyle}" Background="Red" CommandParameter="Red"/>
+                    <Button x:Name="OrangeButton" Style="{StaticResource ButtonStyle}" Background="Orange" CommandParameter="Orange"/>
+                    <Button x:Name="YellowButton" Style="{StaticResource ButtonStyle}" Background="Yellow" CommandParameter="Yellow"/>
+                    <Button x:Name="GreenButton" Style="{StaticResource ButtonStyle}" Background="Green" CommandParameter="Green"/>
+                    <Button x:Name="BlueButton" Style="{StaticResource ButtonStyle}" Background="Blue" CommandParameter="Blue"/>
+                    <Button x:Name="NavyButton" Style="{StaticResource ButtonStyle}" Background="Navy" CommandParameter="Navy"/>
+                    <Button x:Name="PurPleButton" Style="{StaticResource ButtonStyle}" Background="Purple" CommandParameter="Purple"/>
+                    <Button x:Name="BlackButton" Style="{StaticResource ButtonStyle}" Background="Black" CommandParameter="Black"/>
+                </WrapPanel>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                
+            </Grid>
+            
+        </Grid>
+        <Grid Grid.Row="1">
+
+            <Canvas x:Name="PictureCanvas" Background="White" >
+                <!--MouseDown="{Binding MouseButtonDownEventHandler}" MouseMove="{Binding MouseButtonMoveEventHandler}" MouseUp="{Binding MouseButtonUpEventHandler}">
+                
+                
+                <ItemsControl ItemsSource="{Binding Rect}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Rectangle Width="{Binding Width}" Height="{Binding Height}" 
+                                       Fill="{Binding Fill}" Canvas.Left="{Binding X}" 
+                                       Canvas.Top="{Binding Y}"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>-->
+                
+                    
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

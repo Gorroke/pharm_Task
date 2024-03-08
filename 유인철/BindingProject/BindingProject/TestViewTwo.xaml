@@ -12,15 +12,23 @@
     </UserControl.DataContext>
     
     <Grid Background="White">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
+        
         <Grid Grid.Row="0">
+            
             <TextBox Width="200" Height="30" Text="{Binding Path=TestText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
         </Grid>
+        
         <Grid Grid.Row="1">
+            
             <StackPanel Background="{Binding TestText}"/>
+            
         </Grid>
+        
     </Grid>
 </UserControl>

@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uACFC\uC81C\\24.03.06\\bindingexample\\bindingexample\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|solutionrelative:bindingexample\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\bindingexample\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|solutionrelative:bindingexample\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "BindingExample\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
+              "RelativeToolTip": "BindingExample\\RelayCommand.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAADwvxUAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T05:16:51.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "BindingExample\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs",
+              "RelativeToolTip": "BindingExample\\LoginViewModel.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADwvxgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T05:16:23.609Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

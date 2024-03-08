@@ -31,13 +31,16 @@
             <!-- PropertyChanged = 즉시 값 변경-->
         </Grid>
         <Grid Grid.Row="1">
-            <TextBlock Width="200" Height="30" Text="{Binding TestText}"/>
+            <TextBlock Width="200" Height="30" Text="{Binding TestText}" />
+            
         </Grid>
         <Grid Grid.Row="2">
             <TextBox Width="200" Height="30" Text="실험"/>
         </Grid>
         <Grid Grid.Row="3">
-            <Button Width="200" Height="30" Content="Testbutton" Command="{Binding ButtonICommand}"/>
+            <Button x:Name="TestButton" Width="200" Height="30" 
+                    Command="{Binding ButtonICommand}" CommandParameter="Search"
+                    />
         </Grid>
     </Grid>
 </UserControl>

@@ -29,6 +29,6 @@
     -->
     <Grid>
         <!--<local:TestView/> TextBox 입력 시 Label 값 변경 / 버튼 클릭시 ICommand로-->
-        <local:TestViewTwo/> <!-- TextBox에 색 입력하면 밑 패널 색상 변경-->
+        <local:TestView/> <!-- TextBox에 색 입력하면 밑 패널 색상 변경-->
     </Grid>
 </Window>

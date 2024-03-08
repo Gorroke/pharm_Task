@@ -50,6 +50,7 @@ namespace BindingExample
 
         private void Login(object sender)
         {
+            MessageBox.Show("asdasd");
         }
 
     }
