@@ -1,3 +1,41 @@
+<<<<<<< HEAD
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.exe.config
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.exe
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.pdb
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.AssemblyReference.cache
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\LoginView.g.cs
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\MainWindow.g.cs
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\App.g.cs
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample_MarkupCompile.cache
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample_MarkupCompile.lref
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\LoginView.baml
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\MainWindow.baml
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.g.resources
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.Properties.Resources.resources
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.GenerateResource.cache
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.CoreCompileInputs.cache
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.exe
+C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\obj\Debug\BindingExample.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\bin\Debug\BindingExample.exe.config
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\bin\Debug\BindingExample.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\bin\Debug\BindingExample.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.AssemblyReference.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\LoginView.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\MainWindow.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\App.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample_MarkupCompile.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample_MarkupCompile.lref
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\LoginView.baml
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\MainWindow.baml
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.g.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.Properties.Resources.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.GenerateResource.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.CoreCompileInputs.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.pdb
+=======
 C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.exe.config
 C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.exe
 C:\Users\bitks\source\repos\Test_Projects\BindingExample\BindingExample\bin\Debug\BindingExample.pdb
@@ -34,3 +72,4 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\Bi
 C:\Users\유인철\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.csproj.CoreCompileInputs.cache
 C:\Users\유인철\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.exe
 C:\Users\유인철\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\BindingExample.pdb
+>>>>>>> 4f85c477206e3f1fa053197f30aa6e5b68cc57dd

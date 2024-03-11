@@ -1,0 +1,58 @@
+﻿<Window x:Class="wpf_그림판.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ViewModel="clr-namespace:wpf_그림판.ViewModel"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:ie="http://schemas.microsoft.com/expression/2010/interactions"
+        xmlns:local="clr-namespace:wpf_그림판"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Margin="0,0,-49,-103">
+        
+        <Grid.DataContext>
+            <ViewModel:MainViewModel/>
+        </Grid.DataContext>
+        
+        <Canvas Name="canvas" 
+                Background="White" 
+                Margin="0,0,0,10">
+            
+            <Button Content="네모" Command="{Binding DrawRectangleCommand}" Canvas.Left="254" Canvas.Top="30" RenderTransformOrigin="-0.014,2.259" Height="47" Width="68"/>
+            <Button Content="원" Command="{Binding DrawEllipseCommand}" Canvas.Left="362" Canvas.Top="21" Height="56" Width="58"/>
+
+            <i:Interaction.Triggers>
+                
+                <i:EventTrigger EventName="MouseDown">
+                    <i:InvokeCommandAction Command="{Binding MyCommand}" CommandParameter="{Binding ElementName=canvas}"/>
+                </i:EventTrigger>
+
+                <i:EventTrigger EventName="MouseLeftButtonDown">
+                    <i:InvokeCommandAction Command="{Binding CMD_CanvasLeftDown}" CommandParameter="{Binding ElementName=canvas}"/>
+                </i:EventTrigger>
+
+                <i:EventTrigger EventName="MouseMove">
+                    <i:InvokeCommandAction Command="{Binding CMD_MouseMove}" CommandParameter="{Binding ElementName=canvas}"/>
+                </i:EventTrigger>
+
+                <i:EventTrigger EventName="MouseLeftButtonUp">
+                    <i:InvokeCommandAction Command="{Binding CMD_CanvaLeftUp}" CommandParameter="{Binding ElementName=canvas}"/>
+                </i:EventTrigger>
+
+            </i:Interaction.Triggers>
+
+        </Canvas>
+        
+        <ComboBox ItemsSource="{Binding PenColors}" SelectedItem="{Binding PenColor}" Width="120" HorizontalAlignment="Left" Margin="85,40,0,448">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <Rectangle Width="20" Height="20" Fill="{Binding}"/>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+
+    </Grid>
+</Window>

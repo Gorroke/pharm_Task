@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\",
   "Documents": [
     {
@@ -13,6 +14,33 @@
     {
       "AbsoluteMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\bindingexample\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8465F801-88F6-4D51-9ABA-FF316324BF2E}|BindingExample\\BindingExample.csproj|solutionrelative:bindingexample\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\LoginViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\LoginView.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:BindingExample\\LoginView.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> 30c746b14e5ba8d14798728cb512301d209890b7
     }
   ],
   "DocumentGroupContainers": [
@@ -22,6 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -35,11 +64,38 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-03-11T04:27:37.354Z",
               "EditorCaption": ""
+=======
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml.cs",
+              "RelativeDocumentMoniker": "BindingExample\\LoginView.xaml.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml.cs",
+              "RelativeToolTip": "BindingExample\\LoginView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T08:08:14.737Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml",
+              "RelativeDocumentMoniker": "BindingExample\\LoginView.xaml",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginView.xaml",
+              "RelativeToolTip": "BindingExample\\LoginView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-06T08:03:27.219Z"
+>>>>>>> 30c746b14e5ba8d14798728cb512301d209890b7
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "RelayCommand.cs",
+<<<<<<< HEAD
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
               "RelativeDocumentMoniker": "BindingExample\\RelayCommand.cs",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
@@ -47,10 +103,33 @@
               "ViewState": "AQIAAAYAAAAAAAAAAADwvxUAAABTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T05:16:51.243Z"
+=======
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "BindingExample\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\RelayCommand.cs",
+              "RelativeToolTip": "BindingExample\\RelayCommand.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T08:03:26.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "BindingExample\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs",
+              "RelativeToolTip": "BindingExample\\LoginViewModel.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T08:03:26.373Z",
+              "EditorCaption": ""
+>>>>>>> 30c746b14e5ba8d14798728cb512301d209890b7
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "LoginViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\LoginViewModel.cs",
               "RelativeDocumentMoniker": "BindingExample\\LoginViewModel.cs",
@@ -59,6 +138,28 @@
               "ViewState": "AQIAAAkAAAAAAAAAAADwvxgAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T05:16:23.609Z"
+=======
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BindingExample\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml",
+              "RelativeToolTip": "BindingExample\\MainWindow.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-06T08:03:27.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BindingExample\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uACFC\uC81C\\24.03.06\\BindingExample\\BindingExample\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BindingExample\\MainWindow.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-06T08:03:27.232Z"
+>>>>>>> 30c746b14e5ba8d14798728cb512301d209890b7
             }
           ]
         }

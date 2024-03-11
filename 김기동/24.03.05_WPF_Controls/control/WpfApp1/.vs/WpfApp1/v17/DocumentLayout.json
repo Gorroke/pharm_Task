@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\control\\wpfapp1\\wpfapp1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
+      "RelativeMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\control\\wpfapp1\\wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\control\\wpfapp1\\wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37940F82-D771-4476-B380-D3B4A9956AB3}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "WpfApp1\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\Properties\\Resources.resx",
+              "RelativeToolTip": "WpfApp1\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2024-03-06T00:33:20.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\MainWindow.xaml",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-05T23:39:48.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\control\\WpfApp1\\WpfApp1\\MainWindow.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-05T23:39:48.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

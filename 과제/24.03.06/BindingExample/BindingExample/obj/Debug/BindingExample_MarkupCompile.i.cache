@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+﻿BindingExample
+
+
+winexe
+C#
+.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\obj\Debug\
+BindingExample
+none
+false
+DEBUG;TRACE
+C:\Users\김기동\Documents\GitHub\pharm_Task\과제\24.03.06\BindingExample\BindingExample\App.xaml
+21660711735
+
+91326395547
+13-38814620
+LoginView.xaml;MainWindow.xaml;
+
+True
+
+=======
 ﻿BindingExample
 
 
@@ -18,3 +40,4 @@ LoginView.xaml;MainWindow.xaml;
 
 True
 
+>>>>>>> 4f85c477206e3f1fa053197f30aa6e5b68cc57dd
