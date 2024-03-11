@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\bindingproject\\bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\testview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\bindingproject\\bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\testview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -26,23 +22,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestView.xaml.cs",
-              "RelativeDocumentMoniker": "BindingProject\\TestView.xaml.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestView.xaml.cs",
-              "RelativeToolTip": "BindingProject\\TestView.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAawBgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T06:01:36.242Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\RelayCommand.cs",
               "RelativeDocumentMoniker": "BindingProject\\RelayCommand.cs",
@@ -50,31 +34,33 @@
               "RelativeToolTip": "BindingProject\\RelayCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T05:10:45.563Z"
+              "WhenOpened": "2024-03-08T05:10:45.563Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TestViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestViewModel.cs",
               "RelativeDocumentMoniker": "BindingProject\\TestViewModel.cs",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestViewModel.cs",
               "RelativeToolTip": "BindingProject\\TestViewModel.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABMAAAAMAAAA",
+              "ViewState": "AQIAABwAAAAAAAAAAAAUwCkAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T01:04:12.575Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TestView.xaml",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestView.xaml",
               "RelativeDocumentMoniker": "BindingProject\\TestView.xaml",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestView.xaml",
               "RelativeToolTip": "BindingProject\\TestView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-07T01:00:48.784Z"
+              "WhenOpened": "2024-03-07T01:00:48.784Z",
+              "EditorCaption": ""
             }
           ]
         }

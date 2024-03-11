@@ -23,7 +23,7 @@ namespace PictuerDrawing
         public DrawingView()
         {
             InitializeComponent();
-            this.DataContext = new DrawingViewModel(PictureCanvas);
+            this.DataContext = new DrawingViewModel(PictureCanvas, ListBox);
         }
     }
 }

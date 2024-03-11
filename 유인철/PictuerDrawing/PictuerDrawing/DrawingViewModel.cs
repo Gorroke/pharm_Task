@@ -9,6 +9,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Collections.ObjectModel;
 
 namespace PictuerDrawing
 {
@@ -20,20 +21,16 @@ namespace PictuerDrawing
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         private Canvas can;
-        public Canvas Canvas
-        {
-            get { return can; }
-            set { can = value; }
-        }
         int remote = 0;
         private Point CurrentPoint = new Point();
         Rectangle rect;
         Ellipse ellipse;
         Polygon polygon;
+        private ListBox savelistbox;
 
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            CurrentPoint = e.GetPosition((Canvas)sender);
+            CurrentPoint = e.GetPosition(can);
             switch (remote)
             {
                 case 0:
@@ -81,20 +78,20 @@ namespace PictuerDrawing
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            var pos = e.GetPosition((Canvas)sender);
+            var pos = e.GetPosition(can);
             switch (remote)
             {
                 case 0:
                     if (e.LeftButton == MouseButtonState.Pressed) // 선 그리기
                     {
                         Line line = new Line();
-                        line.Stroke = brush;
+                        line.Stroke = CopyColor(brush);
 
                         line.X1 = CurrentPoint.X;
                         line.Y1 = CurrentPoint.Y;
-                        line.X2 = e.GetPosition((Canvas)sender).X;
-                        line.Y2 = e.GetPosition((Canvas)sender).Y;
-                        CurrentPoint = e.GetPosition((Canvas)sender);
+                        line.X2 = e.GetPosition(can).X;
+                        line.Y2 = e.GetPosition(can).Y;
+                        CurrentPoint = e.GetPosition(can);
                         can.Children.Add(line);
                     }
                     break;
@@ -181,38 +178,41 @@ namespace PictuerDrawing
         private void SetPolygon() // 삼각형 유지
         {
             polygon.Opacity = 1;
-            polygon.Stroke = brush;
+            polygon.Stroke = CopyColor(brush);
         }
         private void SetRectangle() // 사각형 유지
         {
             rect.Opacity = 1;
-            rect.Stroke = brush;
+            rect.Stroke = CopyColor(brush);
         }
         private void SetEllipse() // 원 유지
         {
             ellipse.Opacity = 1;
-            ellipse.Stroke = brush;
+            ellipse.Stroke = CopyColor(brush);
         }
-
+        private SolidColorBrush CopyColor(SolidColorBrush b)
+        {
+            SolidColorBrush brush1 = new SolidColorBrush(b.Color);
+            return brush1;
+        }
         public ICommand ButtonCommand { get; set; }
 
-        public DrawingViewModel()
+        public DrawingViewModel(Canvas canvas, ListBox listbox)
         {
+            can = canvas;
+            can.MouseMove += Canvas_MouseMove;
+            can.MouseLeftButtonDown += Canvas_MouseDown;
+            can.MouseLeftButtonUp += Canvas_MouseUp;
             ButtonCommand = new RelayCommand(ButtonAction);
-            
+            CanvasName = new ObservableCollection<string>();
+            savelistbox = listbox;
+            //savelistbox.ItemsSource = CanvasName;
         }
-        public DrawingViewModel(Canvas canvas)
-        {
-            Canvas = canvas;
-            Canvas.MouseMove += Canvas_MouseMove;
-            Canvas.MouseDown += Canvas_MouseDown;
-            Canvas.MouseUp += Canvas_MouseUp;
-            ButtonCommand = new RelayCommand(ButtonAction);
-        }
-        SolidColorBrush brush = new SolidColorBrush();
+
+        SolidColorBrush brush = new SolidColorBrush(Colors.Black);
+
         protected void ButtonAction(object sender)
         {
-            MessageBox.Show(sender.ToString());
             switch (sender)
             {
                 case "Pen":
@@ -226,6 +226,24 @@ namespace PictuerDrawing
                     break;
                 case "Circle":
                     remote = 3;
+                    break;
+                case "Save":
+                    Savelist();
+                    break;
+                case "Load":
+                    Load();
+                    break;
+                case "Search":
+                    Search();
+                    break;
+                case "Fix":
+
+                    break;
+                case "Delete":
+
+                    break;
+                case "Reset":
+
                     break;
                 case "Red":
                     brush.Color = Colors.Red;
@@ -253,7 +271,149 @@ namespace PictuerDrawing
                     break;
             }
         }
-
         
+        List<Canvas> Canvaslist = new List<Canvas>();
+
+        ObservableCollection<string> _CanvasName;
+        public ObservableCollection<string> CanvasName
+        {
+            get { return _CanvasName; }
+            set
+            {
+                _CanvasName = value;
+                OnPropertyChanged("CanvasName");
+            }
+        }
+        private void Savelist()
+        {
+            Canvas canvas = CopyCanvas(can);
+            Canvaslist.Add(canvas);
+            string CanvasNameIndex = Canvaslist.Count.ToString();
+            CanvasName.Add(CanvasNameIndex);
+            can.Children.Clear();
+        }
+        private Canvas CopyCanvas(Canvas c)
+        {
+            Canvas canvas = new Canvas();
+            foreach (UIElement child in c.Children)
+            {
+                if (child is Line line)
+                {
+                    Line newline = new Line
+                    {
+                        X1 = line.X1,
+                        X2 = line.X2,
+                        Y1 = line.Y1,
+                        Y2 = line.Y2,
+                        Stroke = line.Stroke,
+                        StrokeThickness = line.StrokeThickness
+                    };
+                    canvas.Children.Add(newline);
+                }
+                else if (child is Rectangle rect)
+                {
+                    Rectangle newrect = new Rectangle
+                    {
+                        Margin = rect.Margin,
+                        Width = rect.Width,
+                        Height = rect.Height,
+                        Stroke = rect.Stroke,
+                        StrokeThickness = rect.StrokeThickness
+                    };
+                    canvas.Children.Add(newrect);
+                }
+                else if (child is Polygon polygon)
+                {
+                    Polygon newpolygon = new Polygon
+                    {
+                        Points = polygon.Points,
+                        Stroke = polygon.Stroke,
+                        StrokeThickness = polygon.StrokeThickness
+                    };
+                    canvas.Children.Add(newpolygon);
+                }
+                else if (child is Ellipse ellipse)
+                {
+                    Ellipse newellipse = new Ellipse
+                    {
+                        Margin = ellipse.Margin,
+                        Width = ellipse.Width,
+                        Height = ellipse.Height,
+                        Stroke = ellipse.Stroke,
+                        StrokeThickness = ellipse.StrokeThickness
+                    };
+                    canvas.Children.Add(newellipse);
+                }
+            }
+            return canvas;
+        }
+        private void Load()
+        {
+            if(savelistbox.SelectedItem != null)
+            {
+                can.Children.Clear();
+                int count = savelistbox.SelectedIndex;
+                LoadCanvas(Canvaslist[count]);
+                savelistbox.SelectedIndex = -1;
+            }
+        }
+        private void LoadCanvas(Canvas c)
+        {
+            foreach (UIElement child in c.Children)
+            {
+                if (child is Line line)
+                {
+                    Line newline = new Line
+                    {
+                        X1 = line.X1,
+                        X2 = line.X2,
+                        Y1 = line.Y1,
+                        Y2 = line.Y2,
+                        Stroke = line.Stroke,
+                        StrokeThickness = line.StrokeThickness
+                    };
+                    can.Children.Add(newline);
+                }
+                else if (child is Rectangle rect)
+                {
+                    Rectangle newrect = new Rectangle
+                    {
+                        Margin = rect.Margin,
+                        Width = rect.Width,
+                        Height = rect.Height,
+                        Stroke= rect.Stroke,
+                        StrokeThickness = rect.StrokeThickness
+                    };
+                    can.Children.Add(newrect);
+                }
+                else if (child is Polygon polygon)
+                {
+                    Polygon newpolygon = new Polygon
+                    {
+                        Points = polygon.Points,
+                        Stroke = polygon.Stroke,
+                        StrokeThickness = polygon.StrokeThickness
+                    };
+                    can.Children.Add(newpolygon);
+                }
+                else if (child is Ellipse ellipse)
+                {
+                    Ellipse newellipse = new Ellipse
+                    {
+                        Margin = ellipse.Margin,
+                        Width = ellipse.Width,
+                        Height = ellipse.Height,
+                        Stroke = ellipse.Stroke,
+                        StrokeThickness = ellipse.StrokeThickness
+                    };
+                    can.Children.Add(newellipse);
+                }
+            }
+        }
+
+        private void Search()
+        {
+
+        }
     }
 }
