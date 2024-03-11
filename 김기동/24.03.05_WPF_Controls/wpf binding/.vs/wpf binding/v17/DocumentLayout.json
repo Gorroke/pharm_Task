@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf binding\\wpf binding\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E781714D-DB17-47D4-A790-6A27A4839520}|wpf binding\\wpf binding.csproj|solutionrelative:wpf binding\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,25 +35,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RelayCommand.cs",
-              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\RelayCommand.cs",
-              "RelativeDocumentMoniker": "wpf binding\\RelayCommand.cs",
-              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\RelayCommand.cs",
-              "RelativeToolTip": "wpf binding\\RelayCommand.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABsAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T02:59:26.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "wpf binding\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "wpf binding\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAAAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T00:16:15.109Z",
               "EditorCaption": ""
@@ -61,19 +48,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "wpf binding\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\RelayCommand.cs",
+              "RelativeToolTip": "wpf binding\\RelayCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T02:59:26.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainModel.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\Model\\MainModel.cs",
               "RelativeDocumentMoniker": "wpf binding\\Model\\MainModel.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\Model\\MainModel.cs",
               "RelativeToolTip": "wpf binding\\Model\\MainModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAIAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAA4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T00:15:55.652Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\MainWindow.xaml",
               "RelativeDocumentMoniker": "wpf binding\\MainWindow.xaml",
@@ -85,20 +85,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "wpf binding\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf binding\\wpf binding\\MainWindow.xaml.cs",
               "RelativeToolTip": "wpf binding\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAJAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAnwBsAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-06T23:54:46.924Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

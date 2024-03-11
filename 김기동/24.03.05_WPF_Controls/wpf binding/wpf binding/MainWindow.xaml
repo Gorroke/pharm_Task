@@ -7,20 +7,36 @@
         xmlns:ViewModel="clr-namespace:wpf_binding.ViewModel" x:Class="wpf_binding.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    
     <Grid>
+        
         <Grid.DataContext>
             <ViewModel:MainViewModel/>
         </Grid.DataContext>
+        
         <Label Content="숫자 바꾸기" HorizontalAlignment="Center" Margin="0,108,0,0" VerticalAlignment="Top">
+
             <Label.DataContext>
                 <ViewModel:MainViewModel/>
             </Label.DataContext>
+            
         </Label>
+        
         <Label Content="숫자 입력" HorizontalAlignment="Left" Margin="200,0,0,0" VerticalAlignment="Center"/>
-        <Label Content="숫자 결과" HorizontalAlignment="Left" Margin="516,0,0,0" VerticalAlignment="Center"/>
-        <TextBox HorizontalAlignment="Left" Margin="171,264,0,0" TextWrapping="Wrap" Text="{Binding Model.Num, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="487,264,0,0" TextWrapping="Wrap" Text="{Binding Model.Num2, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="363,337,0,0" VerticalAlignment="Top" Command="{Binding ClickCommand}"/>
 
+        <Label Content="숫자 결과" HorizontalAlignment="Left" Margin="516,0,0,0" VerticalAlignment="Center"/>
+
+        <TextBox HorizontalAlignment="Left" Margin="171,264,0,0" TextWrapping="Wrap" 
+                 Text="{Binding Model.Num, UpdateSourceTrigger=PropertyChanged}" 
+                 VerticalAlignment="Top" Width="120"/>
+
+        <TextBox Text="{Binding Model.Num2, UpdateSourceTrigger=PropertyChanged}" 
+                 HorizontalAlignment="Left" VerticalAlignment="Top" 
+                 Margin="487,264,0,0" 
+                 TextWrapping="Wrap" 
+                 Width="120"/>
+
+        <Button Content="Button" HorizontalAlignment="Left" Margin="363,337,0,0" VerticalAlignment="Top" Command="{Binding ClickCommand}"/>
+    
     </Grid>
 </Window>

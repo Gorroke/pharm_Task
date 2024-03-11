@@ -11,7 +11,6 @@ namespace wpf_binding.ViewModel
     internal class MainViewModel:INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public ICommand ClickCommand { get;}
         protected void OnpropertyChanged(string name)
         {
             PropertyChangedEventHandler propertyChangedEventHandler = PropertyChanged;
@@ -20,12 +19,15 @@ namespace wpf_binding.ViewModel
                 propertyChangedEventHandler(this, new PropertyChangedEventArgs(name));
             }
         }
-        private Model.MainModel model = null;
+
+        public ICommand ClickCommand { get; }
         public MainViewModel()
         {
             model = new Model.MainModel();
             ClickCommand = new RelayCommand(OnClick);
         }
+
+        private Model.MainModel model = null;
         public Model.MainModel Model
         {
             get { return model; }
@@ -36,5 +38,6 @@ namespace wpf_binding.ViewModel
         {
             Console.WriteLine("버튼 클릭되었습니다.");
         }
+
     }
 }
