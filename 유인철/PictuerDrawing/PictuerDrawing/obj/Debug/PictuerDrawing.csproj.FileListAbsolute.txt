@@ -21,3 +21,11 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerD
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Microsoft.Expression.Interactions.xml
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\System.Windows.Interactivity.xml
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\PictuerD.4FC9CD94.Up2Date
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\DeleteControl.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\SearchControl.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\SubWindow.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\DeleteControl.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\SearchControl.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\SubWindow.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\NamingControl.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\NamingControl.baml

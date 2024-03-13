@@ -12,7 +12,6 @@ namespace BindingProject
 {
     internal class TestViewModel : INotifyPropertyChanged
     {
-
         public ICommand ButtonICommand { get; set; }
         public TestViewModel() 
         { 

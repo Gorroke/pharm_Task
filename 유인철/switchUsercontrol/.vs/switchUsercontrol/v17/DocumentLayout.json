@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\switchUsercontrol\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FD046805-3862-464D-BB08-0D31BC39C58E}|switchUsercontrol\\switchUsercontrol.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\switchusercontrol\\switchusercontrol\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD046805-3862-464D-BB08-0D31BC39C58E}|switchUsercontrol\\switchUsercontrol.csproj|solutionrelative:switchusercontrol\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD046805-3862-464D-BB08-0D31BC39C58E}|switchUsercontrol\\switchUsercontrol.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\switchusercontrol\\switchusercontrol\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FD046805-3862-464D-BB08-0D31BC39C58E}|switchUsercontrol\\switchUsercontrol.csproj|solutionrelative:switchusercontrol\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\switchUsercontrol\\switchUsercontrol\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "switchUsercontrol\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\switchUsercontrol\\switchUsercontrol\\MainWindow.xaml",
+              "RelativeToolTip": "switchUsercontrol\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-12T01:17:44.27Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\switchUsercontrol\\switchUsercontrol\\MainModel.cs",
+              "RelativeDocumentMoniker": "switchUsercontrol\\MainModel.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\switchUsercontrol\\switchUsercontrol\\MainModel.cs",
+              "RelativeToolTip": "switchUsercontrol\\MainModel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-12T01:19:55.967Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

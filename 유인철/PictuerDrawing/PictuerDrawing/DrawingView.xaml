@@ -55,7 +55,7 @@
                     <Button x:Name="SaveButton" Style="{StaticResource ButtonStyle}" Content="저장" CommandParameter="Save"/>
                     <Button x:Name="LoadButton" Style="{StaticResource ButtonStyle}" Content="LOAD" CommandParameter="Load"/>
                     <Button x:Name="SearchButton" Style="{StaticResource ButtonStyle}" Content="검색" CommandParameter="Search"/>
-                    <Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" Content="수정" CommandParameter="Fix"/>
+                    <!--<Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" Content="수정" CommandParameter="Fix"/>-->
                     <Button x:Name="DeleteButton" Style="{StaticResource ButtonStyle}" Content="삭제" CommandParameter="Delete"/>
                     <Button x:Name="ResetButton" Style="{StaticResource ButtonStyle}" Content="초기화" CommandParameter="Reset"/>
                     
@@ -76,7 +76,7 @@
             </Grid>
 
             <Grid Grid.Column="2">
-                <ListBox x:Name="ListBox" Width="250" ItemsSource="{Binding CanvasName}"/>
+                <ListBox x:Name="ListBox" Width="250" ItemsSource="{Binding CanvasListName}"/>
             </Grid>
             
         </Grid>

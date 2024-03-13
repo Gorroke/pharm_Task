@@ -204,9 +204,8 @@ namespace PictuerDrawing
             can.MouseLeftButtonDown += Canvas_MouseDown;
             can.MouseLeftButtonUp += Canvas_MouseUp;
             ButtonCommand = new RelayCommand(ButtonAction);
-            CanvasName = new ObservableCollection<string>();
+            CanvasListName = new ObservableCollection<string>();
             savelistbox = listbox;
-            //savelistbox.ItemsSource = CanvasName;
         }
 
         SolidColorBrush brush = new SolidColorBrush(Colors.Black);
@@ -236,14 +235,14 @@ namespace PictuerDrawing
                 case "Search":
                     Search();
                     break;
-                case "Fix":
-
-                    break;
+                /*case "Naming":
+                    Naming();
+                    break;*/
                 case "Delete":
-
+                    Delete();
                     break;
                 case "Reset":
-
+                    Reset();
                     break;
                 case "Red":
                     brush.Color = Colors.Red;
@@ -274,146 +273,169 @@ namespace PictuerDrawing
         
         List<Canvas> Canvaslist = new List<Canvas>();
 
-        ObservableCollection<string> _CanvasName;
-        public ObservableCollection<string> CanvasName
+        ObservableCollection<string> _CanvasListName;
+        public ObservableCollection<string> CanvasListName
         {
-            get { return _CanvasName; }
+            get { return _CanvasListName; }
             set
             {
-                _CanvasName = value;
-                OnPropertyChanged("CanvasName");
+                _CanvasListName = value;
+                OnPropertyChanged("CanvasListName");
             }
         }
         private void Savelist()
         {
-            Canvas canvas = CopyCanvas(can);
-            Canvaslist.Add(canvas);
-            string CanvasNameIndex = Canvaslist.Count.ToString();
-            CanvasName.Add(CanvasNameIndex);
+            SubWindow sw = new SubWindow(1);
+            sw.ShowDialog();
+            NameingPicture np = NameingPicture.GetInstance();
+            string CanvasName = np.PictureName;
+            SaveCanvas(can, CanvasName);
+            CanvasListName.Add(CanvasName);
             can.Children.Clear();
         }
-        private Canvas CopyCanvas(Canvas c)
+        private void SaveCanvas(Canvas c, string CanvasName)
         {
-            Canvas canvas = new Canvas();
+            DB db = DB.GetInstance();
+            int Linecount = 0;
+            int Rectcount = 0;
+            int Polycount = 0;
+            int Ellicount = 0;
             foreach (UIElement child in c.Children)
             {
                 if (child is Line line)
                 {
-                    Line newline = new Line
-                    {
-                        X1 = line.X1,
-                        X2 = line.X2,
-                        Y1 = line.Y1,
-                        Y2 = line.Y2,
-                        Stroke = line.Stroke,
-                        StrokeThickness = line.StrokeThickness
-                    };
-                    canvas.Children.Add(newline);
+                    string query = $"insert into PictureObject values ('{CanvasName}','Line','{Linecount}')";
+                    db.SaveDB(query);
+                    query = $"insert into PictureLine values ('{CanvasName}','{line.X1}','{line.X2}','{line.Y1}','{line.Y2}','{line.Stroke.ToString()}','{line.StrokeThickness}','{Linecount}')";
+                    db.SaveDB(query);
+                    Linecount++;
                 }
                 else if (child is Rectangle rect)
                 {
-                    Rectangle newrect = new Rectangle
-                    {
-                        Margin = rect.Margin,
-                        Width = rect.Width,
-                        Height = rect.Height,
-                        Stroke = rect.Stroke,
-                        StrokeThickness = rect.StrokeThickness
-                    };
-                    canvas.Children.Add(newrect);
+                    string query = $"insert into PictureObject values ('{CanvasName}','Rectangle','{Rectcount}')";
+                    db.SaveDB(query);
+                    query = $"insert into PictureRectangle values ('{CanvasName}','{rect.Margin.Top}','{rect.Width}','{rect.Height}','{rect.Stroke.ToString()}','{rect.StrokeThickness}','{Rectcount}','{rect.Margin.Left}')";
+                    db.SaveDB(query);
+                    Rectcount++;
                 }
                 else if (child is Polygon polygon)
                 {
-                    Polygon newpolygon = new Polygon
-                    {
-                        Points = polygon.Points,
-                        Stroke = polygon.Stroke,
-                        StrokeThickness = polygon.StrokeThickness
-                    };
-                    canvas.Children.Add(newpolygon);
+                    string query = $"insert into PictureObject values ('{CanvasName}','Polygon','{Polycount}')";
+                    db.SaveDB(query);
+                    query = $"insert into PicturePolygon values ('{CanvasName}','{polygon.Points[0]}','{polygon.Stroke.ToString()}','{polygon.StrokeThickness}','{Polycount}','{polygon.Points[1]}','{polygon.Points[2]}')";
+                    db.SaveDB(query);
+                    Polycount++;
                 }
                 else if (child is Ellipse ellipse)
                 {
-                    Ellipse newellipse = new Ellipse
-                    {
-                        Margin = ellipse.Margin,
-                        Width = ellipse.Width,
-                        Height = ellipse.Height,
-                        Stroke = ellipse.Stroke,
-                        StrokeThickness = ellipse.StrokeThickness
-                    };
-                    canvas.Children.Add(newellipse);
+                    string query = $"insert into PictureObject values ('{CanvasName}','Ellipse','{Ellicount}')";
+                    db.SaveDB(query);
+                    query = $"insert into PictureEllipse values ('{CanvasName}','{ellipse.Margin.Top}','{ellipse.Width}','{ellipse.Height}','{ellipse.Stroke.ToString()}','{ellipse.StrokeThickness}','{Ellicount}','{ellipse.Margin.Left}')";
+                    db.SaveDB(query);
+                    Ellicount++;
                 }
             }
-            return canvas;
         }
         private void Load()
         {
             if(savelistbox.SelectedItem != null)
             {
                 can.Children.Clear();
-                int count = savelistbox.SelectedIndex;
-                LoadCanvas(Canvaslist[count]);
-                savelistbox.SelectedIndex = -1;
+                string Canvasname = savelistbox.SelectedItem.ToString();
+                LoadCanvas(Canvasname);
+                //savelistbox.SelectedIndex = -1;
             }
         }
-        private void LoadCanvas(Canvas c)
+        private void LoadCanvas(string c)
         {
-            foreach (UIElement child in c.Children)
+            DB db = DB.GetInstance();
+            string query = $"Select Shape, ShapeNum from PictureObject where PictureName = '{c}'";
+            List<DBObject> listdbo = db.SelectObjectDB(query);
+            foreach (DBObject obj in listdbo)
             {
-                if (child is Line line)
+                switch (obj.Shapename)
                 {
-                    Line newline = new Line
-                    {
-                        X1 = line.X1,
-                        X2 = line.X2,
-                        Y1 = line.Y1,
-                        Y2 = line.Y2,
-                        Stroke = line.Stroke,
-                        StrokeThickness = line.StrokeThickness
-                    };
-                    can.Children.Add(newline);
-                }
-                else if (child is Rectangle rect)
-                {
-                    Rectangle newrect = new Rectangle
-                    {
-                        Margin = rect.Margin,
-                        Width = rect.Width,
-                        Height = rect.Height,
-                        Stroke= rect.Stroke,
-                        StrokeThickness = rect.StrokeThickness
-                    };
-                    can.Children.Add(newrect);
-                }
-                else if (child is Polygon polygon)
-                {
-                    Polygon newpolygon = new Polygon
-                    {
-                        Points = polygon.Points,
-                        Stroke = polygon.Stroke,
-                        StrokeThickness = polygon.StrokeThickness
-                    };
-                    can.Children.Add(newpolygon);
-                }
-                else if (child is Ellipse ellipse)
-                {
-                    Ellipse newellipse = new Ellipse
-                    {
-                        Margin = ellipse.Margin,
-                        Width = ellipse.Width,
-                        Height = ellipse.Height,
-                        Stroke = ellipse.Stroke,
-                        StrokeThickness = ellipse.StrokeThickness
-                    };
-                    can.Children.Add(newellipse);
+                    case "Line":
+                        query = $"SELECT X1,X2,Y1,Y2,Stroke,StrokeThickness FROM PictureLine Where PictureName = {c} And LineNum = {obj.Shapenun}";
+                        DBLine dbl = db.SelectLineDB(query);
+                        Line line = new Line
+                        {
+                            X1 = dbl.X1,
+                            Y1 = dbl.Y1,
+                            X2 = dbl.X2,
+                            Y2 = dbl.Y2,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(dbl.Stroke)),
+                            StrokeThickness = double.Parse(dbl.StrokeThickness)
+                        };
+                        can.Children.Add(line);
+                        break;
+                    case "Rectangle":
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureRectangle Where PictureName = {c} And RectNum = {obj.Shapenun}";
+                        DBRectangle dbr = db.SelectRectDB(query);
+                        Rectangle rect = new Rectangle
+                        {
+                            Margin = new Thickness(double.Parse(dbr.MarginLeft), double.Parse(dbr.MarginTop), 0, 0),
+                            Width = dbr.Width,
+                            Height = dbr.Height,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(dbr.Stroke)),
+                            StrokeThickness = double.Parse(dbr.StrokeThickness)
+
+                        };
+                        can.Children.Add(rect);
+                        break;
+                    case "Polygon":
+                        query = $"SELECT PointOne,Stroke,StrokeThickness,PointTwo,PointThree FROM PicturePolygon Where PictureName = {c} And PolyNum = {obj.Shapenun}";
+                        DBPolygon dbp = db.SelectPolyDB(query);
+                        PointCollection points = new PointCollection();
+                        points.Add(Point.Parse(dbp.PointOne));
+                        points.Add(Point.Parse(dbp.PointTwo));
+                        points.Add(Point.Parse(dbp.PointThree));
+                        Polygon polygon = new Polygon
+                        {
+                            Points = points,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(dbp.Stroke)),
+                            StrokeThickness = double.Parse(dbp.StrokeThickness)
+                        };
+                        can.Children.Add(polygon);
+                        break;
+                    case "Ellipse":
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureEllipse Where PictureName = {c} And ElliNum = {obj.Shapenun}";
+                        DBEllipse dbe = db.SelectEliiDB(query);
+                        Ellipse elli = new Ellipse
+                        {
+                            Margin = new Thickness(double.Parse(dbe.MarginLeft), double.Parse(dbe.MarginTop), 0, 0),
+                            Width = dbe.Width,
+                            Height = dbe.Height,
+                            Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(dbe.Stroke)),
+                            StrokeThickness = double.Parse(dbe.StrokeThickness)
+                        };
+                        can.Children.Add(elli);
+                        break;
                 }
             }
+
         }
 
         private void Search()
         {
-
+            SubWindow sw = new SubWindow(0);
+            sw.ShowDialog();
+            
+        }
+        private void Naming()
+        {
+            SubWindow sw = new SubWindow(1);
+            sw.ShowDialog();
+            
+        }
+        private void Delete()
+        {
+            SubWindow sw = new SubWindow(2);
+            sw.ShowDialog();
+        }
+        private void Reset()
+        {
+            can.Children.Clear();
         }
     }
 }

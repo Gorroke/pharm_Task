@@ -23,6 +23,7 @@ namespace PictuerDrawing
         public MainWindow()
         {
             InitializeComponent();
+            DB db = DB.GetInstance();
         }
     }
 }
