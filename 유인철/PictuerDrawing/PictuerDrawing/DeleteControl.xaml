@@ -6,14 +6,12 @@
              xmlns:local="clr-namespace:PictuerDrawing"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    
-    <UserControl.DataContext>
-        <local:DeleteViewModel/>
-    </UserControl.DataContext>
+
     
     <Grid Background="White">
-        <TextBox Width="400" Height="40" HorizontalAlignment="Left" Margin="120,0,0,0" FontSize="15" Text="{Binding DeleteName}"/>
+        <Label Width="600" Height="70" HorizontalAlignment="Center" VerticalAlignment="Top" Content="삭제할 그림 이름을 입력하세요" FontSize="40" Margin="0,100,0,0" HorizontalContentAlignment="Center"/>
+        <TextBox Width="400" Height="40" HorizontalAlignment="Left" Margin="120,0,0,0" FontSize="15" Text="{Binding Deletename}"/>
             <Button Width="100" Height="40" HorizontalAlignment="Right" Margin="0,0,150,0" Content="삭제" FontSize="20" 
-                    Command="{Binding DeleteButton}" CommandParameter="Search"/>
+                    Command="{Binding DeleteButton}" CommandParameter="Delete"/>
     </Grid>
 </UserControl>

@@ -20,6 +20,7 @@ namespace PictuerDrawing
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         private Canvas can;
         int remote = 0;
         private Point CurrentPoint = new Point();
@@ -205,6 +206,9 @@ namespace PictuerDrawing
             can.MouseLeftButtonUp += Canvas_MouseUp;
             ButtonCommand = new RelayCommand(ButtonAction);
             CanvasListName = new ObservableCollection<string>();
+            string qurey = "Select PictureName from PictureList";
+            DB db = DB.GetInstance();
+            CanvasListName = db.SelectListName(qurey);
             savelistbox = listbox;
         }
 
@@ -235,9 +239,9 @@ namespace PictuerDrawing
                 case "Search":
                     Search();
                     break;
-                /*case "Naming":
-                    Naming();
-                    break;*/
+                case "Fix":
+                    Fix();
+                    break;
                 case "Delete":
                     Delete();
                     break;
@@ -289,13 +293,24 @@ namespace PictuerDrawing
             sw.ShowDialog();
             NameingPicture np = NameingPicture.GetInstance();
             string CanvasName = np.PictureName;
-            SaveCanvas(can, CanvasName);
+            SaveCanvas(can, CanvasName, 0);
             CanvasListName.Add(CanvasName);
             can.Children.Clear();
         }
-        private void SaveCanvas(Canvas c, string CanvasName)
+        private void SaveCanvas(Canvas c, string CanvasName, int LoadRemote)
         {
             DB db = DB.GetInstance();
+            string dt = DateTime.Now.ToString("yyyy-MM-dd");
+            if(LoadRemote == 0)
+            {
+                string namingquery = $"insert into PictureList (PictureName, SaveTime) values ('{CanvasName}','{dt}')";
+                db.SaveDB(namingquery);
+            }
+            else if(LoadRemote == 1)
+            {
+                string namingquery = $"Update PictureList Set FixTime = '{dt}' Where PictureName = '{CanvasName}'";
+                db.SaveDB(namingquery);
+            }
             int Linecount = 0;
             int Rectcount = 0;
             int Polycount = 0;
@@ -342,10 +357,12 @@ namespace PictuerDrawing
             {
                 can.Children.Clear();
                 string Canvasname = savelistbox.SelectedItem.ToString();
+                Loadstring = savelistbox.SelectedItem.ToString();
                 LoadCanvas(Canvasname);
                 //savelistbox.SelectedIndex = -1;
             }
         }
+        string Loadstring;
         private void LoadCanvas(string c)
         {
             DB db = DB.GetInstance();
@@ -356,7 +373,7 @@ namespace PictuerDrawing
                 switch (obj.Shapename)
                 {
                     case "Line":
-                        query = $"SELECT X1,X2,Y1,Y2,Stroke,StrokeThickness FROM PictureLine Where PictureName = {c} And LineNum = {obj.Shapenun}";
+                        query = $"SELECT X1,X2,Y1,Y2,Stroke,StrokeThickness FROM PictureLine Where PictureName = '{c}' And LineNum = {obj.Shapenun}";
                         DBLine dbl = db.SelectLineDB(query);
                         Line line = new Line
                         {
@@ -370,7 +387,7 @@ namespace PictuerDrawing
                         can.Children.Add(line);
                         break;
                     case "Rectangle":
-                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureRectangle Where PictureName = {c} And RectNum = {obj.Shapenun}";
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureRectangle Where PictureName = '{c}' And RectNum = {obj.Shapenun}";
                         DBRectangle dbr = db.SelectRectDB(query);
                         Rectangle rect = new Rectangle
                         {
@@ -379,12 +396,11 @@ namespace PictuerDrawing
                             Height = dbr.Height,
                             Stroke = new SolidColorBrush((Color)ColorConverter.ConvertFromString(dbr.Stroke)),
                             StrokeThickness = double.Parse(dbr.StrokeThickness)
-
                         };
                         can.Children.Add(rect);
                         break;
                     case "Polygon":
-                        query = $"SELECT PointOne,Stroke,StrokeThickness,PointTwo,PointThree FROM PicturePolygon Where PictureName = {c} And PolyNum = {obj.Shapenun}";
+                        query = $"SELECT PointOne,Stroke,StrokeThickness,PointTwo,PointThree FROM PicturePolygon Where PictureName = '{c}' And PolyNum = {obj.Shapenun}";
                         DBPolygon dbp = db.SelectPolyDB(query);
                         PointCollection points = new PointCollection();
                         points.Add(Point.Parse(dbp.PointOne));
@@ -399,7 +415,7 @@ namespace PictuerDrawing
                         can.Children.Add(polygon);
                         break;
                     case "Ellipse":
-                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureEllipse Where PictureName = {c} And ElliNum = {obj.Shapenun}";
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureEllipse Where PictureName = '{c}' And ElliNum = {obj.Shapenun}";
                         DBEllipse dbe = db.SelectEliiDB(query);
                         Ellipse elli = new Ellipse
                         {
@@ -420,22 +436,46 @@ namespace PictuerDrawing
         {
             SubWindow sw = new SubWindow(0);
             sw.ShowDialog();
-            
         }
-        private void Naming()
+        private void Fix()
         {
-            SubWindow sw = new SubWindow(1);
-            sw.ShowDialog();
-            
+            DeleteDB();
+            SaveCanvas(can, Loadstring, 1);
+            MessageBox.Show("수정 완료");
+            can.Children.Clear();
         }
         private void Delete()
         {
             SubWindow sw = new SubWindow(2);
             sw.ShowDialog();
+            DeletePicture dp = DeletePicture.GetInstance();
+            foreach(string i in CanvasListName)
+            {
+                if(i == dp.PictureName)
+                {
+                    CanvasListName.Remove(i);
+                    break;
+                }
+            }
+            can.Children.Clear();
         }
         private void Reset()
         {
             can.Children.Clear();
+        }
+        private void DeleteDB()
+        {
+            DB db = DB.GetInstance();
+            string qurey = $"Delete from PictureObject where PictureName = '{Loadstring}'";
+            db.SaveDB(qurey);
+            qurey = $"Delete from PictureEllipse where PictureName = '{Loadstring}'";
+            db.SaveDB(qurey);
+            qurey = $"Delete from PictureLine where PictureName = '{Loadstring}'";
+            db.SaveDB(qurey);
+            qurey = $"Delete from PicturePolygon where PictureName = '{Loadstring}'";
+            db.SaveDB(qurey);
+            qurey = $"Delete from PictureRectangle where PictureName = '{Loadstring}'";
+            db.SaveDB(qurey);
         }
     }
 }

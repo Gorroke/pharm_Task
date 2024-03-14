@@ -92,6 +92,7 @@ namespace PictuerDrawing
             MarginLeft = marginleft;
         }
     }
+    
     public class NameingPicture
     {
         private static NameingPicture instance = new NameingPicture();
@@ -104,5 +105,18 @@ namespace PictuerDrawing
             return instance;
         }
         public string PictureName { get; set; }
+    }
+    public class DeletePicture
+    {
+        private static DeletePicture instance = new DeletePicture();
+        public static DeletePicture GetInstance()
+        {
+            if(instance == null)
+            {
+                instance = new DeletePicture();
+            }
+            return instance;
+        }
+        public string PictureName { get; set;}
     }
 }

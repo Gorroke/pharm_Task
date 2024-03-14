@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,34 @@ namespace PictuerDrawing
                 instance = new DB();
             }
             return instance;
+        }
+        public ObservableCollection<string> SelectListName(string query)
+        {
+            ObservableCollection<string> names = new ObservableCollection<string>();
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                names.Add(reader.GetString(0));
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            return names;
+
         }
         public List<DBObject> SelectObjectDB(string query)
         {

@@ -52,13 +52,13 @@
                     <Button x:Name="RectButton" Style="{StaticResource ButtonStyle}" Content="사각형" CommandParameter="Square"/>
                     <Button x:Name="PolyButton" Style="{StaticResource ButtonStyle}" Content="삼각형" CommandParameter="Angle"/>
                     <Button x:Name="CircleButton" Style="{StaticResource ButtonStyle}" Content="원" CommandParameter="Circle"/>
+                    <Button x:Name="ResetButton" Style="{StaticResource ButtonStyle}" Content="초기화" CommandParameter="Reset"/>
                     <Button x:Name="SaveButton" Style="{StaticResource ButtonStyle}" Content="저장" CommandParameter="Save"/>
                     <Button x:Name="LoadButton" Style="{StaticResource ButtonStyle}" Content="LOAD" CommandParameter="Load"/>
                     <Button x:Name="SearchButton" Style="{StaticResource ButtonStyle}" Content="검색" CommandParameter="Search"/>
-                    <!--<Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" Content="수정" CommandParameter="Fix"/>-->
+                    <Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" Content="수정" CommandParameter="Fix"/>
                     <Button x:Name="DeleteButton" Style="{StaticResource ButtonStyle}" Content="삭제" CommandParameter="Delete"/>
-                    <Button x:Name="ResetButton" Style="{StaticResource ButtonStyle}" Content="초기화" CommandParameter="Reset"/>
-                    
+
                 </WrapPanel>
             </Grid>
 

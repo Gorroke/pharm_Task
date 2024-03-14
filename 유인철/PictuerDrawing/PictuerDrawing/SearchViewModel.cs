@@ -40,14 +40,14 @@ namespace PictuerDrawing
             // DB에 그림 제목으로 찾아서 캔버스 그리고 찾아오기
             can.Children.Clear();
             DB db = DB.GetInstance();
-            string query = $"SELECT Shape, ShapeNum FROM PictureObject Where PictureName = {SearchName}";
+            string query = $"SELECT Shape, ShapeNum FROM PictureObject Where PictureName = '{SearchName}'";
             List<DBObject> PictureObject = db.SelectObjectDB(query);
             foreach (DBObject obj in PictureObject)
             {
                 switch (obj.Shapename)
                 {
                     case "Line":
-                        query = $"SELECT X1,X2,Y1,Y2,Stroke,StrokeThickness FROM PictureLine Where PictureName = {SearchName} And LineNum = {obj.Shapenun}";
+                        query = $"SELECT X1,X2,Y1,Y2,Stroke,StrokeThickness FROM PictureLine Where PictureName = '{SearchName}' And LineNum = {obj.Shapenun}";
                         DBLine dbl = db.SelectLineDB(query);
                         Line line = new Line
                         {
@@ -61,7 +61,7 @@ namespace PictuerDrawing
                         can.Children.Add(line);
                         break;
                     case "Rectangle":
-                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureRectangle Where PictureName = {SearchName} And RectNum = {obj.Shapenun}";
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureRectangle Where PictureName = '{SearchName}' And RectNum = {obj.Shapenun}";
                         DBRectangle dbr = db.SelectRectDB(query);
                         Rectangle rect = new Rectangle
                         {
@@ -75,7 +75,7 @@ namespace PictuerDrawing
                         can.Children.Add(rect);
                         break;
                     case "Polygon":
-                        query = $"SELECT PointOne,Stroke,StrokeThickness,PointTwo,PointThree FROM PicturePolygon Where PictureName = {SearchName} And PolyNum = {obj.Shapenun}";
+                        query = $"SELECT PointOne,Stroke,StrokeThickness,PointTwo,PointThree FROM PicturePolygon Where PictureName = '{SearchName}' And PolyNum = {obj.Shapenun}";
                         DBPolygon dbp = db.SelectPolyDB(query);
                         PointCollection points = new PointCollection();
                         points.Add(Point.Parse(dbp.PointOne));
@@ -90,7 +90,7 @@ namespace PictuerDrawing
                         can.Children.Add(polygon);
                         break;
                     case "Ellipse":
-                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureEllipse Where PictureName = {SearchName} And ElliNum = {obj.Shapenun}";
+                        query = $"SELECT MarginTop,Width,Height,Stroke,StrokeThickness,MarginLeft FROM PictureEllipse Where PictureName = '{SearchName}' And ElliNum = {obj.Shapenun}";
                         DBEllipse dbe = db.SelectEliiDB(query);
                         Ellipse elli = new Ellipse
                         {

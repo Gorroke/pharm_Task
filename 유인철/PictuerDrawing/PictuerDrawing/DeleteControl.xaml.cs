@@ -23,6 +23,12 @@ namespace PictuerDrawing
         public DeleteControl()
         {
             InitializeComponent();
+            DeleteViewModel vm = new DeleteViewModel();
+            this.DataContext = vm;
+            if (vm.CloseAction == null)
+            {
+                vm.CloseAction = new Action(() => Window.GetWindow(this).Close());
+            }
         }
     }
 }
