@@ -25,5 +25,12 @@ namespace PictuerDrawing
             InitializeComponent();
             this.DataContext = new DrawingViewModel(PictureCanvas, ListBox);
         }
+        private void OnListBoxItemDoubleClick(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is DrawingViewModel viewModel && sender is ListBoxItem listBoxItem)
+            {
+                viewModel.listboxcommand.Execute(listBoxItem.DataContext);
+            }
+        }
     }
 }

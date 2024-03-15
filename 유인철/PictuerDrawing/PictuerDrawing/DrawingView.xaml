@@ -3,21 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:ie="http://schemas.microsoft.com/expression/2010/interactions"
              xmlns:local="clr-namespace:PictuerDrawing"
+             xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="1000">
 
     <UserControl.Resources>
-        
         <Style TargetType="Button" x:Key="ButtonStyle">
             <Setter Property="Width" Value="40"/>
             <Setter Property="Height" Value="40"/>
             <Setter Property="Background" Value="White"/>
             <Setter Property="Command" Value="{Binding ButtonCommand}"/>
         </Style>
-        
+
         <Style TargetType="WrapPanel" x:Key="WrapStyle">
             <Setter Property="Orientation" Value="Horizontal"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -31,14 +30,60 @@
         </Style>
     </UserControl.Resources>
 
+    
     <Grid Background="White">
-        
+    
         <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        
         <Grid Grid.Row="0">
+            <Menu Background="White">
+                <MenuItem Header="입력" FontSize="20" >
+                    <MenuItem Header="Pen" Command="{Binding ButtonCommand}" CommandParameter="Pen"/>
+                    <Separator/>
+                    <MenuItem Header="Rectangle" Command="{Binding ButtonCommand}" CommandParameter="Rectangle"/>
+                    <Separator/>
+                    <MenuItem Header="Polygon" Command="{Binding ButtonCommand}" CommandParameter="Polygon"/>
+                    <Separator/>
+                    <MenuItem Header="Circle" Command="{Binding ButtonCommand}" CommandParameter="Circle"/>
+                    <Separator/>
+                    <MenuItem Header="Reset" Command="{Binding ButtonCommand}" CommandParameter="Reset"/>
+                    <Separator/>
+                    <MenuItem Header="Undo" Command="{Binding ButtonCommand}" CommandParameter="Undo"/>
+                    <Separator/>
+                    <MenuItem Header="Redo" Command="{Binding ButtonCommand}" CommandParameter="Redo"/>
+                </MenuItem>
+                <MenuItem Header="파일" FontSize="20">
+                    <MenuItem Header="Save" Command="{Binding ButtonCommand}" CommandParameter="Save"/>
+                    <Separator/>
+                    <MenuItem Header="Load" Command="{Binding ButtonCommand}" CommandParameter="Load"/>
+                    <Separator/>
+                    <MenuItem Header="Fix" Command="{Binding ButtonCommand}" CommandParameter="Fix"/>
+                    <Separator/>
+                    <MenuItem Header="Delete" Command="{Binding ButtonCommand}" CommandParameter="Delete"/>
+                </MenuItem>
+                <MenuItem Header="색상" FontSize="20">
+                    <MenuItem Header="Red" Command="{Binding ButtonCommand}" CommandParameter="Red"/>
+                    <Separator/>
+                    <MenuItem Header="Orange" Command="{Binding ButtonCommand}" CommandParameter="Orange"/>
+                    <Separator/>
+                    <MenuItem Header="Yellow" Command="{Binding ButtonCommand}" CommandParameter="Yellow"/>
+                    <Separator/>
+                    <MenuItem Header="Green" Command="{Binding ButtonCommand}" CommandParameter="Green"/>
+                    <Separator/>
+                    <MenuItem Header="Blue" Command="{Binding ButtonCommand}" CommandParameter="Blue"/>
+                    <Separator/>
+                    <MenuItem Header="Navy" Command="{Binding ButtonCommand}" CommandParameter="Navy"/>
+                    <Separator/>
+                    <MenuItem Header="Purple" Command="{Binding ButtonCommand}" CommandParameter="Purple"/>
+                    <Separator/>
+                    <MenuItem Header="Black" Command="{Binding ButtonCommand}" CommandParameter="Black"/>
+                </MenuItem>
+            </Menu>
+        </Grid>
+        <Grid Grid.Row="1">
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -48,16 +93,36 @@
 
             <Grid Grid.Column="0">
                 <WrapPanel Style="{StaticResource WrapStyle}" Width="200" Height="80">
-                    <Button x:Name="PenButton" Style="{StaticResource ButtonStyle}" Content="펜" CommandParameter="Pen"/>
-                    <Button x:Name="RectButton" Style="{StaticResource ButtonStyle}" Content="사각형" CommandParameter="Square"/>
-                    <Button x:Name="PolyButton" Style="{StaticResource ButtonStyle}" Content="삼각형" CommandParameter="Angle"/>
-                    <Button x:Name="CircleButton" Style="{StaticResource ButtonStyle}" Content="원" CommandParameter="Circle"/>
-                    <Button x:Name="ResetButton" Style="{StaticResource ButtonStyle}" Content="초기화" CommandParameter="Reset"/>
-                    <Button x:Name="SaveButton" Style="{StaticResource ButtonStyle}" Content="저장" CommandParameter="Save"/>
-                    <Button x:Name="LoadButton" Style="{StaticResource ButtonStyle}" Content="LOAD" CommandParameter="Load"/>
-                    <Button x:Name="SearchButton" Style="{StaticResource ButtonStyle}" Content="검색" CommandParameter="Search"/>
-                    <Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" Content="수정" CommandParameter="Fix"/>
-                    <Button x:Name="DeleteButton" Style="{StaticResource ButtonStyle}" Content="삭제" CommandParameter="Delete"/>
+                    <Button x:Name="PenButton" Style="{StaticResource ButtonStyle}" CommandParameter="Pen">
+                        <Image Source="Image/Pen.png"/>
+                    </Button>
+                    <Button x:Name="RectButton" Style="{StaticResource ButtonStyle}" CommandParameter="Square">
+                        <Image Source="Image/rect.png"/>
+                    </Button>
+                    <Button x:Name="PolyButton" Style="{StaticResource ButtonStyle}" CommandParameter="Angle">
+                        <Image Source="Image/angle.png"/>
+                    </Button>
+                    <Button x:Name="CircleButton" Style="{StaticResource ButtonStyle}" CommandParameter="Circle">
+                        <Image Source="Image/circle.png"/>
+                    </Button>
+                    <Button x:Name="ResetButton" Style="{StaticResource ButtonStyle}" CommandParameter="Reset">
+                        <Image Source="Image/clear.png"/>
+                    </Button>
+                    <Button x:Name="SaveButton" Style="{StaticResource ButtonStyle}" CommandParameter="Save">
+                        <Image Source="Image/Save.png"/>
+                    </Button>
+                    <Button x:Name="LoadButton" Style="{StaticResource ButtonStyle}" CommandParameter="Load">
+                        <Image Source="Image/Load.png"/>
+                    </Button>
+                    <Button x:Name="SearchButton" Style="{StaticResource ButtonStyle}" CommandParameter="Search">
+                        <Image Source="Image/search.png"/>
+                    </Button>
+                    <Button x:Name="FixButton" Style="{StaticResource ButtonStyle}" CommandParameter="Fix">
+                        <Image Source="Image/fix.png"/>
+                    </Button>
+                    <Button x:Name="DeleteButton" Style="{StaticResource ButtonStyle}" CommandParameter="Delete">
+                        <Image Source="Image/delete.png"/>
+                    </Button>
 
                 </WrapPanel>
             </Grid>
@@ -76,11 +141,18 @@
             </Grid>
 
             <Grid Grid.Column="2">
-                <ListBox x:Name="ListBox" Width="250" ItemsSource="{Binding CanvasListName}"/>
+                <ListBox x:Name="ListBox" Width="250" ItemsSource="{Binding CanvasListName}" Margin="0,10,0,10">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <EventSetter Event="MouseDoubleClick" Handler="OnListBoxItemDoubleClick"/>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                </ListBox>
+
             </Grid>
             
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
 
             <Canvas x:Name="PictureCanvas" Background="White"/>
 

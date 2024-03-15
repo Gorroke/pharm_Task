@@ -10,11 +10,14 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
+using Prism.Commands;
 
 namespace PictuerDrawing
 {
     internal class DrawingViewModel : INotifyPropertyChanged
     {
+        private readonly Stack<UIElement> UIUndostack = new Stack<UIElement>();
+        private readonly Stack<UIElement> UIRedostack = new Stack<UIElement>();
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
@@ -94,6 +97,7 @@ namespace PictuerDrawing
                         line.Y2 = e.GetPosition(can).Y;
                         CurrentPoint = e.GetPosition(can);
                         can.Children.Add(line);
+                        UIUndostack.Push(line);
                     }
                     break;
                 case 1:
@@ -180,16 +184,19 @@ namespace PictuerDrawing
         {
             polygon.Opacity = 1;
             polygon.Stroke = CopyColor(brush);
+            UIUndostack.Push(polygon);
         }
         private void SetRectangle() // 사각형 유지
         {
             rect.Opacity = 1;
             rect.Stroke = CopyColor(brush);
+            UIUndostack.Push(rect);
         }
         private void SetEllipse() // 원 유지
         {
             ellipse.Opacity = 1;
             ellipse.Stroke = CopyColor(brush);
+            UIUndostack.Push(ellipse);
         }
         private SolidColorBrush CopyColor(SolidColorBrush b)
         {
@@ -204,6 +211,7 @@ namespace PictuerDrawing
             can.MouseMove += Canvas_MouseMove;
             can.MouseLeftButtonDown += Canvas_MouseDown;
             can.MouseLeftButtonUp += Canvas_MouseUp;
+            listboxcommand = new RelayCommand(doubleclicklistbox);
             ButtonCommand = new RelayCommand(ButtonAction);
             CanvasListName = new ObservableCollection<string>();
             string qurey = "Select PictureName from PictureList";
@@ -211,6 +219,7 @@ namespace PictuerDrawing
             CanvasListName = db.SelectListName(qurey);
             savelistbox = listbox;
         }
+
 
         SolidColorBrush brush = new SolidColorBrush(Colors.Black);
 
@@ -271,6 +280,12 @@ namespace PictuerDrawing
                     break;
                 case "Black":
                     brush.Color = Colors.Black;
+                    break;
+                case "Undo":
+                    UndoStack_Command();
+                    break;
+                case "Redo":
+                    RedoStack_Command();
                     break;
             }
         }
@@ -443,6 +458,7 @@ namespace PictuerDrawing
             SaveCanvas(can, Loadstring, 1);
             MessageBox.Show("수정 완료");
             can.Children.Clear();
+            savelistbox.SelectedIndex = -1;
         }
         private void Delete()
         {
@@ -462,6 +478,7 @@ namespace PictuerDrawing
         private void Reset()
         {
             can.Children.Clear();
+            savelistbox.SelectedIndex = -1;
         }
         private void DeleteDB()
         {
@@ -476,6 +493,33 @@ namespace PictuerDrawing
             db.SaveDB(qurey);
             qurey = $"Delete from PictureRectangle where PictureName = '{Loadstring}'";
             db.SaveDB(qurey);
+        }
+
+        public ICommand listboxcommand { get; set; }
+
+        private void doubleclicklistbox(object sender)
+        {
+            can.Children.Clear();
+            LoadCanvas(savelistbox.SelectedItem.ToString());
+        }
+
+        private void UndoStack_Command()
+        {
+            if(UIUndostack.Count > 0)
+            {
+                UIElement ue = UIUndostack.Pop();
+                can.Children.Remove(ue);
+                UIRedostack.Push(ue);
+            }
+        }
+        private void RedoStack_Command()
+        {
+            if (UIRedostack.Count > 0)
+            {
+                UIElement ue = UIRedostack.Pop();
+                can.Children.Add(ue);
+                UIUndostack.Push(ue);
+            }
         }
     }
 }
