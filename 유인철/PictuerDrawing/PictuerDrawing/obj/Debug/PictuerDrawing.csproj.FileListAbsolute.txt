@@ -29,3 +29,12 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerD
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\SubWindow.baml
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\NamingControl.g.cs
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\obj\Debug\NamingControl.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.Wpf.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.xml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.Wpf.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\Prism.Wpf.xml

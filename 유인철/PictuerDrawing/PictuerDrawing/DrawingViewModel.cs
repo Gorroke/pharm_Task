@@ -31,6 +31,8 @@ namespace PictuerDrawing
         Ellipse ellipse;
         Polygon polygon;
         private ListBox savelistbox;
+        double strokethickness = 1;
+        
 
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -63,6 +65,7 @@ namespace PictuerDrawing
         {
             polygon = new Polygon();
             polygon.Stroke = brush;
+            polygon.StrokeThickness = strokethickness;
             can.Children.Add(polygon);
         }
 
@@ -70,6 +73,7 @@ namespace PictuerDrawing
         {
             ellipse = new Ellipse();
             ellipse.Stroke = brush;
+            ellipse.StrokeThickness = strokethickness;
             can.Children.Add(ellipse);
         }
 
@@ -77,6 +81,7 @@ namespace PictuerDrawing
         {
             rect = new Rectangle();
             rect.Stroke = brush;
+            rect.StrokeThickness = strokethickness;
             can.Children.Add(rect);
         }
 
@@ -90,7 +95,7 @@ namespace PictuerDrawing
                     {
                         Line line = new Line();
                         line.Stroke = CopyColor(brush);
-
+                        line.StrokeThickness = strokethickness;
                         line.X1 = CurrentPoint.X;
                         line.Y1 = CurrentPoint.Y;
                         line.X2 = e.GetPosition(can).X;
@@ -218,6 +223,7 @@ namespace PictuerDrawing
             DB db = DB.GetInstance();
             CanvasListName = db.SelectListName(qurey);
             savelistbox = listbox;
+            _color = new SolidColorBrush(Colors.Black);
         }
 
 
@@ -259,33 +265,53 @@ namespace PictuerDrawing
                     break;
                 case "Red":
                     brush.Color = Colors.Red;
+                    color.Color = Colors.Red;
                     break;
                 case "Orange":
                     brush.Color = Colors.Orange;
+                    color.Color = Colors.Orange;
                     break;
                 case "Yellow":
                     brush.Color = Colors.Yellow;
+                    color.Color = Colors.Yellow;
                     break;
                 case "Green":
                     brush.Color = Colors.Green;
+                    color.Color = Colors.Green;
                     break;
                 case "Blue":
                     brush.Color = Colors.Blue;
+                    color.Color = Colors.Blue;
                     break;
                 case "Navy":
                     brush.Color = Colors.Navy;
+                    color.Color = Colors.Navy;
                     break;
                 case "Purple":
                     brush.Color = Colors.Purple;
+                    color.Color = Colors.Purple;
                     break;
                 case "Black":
                     brush.Color = Colors.Black;
+                    color.Color = Colors.Black;
                     break;
                 case "Undo":
                     UndoStack_Command();
                     break;
                 case "Redo":
                     RedoStack_Command();
+                    break;
+                case "1pt":
+                    strokethickness = 1;
+                    break;
+                case "3pt":
+                    strokethickness = 3;
+                    break;
+                case "5pt":
+                    strokethickness = 5;
+                    break;
+                case "8pt":
+                    strokethickness = 8;
                     break;
             }
         }
@@ -300,6 +326,16 @@ namespace PictuerDrawing
             {
                 _CanvasListName = value;
                 OnPropertyChanged("CanvasListName");
+            }
+        }
+        SolidColorBrush _color;
+        public SolidColorBrush color
+        {
+            get { return _color; }
+            set
+            {
+                _color = value;
+                OnPropertyChanged("color");
             }
         }
         private void Savelist()
@@ -503,7 +539,7 @@ namespace PictuerDrawing
             LoadCanvas(savelistbox.SelectedItem.ToString());
         }
 
-        private void UndoStack_Command()
+        public void UndoStack_Command()
         {
             if(UIUndostack.Count > 0)
             {
@@ -512,7 +548,7 @@ namespace PictuerDrawing
                 UIRedostack.Push(ue);
             }
         }
-        private void RedoStack_Command()
+        public void RedoStack_Command()
         {
             if (UIRedostack.Count > 0)
             {

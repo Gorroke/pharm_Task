@@ -20,16 +20,30 @@ namespace PictuerDrawing
     /// </summary>
     public partial class DrawingView : UserControl
     {
+        DrawingViewModel dvm;
         public DrawingView()
         {
             InitializeComponent();
-            this.DataContext = new DrawingViewModel(PictureCanvas, ListBox);
+            dvm = new DrawingViewModel(PictureCanvas, ListBox);
+            this.DataContext = dvm;
         }
         private void OnListBoxItemDoubleClick(object sender, RoutedEventArgs e)
         {
             if (DataContext is DrawingViewModel viewModel && sender is ListBoxItem listBoxItem)
             {
                 viewModel.listboxcommand.Execute(listBoxItem.DataContext);
+            }
+        }
+
+        private void UserControl_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Z && Keyboard.Modifiers == ModifierKeys.Control)
+            {
+                dvm.UndoStack_Command();
+            }
+            if (e.Key == Key.Y && Keyboard.Modifiers == ModifierKeys.Control)
+            {
+                dvm.RedoStack_Command();
             }
         }
     }

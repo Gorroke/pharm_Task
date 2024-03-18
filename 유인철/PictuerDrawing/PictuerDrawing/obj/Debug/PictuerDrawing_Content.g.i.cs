@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/search.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/redo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("image/undo.png")]
 
 

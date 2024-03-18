@@ -30,7 +30,7 @@ namespace PictuerDrawing
         public double Y2 { get; set; }
         public string Stroke { get; set; }
         public string StrokeThickness { get; set; }
-        public DBLine(string x1, string y1, string x2, string y2, string strokecolor, string strokethickness)
+        public DBLine(string x1, string x2, string y1, string y2, string strokecolor, string strokethickness)
         {
             X1 = Double.Parse(x1);
             Y1 = Double.Parse(y1);
