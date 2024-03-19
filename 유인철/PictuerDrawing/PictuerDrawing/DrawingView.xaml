@@ -6,6 +6,7 @@
              xmlns:ie="http://schemas.microsoft.com/expression/2010/interactions"
              xmlns:local="clr-namespace:PictuerDrawing"
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" 
+             xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
              mc:Ignorable="d" 
              d:DesignHeight="800" d:DesignWidth="1300" Focusable="True" Keyboard.KeyDown="UserControl_KeyDown">
 
@@ -155,7 +156,7 @@
             </Grid>
             <Grid Grid.Column="3" Background="LightGray">
                 <Border BorderBrush="Black" BorderThickness="0,1,1,0"/>
-                <WrapPanel Style="{StaticResource WrapStyle}" Width="200" Height="100" Margin="0,0,0,25">
+                <WrapPanel Style="{StaticResource WrapStyle}" Width="200" Height="100" Margin="0,0,110,25">
                     <Button x:Name="RedButton" Style="{StaticResource ColorButtonStyle}" Background="Red" CommandParameter="Red"/>
                     <Button x:Name="OrangeButton" Style="{StaticResource ColorButtonStyle}" Background="Orange" CommandParameter="Orange"/>
                     <Button x:Name="YellowButton" Style="{StaticResource ColorButtonStyle}" Background="Yellow" CommandParameter="Yellow"/>
@@ -166,7 +167,7 @@
                     <Button x:Name="BlackButton" Style="{StaticResource ColorButtonStyle}" Background="Black" CommandParameter="Black"/>
                 </WrapPanel>
                 <Label Content="색상 지정" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25" VerticalContentAlignment="Bottom"/>
-                
+                <xctk:ColorPicker x:Name="Selectcolor" Width="100" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,25" SelectedColor="{Binding colorspic}" SelectedColorChanged="Selectcolor_SelectedColorChanged"/>
             </Grid>
             <Grid Grid.Column="4" Background="Beige">
                 <Border BorderBrush="Black" BorderThickness="0,1,1,0"/>
@@ -189,7 +190,7 @@
                         </Style>
                     </ListBox.ItemContainerStyle>
                 </ListBox>
-                <Label Content="저장한 그림" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25" VerticalContentAlignment="Bottom"/>
+                <Label Content="저장한 그림 리스트" HorizontalAlignment="Center" VerticalAlignment="Bottom" FontSize="25" VerticalContentAlignment="Bottom"/>
             </Grid>
             
         </Grid>
@@ -197,8 +198,6 @@
             <Border BorderBrush="Black" BorderThickness="0,1,0,0">
                 <Canvas x:Name="PictureCanvas" Background="White" Margin="50,0,50,0" />
             </Border>
-            
-
         </Grid>
     </Grid>
 </UserControl>

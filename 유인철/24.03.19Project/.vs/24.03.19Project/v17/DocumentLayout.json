@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\RelayCommand.cs",
+              "RelativeToolTip": "24.03.19Project\\RelayCommand.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACEAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T05:51:06.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserViewModel.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\UserViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserViewModel.cs",
+              "RelativeToolTip": "24.03.19Project\\UserViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-19T05:04:23.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
+              "RelativeDocumentMoniker": "24.03.19Project\\UserView.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
+              "RelativeToolTip": "24.03.19Project\\UserView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-19T05:03:38.8Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

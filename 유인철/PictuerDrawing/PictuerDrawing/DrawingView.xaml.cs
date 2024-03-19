@@ -34,7 +34,7 @@ namespace PictuerDrawing
                 viewModel.listboxcommand.Execute(listBoxItem.DataContext);
             }
         }
-
+        
         private void UserControl_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Z && Keyboard.Modifiers == ModifierKeys.Control)
@@ -44,6 +44,14 @@ namespace PictuerDrawing
             if (e.Key == Key.Y && Keyboard.Modifiers == ModifierKeys.Control)
             {
                 dvm.RedoStack_Command();
+            }
+        }
+
+        private void Selectcolor_SelectedColorChanged(object sender, RoutedPropertyChangedEventArgs<Color?> e)
+        {
+            if(DataContext is DrawingViewModel viewModel)
+            {
+                viewModel.Selectcolorpic((Color)Selectcolor.SelectedColor);
             }
         }
     }

@@ -32,8 +32,18 @@ namespace PictuerDrawing
         Polygon polygon;
         private ListBox savelistbox;
         double strokethickness = 1;
-        
-
+        int linecount = 0;
+        public class linesetting
+        {
+            int linecountsetting { get; set; }
+            Line linessetting {  get; set; }
+            public linesetting (int l, Line line)
+            {
+                linecountsetting = l;
+                linessetting = line;
+            }
+        }
+        List<linesetting> lines = new List<linesetting>();
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             CurrentPoint = e.GetPosition(can);
@@ -103,6 +113,8 @@ namespace PictuerDrawing
                         CurrentPoint = e.GetPosition(can);
                         can.Children.Add(line);
                         UIUndostack.Push(line);
+                        //linesetting ls = new linesetting(linecount, line);
+                        //lines.Add(ls);
                     }
                     break;
                 case 1:
@@ -133,7 +145,8 @@ namespace PictuerDrawing
                         {
                             PointCollection points = new PointCollection();
                             double a = Math.Abs(CurrentPoint.X + pos.X) / 2;
-                            double h = a * Math.Tan(60);
+                            //double h = a * Math.Tan(60);
+                            double h = CurrentPoint.Y;
                             points.Add(new Point(CurrentPoint.X, pos.Y));
                             points.Add(new Point(a, h));
                             points.Add(pos);
@@ -170,6 +183,8 @@ namespace PictuerDrawing
             switch (remote)
             {
                 case 0:
+                    //linecount++;
+                    //UIUndostack.Push(new Line());
                     break;
                 case 1:
                     SetRectangle();
@@ -224,6 +239,7 @@ namespace PictuerDrawing
             CanvasListName = db.SelectListName(qurey);
             savelistbox = listbox;
             _color = new SolidColorBrush(Colors.Black);
+            colorspic = _color.Color;
         }
 
 
@@ -266,34 +282,42 @@ namespace PictuerDrawing
                 case "Red":
                     brush.Color = Colors.Red;
                     color.Color = Colors.Red;
+                    colorspic = Colors.Red;
                     break;
                 case "Orange":
                     brush.Color = Colors.Orange;
                     color.Color = Colors.Orange;
+                    colorspic = Colors.Orange;
                     break;
                 case "Yellow":
                     brush.Color = Colors.Yellow;
                     color.Color = Colors.Yellow;
+                    colorspic = Colors.Yellow;
                     break;
                 case "Green":
                     brush.Color = Colors.Green;
                     color.Color = Colors.Green;
+                    colorspic = Colors.Green;
                     break;
                 case "Blue":
                     brush.Color = Colors.Blue;
                     color.Color = Colors.Blue;
+                    colorspic = Colors.Blue;
                     break;
                 case "Navy":
                     brush.Color = Colors.Navy;
                     color.Color = Colors.Navy;
+                    colorspic = Colors.Navy;
                     break;
                 case "Purple":
                     brush.Color = Colors.Purple;
                     color.Color = Colors.Purple;
+                    colorspic = Colors.Purple;
                     break;
                 case "Black":
                     brush.Color = Colors.Black;
                     color.Color = Colors.Black;
+                    colorspic = Colors.Black;
                     break;
                 case "Undo":
                     UndoStack_Command();
@@ -337,6 +361,22 @@ namespace PictuerDrawing
                 _color = value;
                 OnPropertyChanged("color");
             }
+        }
+        Color _colorspic;
+        public Color colorspic
+        {
+            get { return _colorspic; }
+            set
+            {
+                _colorspic = value;
+                OnPropertyChanged("colorspic");
+            }
+        }
+        public void Selectcolorpic(Color co)
+        {
+            brush.Color = co;
+            color.Color = co;
+            colorspic = co;
         }
         private void Savelist()
         {
@@ -493,7 +533,6 @@ namespace PictuerDrawing
             DeleteDB();
             SaveCanvas(can, Loadstring, 1);
             MessageBox.Show("수정 완료");
-            can.Children.Clear();
             savelistbox.SelectedIndex = -1;
         }
         private void Delete()
@@ -509,7 +548,6 @@ namespace PictuerDrawing
                     break;
                 }
             }
-            can.Children.Clear();
         }
         private void Reset()
         {
