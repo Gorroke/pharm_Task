@@ -6,6 +6,11 @@
              xmlns:local="clr-namespace:_24._03._19Project"
              mc:Ignorable="d" 
              d:DesignHeight="740" d:DesignWidth="1600">
+
+    <UserControl.DataContext>
+        <local:UserViewModel/>
+    </UserControl.DataContext>
+    
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -14,14 +19,19 @@
 
         <Grid Grid.Column="0">
             <Label Content="처방 목록" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="50,70,0,0"/>
-            <Calendar x:Name="SelectDate" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-            <ListView x:Name="PPRESCR" FontSize="15" Height="530" VerticalAlignment="Bottom">
+            <Calendar x:Name="SelectDate" VerticalAlignment="Top" HorizontalAlignment="Right" SelectedDate="{Binding SelectDateTime}" SelectedDatesChanged="SelectDate_SelectedDatesChanged"/>
+            <ListView x:Name="PPRESCR" FontSize="15" Height="530" VerticalAlignment="Bottom" ItemsSource="{Binding PPRESCRList}" SelectedItem="{Binding Selectlistview}">
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="순번" Width="80"/>
-                        <GridViewColumn Header="이름" Width="80"/>
-                        <GridViewColumn Header="생년월일" Width="120"/>
-                        <GridViewColumn Header="접수시간" Width="115"/>
+                        <GridViewColumn Header="조제번호" Width="80" DisplayMemberBinding="{Binding Number}"/>
+                        <GridViewColumn Header="이름" Width="80" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="생년월일" Width="120" DisplayMemberBinding="{Binding Birthday}"/>
+                        <GridViewColumn Header="접수시간" Width="115" DisplayMemberBinding="{Binding Pres_Time}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
@@ -35,17 +45,19 @@
             
             <Grid Grid.Row="0">
                 <Label Content="약품 목록" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="10,5,0,0"/>
-                <ListView x:Name="PDRUDRUG" FontSize="15" Height="370" VerticalAlignment="Bottom">
+                <ListView x:Name="PDRUDRUG" FontSize="15" Height="370" VerticalAlignment="Bottom" ItemsSource="{Binding PDRUDRUGList}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="약품명" Width="245"/>
-                            <GridViewColumn Header="약품코드" Width="100"/>
-                            <GridViewColumn Header="1회복용량" Width="100"/>
-                            <GridViewColumn Header="하루N번" Width="100"/>
-                            <GridViewColumn Header="복용일수" Width="100"/>
-                            <GridViewColumn Header="약품단위" Width="100"/>
-                            <GridViewColumn Header="복용코드" Width="100"/>
-                            <GridViewColumn Header="복용법" Width="340"/>
+                            <GridViewColumn Header="약품명" Width="245" DisplayMemberBinding="{Binding Name}"/>
+                            <GridViewColumn Header="약품코드" Width="100" DisplayMemberBinding="{Binding DrugCode}"/>
+                            <GridViewColumn Header="1회복용량" Width="100" DisplayMemberBinding="{Binding Eat}"/>
+                            <GridViewColumn Header="하루N번" Width="100" DisplayMemberBinding="{Binding Onedayeat}"/>
+                            <GridViewColumn Header="복용일수" Width="100" DisplayMemberBinding="{Binding Alleat}"/>
+                            <GridViewColumn Header="약품단위" Width="100" DisplayMemberBinding="{Binding DrugUnit}"/>
+                            <!--
+                            <GridViewColumn Header="복용코드" Width="100" DisplayMemberBinding="{Binding EatCode}"/>
+                            <GridViewColumn Header="복용법" Width="340" DisplayMemberBinding="{Binding EatHow}"/>
+                            -->
                         </GridView>
                     </ListView.View>
                 </ListView>
@@ -53,21 +65,22 @@
 
             <Grid Grid.Row="1">
                 <Label Content="고객 정보" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="10,0,0,0"/>
-                <ListView x:Name="PCUSCUST" FontSize="15" Height="240" VerticalAlignment="Bottom">
+                <ListView x:Name="PCUSCUST" FontSize="15" Height="240" VerticalAlignment="Bottom" ItemsSource="{Binding PCUSCUSTList}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="성명" Width="80"/>
-                            <GridViewColumn Header="나이" Width="80"/>
-                            <GridViewColumn Header="생년월일" Width="120"/>
-                            <GridViewColumn Header="전화번호" Width="120"/>
-                            <GridViewColumn Header="고객메모" Width="130"/>
-                            <GridViewColumn Header="고객메모" Width="125"/>
-                            <GridViewColumn Header="병원명" Width="80"/>
-                            <GridViewColumn Header="진료과" Width="95"/>
-                            <GridViewColumn Header="병원코드" Width="90"/>
-                            <GridViewColumn Header="병원전화번호" Width="100"/>
-                            <GridViewColumn Header="의사명" Width="80"/>
-                            <GridViewColumn Header="의사코드" Width="80"/>
+                            <GridViewColumn Header="성명" Width="70" DisplayMemberBinding="{Binding CName}"/>
+                            <!--<GridViewColumn Header="나이" Width="50" DisplayMemberBinding="{Binding Age}"/>-->
+                            <GridViewColumn Header="생년월일" Width="120" DisplayMemberBinding="{Binding CBirthDay}"/>
+                            <GridViewColumn Header="고객메모1" Width="120" DisplayMemberBinding="{Binding Memo3}"/>
+                            <GridViewColumn Header="고객메모2" Width="120" DisplayMemberBinding="{Binding MeMo4}"/>
+                            <GridViewColumn Header="전화번호" Width="100" DisplayMemberBinding="{Binding Hp}"/>
+                            <GridViewColumn Header="질병코드" Width="90" DisplayMemberBinding="{Binding DiseaseCode}"/>
+                            <GridViewColumn Header="병원명" Width="80" DisplayMemberBinding="{Binding HosName}"/>
+                            <GridViewColumn Header="진료과" Width="95" DisplayMemberBinding="{Binding Partid}"/>
+                            <GridViewColumn Header="병원코드" Width="90" DisplayMemberBinding="{Binding HosCode}"/>
+                            <GridViewColumn Header="병원전화번호" Width="100" DisplayMemberBinding="{Binding HosTel}"/>
+                            <GridViewColumn Header="의사명" Width="80" DisplayMemberBinding="{Binding DrName}"/>
+                            <GridViewColumn Header="의사코드" Width="80" DisplayMemberBinding="{Binding DrCode}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

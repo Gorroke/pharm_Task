@@ -24,5 +24,28 @@ namespace _24._03._19Project
         {
             InitializeComponent();
         }
+
+        private void SelectDate_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(DataContext is UserViewModel userViewModel)
+            {
+                userViewModel.SelectedDates();
+            }
+        }
+
+        private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            PDRUDRUG = null;
+            PCUSCUST = null;
+            if (DataContext is UserViewModel userViewModel)
+            {
+                if(PPRESCR.SelectedItems != null)
+                {
+                    string Pres_id = PPRESCR.SelectedItems[0].ToString();
+                    userViewModel.SelectedPDRUDRUG(Pres_id);
+                    userViewModel.SelectedPCUSCUST(Pres_id);
+                }
+            }
+        }
     }
 }

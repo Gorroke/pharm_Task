@@ -16,8 +16,8 @@ namespace PictuerDrawing
 {
     internal class DrawingViewModel : INotifyPropertyChanged
     {
-        private readonly Stack<UIElement> UIUndostack = new Stack<UIElement>();
-        private readonly Stack<UIElement> UIRedostack = new Stack<UIElement>();
+        private readonly Stack<List<UIElement>> UIUndostack = new Stack<List<UIElement>>();
+        private readonly Stack<List<UIElement>> UIRedostack = new Stack<List<UIElement>>();
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
@@ -32,24 +32,14 @@ namespace PictuerDrawing
         Polygon polygon;
         private ListBox savelistbox;
         double strokethickness = 1;
-        int linecount = 0;
-        public class linesetting
-        {
-            int linecountsetting { get; set; }
-            Line linessetting {  get; set; }
-            public linesetting (int l, Line line)
-            {
-                linecountsetting = l;
-                linessetting = line;
-            }
-        }
-        List<linesetting> lines = new List<linesetting>();
+        List<UIElement> linelist;
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             CurrentPoint = e.GetPosition(can);
             switch (remote)
             {
                 case 0:
+                    linelist = new List<UIElement>();
                     break;
                 case 1:
                     if (rect == null)
@@ -112,9 +102,7 @@ namespace PictuerDrawing
                         line.Y2 = e.GetPosition(can).Y;
                         CurrentPoint = e.GetPosition(can);
                         can.Children.Add(line);
-                        UIUndostack.Push(line);
-                        //linesetting ls = new linesetting(linecount, line);
-                        //lines.Add(ls);
+                        linelist.Add(line);
                     }
                     break;
                 case 1:
@@ -183,8 +171,7 @@ namespace PictuerDrawing
             switch (remote)
             {
                 case 0:
-                    //linecount++;
-                    //UIUndostack.Push(new Line());
+                    SetLine();
                     break;
                 case 1:
                     SetRectangle();
@@ -200,23 +187,39 @@ namespace PictuerDrawing
                     break;
             }
         }
+        private void SetLine()
+        {
+            List<UIElement> setlinelist = new List<UIElement>();
+            foreach(UIElement item in linelist)
+            {
+                setlinelist.Add(item);
+            }
+            UIUndostack.Push(setlinelist);
+            linelist.Clear();
+        }
         private void SetPolygon() // 삼각형 유지
         {
             polygon.Opacity = 1;
             polygon.Stroke = CopyColor(brush);
-            UIUndostack.Push(polygon);
+            List<UIElement> polylist = new List<UIElement>();
+            polylist.Add(polygon);
+            UIUndostack.Push(polylist);
         }
         private void SetRectangle() // 사각형 유지
         {
             rect.Opacity = 1;
             rect.Stroke = CopyColor(brush);
-            UIUndostack.Push(rect);
+            List<UIElement> rectlist = new List<UIElement>();
+            rectlist.Add(rect);
+            UIUndostack.Push(rectlist);
         }
         private void SetEllipse() // 원 유지
         {
             ellipse.Opacity = 1;
             ellipse.Stroke = CopyColor(brush);
-            UIUndostack.Push(ellipse);
+            List<UIElement> ellilist = new List<UIElement>();
+            ellilist.Add(ellipse);
+            UIUndostack.Push(ellilist);
         }
         private SolidColorBrush CopyColor(SolidColorBrush b)
         {
@@ -450,7 +453,6 @@ namespace PictuerDrawing
                 string Canvasname = savelistbox.SelectedItem.ToString();
                 Loadstring = savelistbox.SelectedItem.ToString();
                 LoadCanvas(Canvasname);
-                //savelistbox.SelectedIndex = -1;
             }
         }
         string Loadstring;
@@ -581,18 +583,24 @@ namespace PictuerDrawing
         {
             if(UIUndostack.Count > 0)
             {
-                UIElement ue = UIUndostack.Pop();
-                can.Children.Remove(ue);
-                UIRedostack.Push(ue);
+                List<UIElement> Undolist = UIUndostack.Pop();
+                foreach(UIElement uie in Undolist)
+                {
+                    can.Children.Remove(uie);
+                }
+                UIRedostack.Push(Undolist);
             }
         }
         public void RedoStack_Command()
         {
             if (UIRedostack.Count > 0)
             {
-                UIElement ue = UIRedostack.Pop();
-                can.Children.Add(ue);
-                UIUndostack.Push(ue);
+                List<UIElement> Redolist = UIRedostack.Pop();
+                foreach(UIElement uie in Redolist)
+                {
+                    can.Children.Add(uie);
+                }
+                UIUndostack.Push(Redolist);
             }
         }
     }
