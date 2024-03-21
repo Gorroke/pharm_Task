@@ -35,16 +35,14 @@ namespace _24._03._19Project
 
         private void ListViewItem_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            PDRUDRUG = null;
-            PCUSCUST = null;
-            if (DataContext is UserViewModel userViewModel)
+            if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
             {
-                if(PPRESCR.SelectedItems != null)
-                {
-                    string Pres_id = PPRESCR.SelectedItems[0].ToString();
-                    userViewModel.SelectedPDRUDRUG(Pres_id);
-                    userViewModel.SelectedPCUSCUST(Pres_id);
-                }
+                PDRUDRUG = null;
+                PCUSCUST = null;
+                Prescription psi = (Prescription)PPRESCR.SelectedItems[0];
+                string Pres_id = psi.Number;
+                userViewModel.SelectedPDRUDRUG(Pres_id);
+                userViewModel.SelectedPCUSCUST(Pres_id);
             }
         }
     }

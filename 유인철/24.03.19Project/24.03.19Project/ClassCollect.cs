@@ -26,7 +26,7 @@ namespace _24._03._19Project
             Pres_Time = time;
         }
     }
-    public class Medicine // PDRUDRUG 와 PPRESCR14 Join
+    public class Medicine // PDRUDRUG 와 PPRESCR4 Join
     {
         public string Name { get; set; } // 약품명 Drug_Name
         public string DrugCode { get; set; } // 약품코드 Drug_ID

@@ -20,7 +20,7 @@
         <Grid Grid.Column="0">
             <Label Content="처방 목록" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="40" Margin="50,70,0,0"/>
             <Calendar x:Name="SelectDate" VerticalAlignment="Top" HorizontalAlignment="Right" SelectedDate="{Binding SelectDateTime}" SelectedDatesChanged="SelectDate_SelectedDatesChanged"/>
-            <ListView x:Name="PPRESCR" FontSize="15" Height="530" VerticalAlignment="Bottom" ItemsSource="{Binding PPRESCRList}" SelectedItem="{Binding Selectlistview}">
+            <ListView x:Name="PPRESCR" FontSize="15" Height="530" VerticalAlignment="Bottom" ItemsSource="{Binding PPRESCRList, Mode=TwoWay}" SelectedItem="{Binding Selectlistview}">
                 <ListView.ItemContainerStyle>
                     <Style TargetType="ListViewItem">
                         <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>

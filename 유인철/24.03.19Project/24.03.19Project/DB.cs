@@ -106,13 +106,12 @@ namespace _24._03._19Project
                             {
                                 cus = new Customer
                                 (
-                                    reader.GetString(0),
-                                    reader.GetString(2), reader.GetString(3),
-                                    reader.GetString(4), reader.GetString(5),
-                                    reader.GetString(6), reader.GetString(7),
-                                    reader.GetString(8), reader.GetString(9),
-                                    reader.GetString(10), reader.GetString(11),
-                                    reader.GetString(12)
+                                    reader.GetString(0), reader.GetString(1),
+                                    reader.GetString(2), reader.GetString(3), 
+                                    reader.GetString(4), reader.GetString(5), 
+                                    reader.GetString(6), reader.GetString(7), 
+                                    reader.GetString(8), reader.GetString(9), 
+                                    reader.GetString(10), reader.GetString(11)
                                 );
                                 clist.Add(cus);
                             }

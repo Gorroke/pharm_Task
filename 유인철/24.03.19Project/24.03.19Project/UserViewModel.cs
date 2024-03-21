@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace _24._03._19Project
 {
@@ -19,11 +20,12 @@ namespace _24._03._19Project
         }
         public UserViewModel()
         {
-            _PPRESCRList = new ObservableCollection<Prescription>();
-            _PDRUDRUGList = new ObservableCollection<Medicine>();
-            _PCUSCUSTList = new ObservableCollection<Customer>();
+            PPRESCRList = new ObservableCollection<Prescription>();
+            PDRUDRUGList = new ObservableCollection<Medicine>();
+            PCUSCUSTList = new ObservableCollection<Customer>();
+            SelectedDates();
         }
-        private DateTime _SelectDateTime;
+        private DateTime _SelectDateTime = DateTime.Now;
         public DateTime SelectDateTime
         {
             get { return _SelectDateTime; }
@@ -78,7 +80,7 @@ namespace _24._03._19Project
         }
         public void SelectedDates()
         {
-            string date = SelectDateTime.ToString("yyyyMMDD");
+            string date = SelectDateTime.ToString("yyyyMMdd");
             string qurey = $"Select Pres_Id, ct_name, Inhabitant_id, Pres_Time from PPRESCR1 Where Pres_Date = '{date}'";
             DB db = DB.GetInstance();
             PPRESCRList = db.PreSelectDB(qurey);
@@ -88,7 +90,7 @@ namespace _24._03._19Project
             string qurey = $"Select PDRUDRUG.Drug_Name, PDRUDRUG.Drug_ID, PPRESCR4.One_Qty, PPRESCR4.One_Cnt, PPRESCR4.Total_Cnt, PDRUDRUG.Pres_Unit " +
                 $"from PDRUDRUG Join PPRESCR4 " +
                 $"On PDRUDRUG.Drug_ID = PPRESCR4.Drug_ID " +
-                $"Where PDRUDRUG.Pres_ID = '{Pres_ID}'";
+                $"Where PPRESCR4.Pres_ID = '{Pres_ID}'";
             DB db = DB.GetInstance();
             PDRUDRUGList = db.MedSelectDB(qurey);
         }
