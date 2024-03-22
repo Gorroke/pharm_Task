@@ -22,6 +22,33 @@ namespace _24._03._19Project
             }
             return instance;
         }
+        public List<string> SelectPres_ID(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    List<string> lists = new List<string>();
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                lists.Add(reader.GetString(0));
+                            }
+                        }
+                    }
+                    return lists;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
+                }
+            }
+        }
         public ObservableCollection<Prescription> PreSelectDB(string query)
         {
             using (SqlConnection connection = new SqlConnection(constr))

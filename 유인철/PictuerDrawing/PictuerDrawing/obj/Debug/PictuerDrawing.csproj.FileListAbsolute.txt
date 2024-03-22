@@ -56,3 +56,7 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerD
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\PictureDrawingLibrary.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\PictureDrawingLibrary.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\DrawingLib.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\PictuerDrawing\bin\Debug\DrawingLib.pdb

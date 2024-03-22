@@ -1,0 +1,6 @@
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\bin\Debug\DrawingLib.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\bin\Debug\DrawingLib.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\obj\Debug\DrawingLib.csproj.AssemblyReference.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\obj\Debug\DrawingLib.csproj.CoreCompileInputs.cache
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\obj\Debug\DrawingLib.dll
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\PictuerDrawing\DrawingLib\obj\Debug\DrawingLib.pdb

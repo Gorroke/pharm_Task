@@ -16,3 +16,7 @@ C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.1
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\24.03.19Project.csproj.CoreCompileInputs.cache
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\24.03.19Project.exe
 C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\24.03.19Project.pdb
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\LabelView.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\LabelWindow.g.cs
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\LabelView.baml
+C:\Users\유인철\Documents\GitHub\pharm_Task\유인철\24.03.19Project\24.03.19Project\obj\Debug\LabelWindow.baml

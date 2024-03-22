@@ -41,9 +41,10 @@ namespace _24._03._19Project
                 PCUSCUST = null;
                 Prescription psi = (Prescription)PPRESCR.SelectedItems[0];
                 string Pres_id = psi.Number;
-                userViewModel.SelectedPDRUDRUG(Pres_id);
-                userViewModel.SelectedPCUSCUST(Pres_id);
+                userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
+                userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
             }
         }
+
     }
 }

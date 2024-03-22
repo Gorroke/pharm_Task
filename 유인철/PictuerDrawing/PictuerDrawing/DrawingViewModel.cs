@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Collections.ObjectModel;
 using Prism.Commands;
+using DrawingLib;
 
 namespace PictuerDrawing
 {
@@ -18,12 +19,12 @@ namespace PictuerDrawing
     {
         private readonly Stack<List<UIElement>> UIUndostack = new Stack<List<UIElement>>();
         private readonly Stack<List<UIElement>> UIRedostack = new Stack<List<UIElement>>();
+        Class1 PDL;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-
         private Canvas can;
         int remote = 0;
         private Point CurrentPoint = new Point();
@@ -33,6 +34,7 @@ namespace PictuerDrawing
         private ListBox savelistbox;
         double strokethickness = 1;
         List<UIElement> linelist;
+
         private void Canvas_MouseDown(object sender, MouseButtonEventArgs e)
         {
             CurrentPoint = e.GetPosition(can);
@@ -61,6 +63,7 @@ namespace PictuerDrawing
                     break;
             }
         }
+
         private void CreatePolygon() // 삼각형 만들기
         {
             polygon = new Polygon();
@@ -93,13 +96,15 @@ namespace PictuerDrawing
                 case 0:
                     if (e.LeftButton == MouseButtonState.Pressed) // 선 그리기
                     {
-                        Line line = new Line();
+                        Line line = PDL.DrawingLine
+                            (CurrentPoint.X, e.GetPosition(can).X, CurrentPoint.Y, e.GetPosition(can).Y, CopyColor(brush), strokethickness);
+                        /*Line line = new Line();
                         line.Stroke = CopyColor(brush);
                         line.StrokeThickness = strokethickness;
                         line.X1 = CurrentPoint.X;
                         line.Y1 = CurrentPoint.Y;
                         line.X2 = e.GetPosition(can).X;
-                        line.Y2 = e.GetPosition(can).Y;
+                        line.Y2 = e.GetPosition(can).Y;*/
                         CurrentPoint = e.GetPosition(can);
                         can.Children.Add(line);
                         linelist.Add(line);
@@ -133,7 +138,6 @@ namespace PictuerDrawing
                         {
                             PointCollection points = new PointCollection();
                             double a = Math.Abs(CurrentPoint.X + pos.X) / 2;
-                            //double h = a * Math.Tan(60);
                             double h = CurrentPoint.Y;
                             points.Add(new Point(CurrentPoint.X, pos.Y));
                             points.Add(new Point(a, h));
@@ -165,6 +169,7 @@ namespace PictuerDrawing
                     break;
             }
         }
+
         private void Canvas_MouseUp(object sender, MouseEventArgs e)
         {
             can.ReleaseMouseCapture();
@@ -187,6 +192,7 @@ namespace PictuerDrawing
                     break;
             }
         }
+
         private void SetLine()
         {
             List<UIElement> setlinelist = new List<UIElement>();
@@ -197,6 +203,7 @@ namespace PictuerDrawing
             UIUndostack.Push(setlinelist);
             linelist.Clear();
         }
+
         private void SetPolygon() // 삼각형 유지
         {
             polygon.Opacity = 1;
@@ -205,6 +212,7 @@ namespace PictuerDrawing
             polylist.Add(polygon);
             UIUndostack.Push(polylist);
         }
+
         private void SetRectangle() // 사각형 유지
         {
             rect.Opacity = 1;
@@ -213,6 +221,7 @@ namespace PictuerDrawing
             rectlist.Add(rect);
             UIUndostack.Push(rectlist);
         }
+
         private void SetEllipse() // 원 유지
         {
             ellipse.Opacity = 1;
@@ -221,15 +230,18 @@ namespace PictuerDrawing
             ellilist.Add(ellipse);
             UIUndostack.Push(ellilist);
         }
+
         private SolidColorBrush CopyColor(SolidColorBrush b)
         {
             SolidColorBrush brush1 = new SolidColorBrush(b.Color);
             return brush1;
         }
+
         public ICommand ButtonCommand { get; set; }
 
         public DrawingViewModel(Canvas canvas, ListBox listbox)
         {
+            PDL = new Class1();
             can = canvas;
             can.MouseMove += Canvas_MouseMove;
             can.MouseLeftButtonDown += Canvas_MouseDown;
@@ -244,7 +256,6 @@ namespace PictuerDrawing
             _color = new SolidColorBrush(Colors.Black);
             colorspic = _color.Color;
         }
-
 
         SolidColorBrush brush = new SolidColorBrush(Colors.Black);
 
@@ -343,7 +354,7 @@ namespace PictuerDrawing
             }
         }
         
-        List<Canvas> Canvaslist = new List<Canvas>();
+        //List<Canvas> Canvaslist = new List<Canvas>();
 
         ObservableCollection<string> _CanvasListName;
         public ObservableCollection<string> CanvasListName
@@ -355,6 +366,7 @@ namespace PictuerDrawing
                 OnPropertyChanged("CanvasListName");
             }
         }
+
         SolidColorBrush _color;
         public SolidColorBrush color
         {
@@ -365,6 +377,7 @@ namespace PictuerDrawing
                 OnPropertyChanged("color");
             }
         }
+
         Color _colorspic;
         public Color colorspic
         {
@@ -375,12 +388,14 @@ namespace PictuerDrawing
                 OnPropertyChanged("colorspic");
             }
         }
+
         public void Selectcolorpic(Color co)
         {
             brush.Color = co;
             color.Color = co;
             colorspic = co;
         }
+
         private void Savelist()
         {
             SubWindow sw = new SubWindow(1);
@@ -391,6 +406,7 @@ namespace PictuerDrawing
             CanvasListName.Add(CanvasName);
             can.Children.Clear();
         }
+
         private void SaveCanvas(Canvas c, string CanvasName, int LoadRemote)
         {
             DB db = DB.GetInstance();
@@ -445,6 +461,7 @@ namespace PictuerDrawing
                 }
             }
         }
+
         private void Load()
         {
             if(savelistbox.SelectedItem != null)
@@ -455,7 +472,9 @@ namespace PictuerDrawing
                 LoadCanvas(Canvasname);
             }
         }
+
         string Loadstring;
+
         private void LoadCanvas(string c)
         {
             DB db = DB.GetInstance();
@@ -530,6 +549,7 @@ namespace PictuerDrawing
             SubWindow sw = new SubWindow(0);
             sw.ShowDialog();
         }
+
         private void Fix()
         {
             DeleteDB();
@@ -537,6 +557,7 @@ namespace PictuerDrawing
             MessageBox.Show("수정 완료");
             savelistbox.SelectedIndex = -1;
         }
+
         private void Delete()
         {
             SubWindow sw = new SubWindow(2);
@@ -551,11 +572,13 @@ namespace PictuerDrawing
                 }
             }
         }
+
         private void Reset()
         {
             can.Children.Clear();
             savelistbox.SelectedIndex = -1;
         }
+
         private void DeleteDB()
         {
             DB db = DB.GetInstance();
@@ -591,6 +614,7 @@ namespace PictuerDrawing
                 UIRedostack.Push(Undolist);
             }
         }
+
         public void RedoStack_Command()
         {
             if (UIRedostack.Count > 0)

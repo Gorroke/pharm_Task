@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace _24._03._19Project
 {
@@ -21,9 +22,13 @@ namespace _24._03._19Project
         public Prescription(string num, string name, string birthday, string time)
         {
             Number = num;
-            Name = name;
-            Birthday = birthday;
-            Pres_Time = time;
+            string[] name1 = name.Split(' ');
+            Name = name1[0];
+            string strings = birthday.Substring(0, 6);
+            Birthday = strings;
+            string time1 = time.Substring(0, 2);
+            string time2 = time.Substring(2, 2);
+            Pres_Time = time1 + "시 " + time2 + "분";
         }
     }
     public class Medicine // PDRUDRUG 와 PPRESCR4 Join
@@ -67,9 +72,11 @@ namespace _24._03._19Project
 
         public Customer(string name, /*string age,*/ string birthDay, string memo3, string meMo4, string hp, string diseaseCode, string hosName, string partid, string hosCode, string hosTel, string drName, string drCode)
         {
-            CName = name;
+            string[] name1 = name.Split(' ');
+            CName = name1[0];
             //Birth = age;
-            CBirthDay = birthDay;
+            string strings = birthDay.Substring(0,6);
+            CBirthDay = strings;
             Memo3 = memo3;
             MeMo4 = meMo4;
             Hp = hp;

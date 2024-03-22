@@ -57,11 +57,26 @@
     </ApplicationDefinition>
     <Compile Include="ClassCollect.cs" />
     <Compile Include="DB.cs" />
+    <Compile Include="LabelModelView.cs" />
+    <Compile Include="LabelView.xaml.cs">
+      <DependentUpon>LabelView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LabelWindow.xaml.cs">
+      <DependentUpon>LabelWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RelayCommand.cs" />
     <Compile Include="UserView.xaml.cs">
       <DependentUpon>UserView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserViewModel.cs" />
+    <Page Include="LabelView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LabelWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
