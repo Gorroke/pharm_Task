@@ -57,7 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="ClassCollect.cs" />
     <Compile Include="DB.cs" />
-    <Compile Include="LabelModelView.cs" />
+    <Compile Include="LabelViewModel.cs" />
     <Compile Include="LabelView.xaml.cs">
       <DependentUpon>LabelView.xaml</DependentUpon>
     </Compile>

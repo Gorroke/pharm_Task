@@ -1,0 +1,7 @@
+[2024-03-25 오후 5:44:05] System.UnauthorizedAccessException: 'C:\Windows\system32\BizEnCode.dll' 경로에 대한 액세스가 거부되었습니다.
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.File.InternalCopy(String sourceFileName, String destFileName, Boolean overwrite, Boolean checkHost)
+   위치: System.IO.File.Copy(String sourceFileName, String destFileName, Boolean overwrite)
+   위치: BizPharmSound.Core.RegisterManager.Register_BizEnCode() 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-BizpharmSound\BizPharmSound\BizPharmSound\Core\RegisterManager.cs:줄 46
+[2024-03-25 오후 5:44:37] PharmDB.Update_CustomerInfo => 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-25 오후 5:44:37] MainFormControl.UpdateCustomerInfo => 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.

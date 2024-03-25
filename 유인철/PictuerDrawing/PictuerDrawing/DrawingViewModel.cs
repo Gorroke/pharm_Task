@@ -19,7 +19,7 @@ namespace PictuerDrawing
     {
         private readonly Stack<List<UIElement>> UIUndostack = new Stack<List<UIElement>>();
         private readonly Stack<List<UIElement>> UIRedostack = new Stack<List<UIElement>>();
-        Class1 PDL;
+        DrawingLibrary PDL;
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
         {
@@ -46,25 +46,28 @@ namespace PictuerDrawing
                 case 1:
                     if (rect == null)
                     {
-                        CreateRectangle();
+                        rect = PDL.CreateRect(rect, brush, strokethickness);
+                        can.Children.Add(rect);
                     }
                     break;
                 case 2:
                     if (polygon == null)
                     {
-                        CreatePolygon();
+                        polygon = PDL.CreatePolygon(polygon, brush, strokethickness);
+                        can.Children.Add(polygon);
                     }
                     break;
                 case 3:
                     if (ellipse == null)
                     {
-                        CreateEllipse();
+                        ellipse = PDL.Createelli(ellipse, brush, strokethickness);
+                        can.Children.Add(ellipse);
                     }
                     break;
             }
         }
 
-        private void CreatePolygon() // 삼각형 만들기
+        /*private void CreatePolygon() // 삼각형 만들기
         {
             polygon = new Polygon();
             polygon.Stroke = brush;
@@ -86,7 +89,7 @@ namespace PictuerDrawing
             rect.Stroke = brush;
             rect.StrokeThickness = strokethickness;
             can.Children.Add(rect);
-        }
+        }*/
 
         private void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
@@ -115,7 +118,8 @@ namespace PictuerDrawing
                     {
                         if (rect != null)
                         {
-                            double left = pos.X;
+                            rect = PDL.DrawingMoveRect(pos, CurrentPoint, rect);
+                            /*double left = pos.X;
                             double top = pos.Y;
                             if (pos.X > CurrentPoint.X)
                             {
@@ -127,7 +131,7 @@ namespace PictuerDrawing
                             }
                             rect.Margin = new Thickness(left, top, 0, 0);
                             rect.Width = Math.Abs(pos.X - CurrentPoint.X);
-                            rect.Height = Math.Abs(pos.Y - CurrentPoint.Y);
+                            rect.Height = Math.Abs(pos.Y - CurrentPoint.Y);*/
                         }
                     }
                     break;
@@ -136,13 +140,14 @@ namespace PictuerDrawing
                     {
                         if (polygon != null)
                         {
-                            PointCollection points = new PointCollection();
+                            polygon = PDL.DrawingMovePoly(pos, CurrentPoint, polygon);
+                            /*PointCollection points = new PointCollection();
                             double a = Math.Abs(CurrentPoint.X + pos.X) / 2;
                             double h = CurrentPoint.Y;
                             points.Add(new Point(CurrentPoint.X, pos.Y));
                             points.Add(new Point(a, h));
                             points.Add(pos);
-                            polygon.Points = points;
+                            polygon.Points = points;*/
                         }
                     }
                     break;
@@ -151,7 +156,8 @@ namespace PictuerDrawing
                     {
                         if (ellipse != null)
                         {
-                            double left = pos.X;
+                            ellipse = PDL.DrawingMoveElli(pos, CurrentPoint, ellipse);
+                            /*double left = pos.X;
                             double top = pos.Y;
                             if (pos.X > CurrentPoint.X)
                             {
@@ -163,7 +169,7 @@ namespace PictuerDrawing
                             }
                             ellipse.Margin = new Thickness(left, top, 0, 0);
                             ellipse.Width = Math.Abs(pos.X - CurrentPoint.X);
-                            ellipse.Height = Math.Abs(pos.Y - CurrentPoint.Y);
+                            ellipse.Height = Math.Abs(pos.Y - CurrentPoint.Y);*/
                         }
                     }
                     break;
@@ -241,7 +247,7 @@ namespace PictuerDrawing
 
         public DrawingViewModel(Canvas canvas, ListBox listbox)
         {
-            PDL = new Class1();
+            PDL = new DrawingLibrary();
             can = canvas;
             can.MouseMove += Canvas_MouseMove;
             can.MouseLeftButtonDown += Canvas_MouseDown;
@@ -354,7 +360,6 @@ namespace PictuerDrawing
             }
         }
         
-        //List<Canvas> Canvaslist = new List<Canvas>();
 
         ObservableCollection<string> _CanvasListName;
         public ObservableCollection<string> CanvasListName

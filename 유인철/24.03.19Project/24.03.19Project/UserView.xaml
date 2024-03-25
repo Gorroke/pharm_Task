@@ -39,7 +39,7 @@
 
                 <Grid Grid.Column="0">
                     <Label Content="처방 목록" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40"/>
-                    <Button Width="150" Height="35" Content="라벨지 출력" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5">
+                    <Button Width="150" Height="35" Content="라벨지 출력" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Command="{Binding LabelButton}">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"/>
@@ -66,7 +66,7 @@
                         <DataGridTextColumn Header="접수시간" Width="*" Binding="{Binding Pres_Time}"/>
                     </DataGrid.Columns>
                 </DataGrid>-->
-                <ListView x:Name="PPRESCR" FontSize="15" Height="550" VerticalAlignment="Top" ItemsSource="{Binding PPRESCRList}" SelectedItem="{Binding Selectlistview}" >
+                <ListView x:Name="PPRESCR" FontSize="15" Height="550" VerticalAlignment="Top" ItemsSource="{Binding PPRESCRList}" SelectionChanged="PPRESCR_SelectionChanged">
                     <ListView.ItemContainerStyle>
                         <Style TargetType="ListViewItem">
                             <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
@@ -78,6 +78,7 @@
                                 <TextBlock Text="{Binding Number}" Style="{StaticResource Textblockstyle}"/>
                                 <TextBlock Text="{Binding Name}" Style="{StaticResource Textblockstyle}"/>
                                 <TextBlock Text="{Binding Birthday}" Style="{StaticResource Textblockstyle}"/>
+                                
                                 <TextBlock Text="{Binding Pres_Time}" Style="{StaticResource Textblockstyle}"/>
                             </StackPanel>
                         </DataTemplate>

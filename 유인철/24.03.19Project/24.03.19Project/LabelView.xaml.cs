@@ -23,6 +23,7 @@ namespace _24._03._19Project
         public LabelView()
         {
             InitializeComponent();
+            this.DataContext = new LabelViewModel(LabelPage);
         }
     }
 }

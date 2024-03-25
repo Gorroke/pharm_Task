@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,8 @@ namespace _24._03._19Project
         {
             if(DataContext is UserViewModel userViewModel)
             {
+                userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
+                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedDates();
             }
         }
@@ -39,12 +42,20 @@ namespace _24._03._19Project
             {
                 PDRUDRUG = null;
                 PCUSCUST = null;
-                Prescription psi = (Prescription)PPRESCR.SelectedItems[0];
-                string Pres_id = psi.Number;
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
                 userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
             }
         }
 
+        private void PPRESCR_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
+            {
+                PDRUDRUG = null;
+                PCUSCUST = null;
+                userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
+                userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
+            }
+        }
     }
 }

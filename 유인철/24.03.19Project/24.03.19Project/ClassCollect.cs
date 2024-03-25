@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Metadata.W3cXsd2001;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Xml.Linq;
 
 namespace _24._03._19Project
@@ -87,6 +88,59 @@ namespace _24._03._19Project
             HosTel = hosTel;
             DrName = drName;
             DrCode = drCode;
+        }
+    }
+    public class SelectItem
+    {
+        private static SelectItem instance;
+        public static SelectItem Getinstance()
+        {
+            if (instance == null)
+            {
+                instance = new SelectItem();
+    }
+            return instance;
+        }
+        public string SelectPres_ID { get; set; }
+    }
+    public class LabelUser
+    {
+        public string UserName { get; set; }
+        public string ChkNum { get; set; }
+        public string NowDate { get; set; }
+        public LabelUser(string userName, string chkNum, string nowDate)
+        {
+            string[] name1 = userName.Split(' ');
+            UserName = name1[0];
+            ChkNum = chkNum;
+            string date1 = nowDate.Substring(0, 4);
+            string date2 = nowDate.Substring(4, 2);
+            string date3 = nowDate.Substring(6, 2);
+            NowDate = date1 + "-" + date2 + "-" + date3;
+        }
+    }
+    public class LabelDrug
+    {
+        public string DrugName { get; set; }
+        public string One_Cnt { get; set; }
+        public string Total_Cnt { get; set; }
+        public LabelDrug(string drugName, string onecnt, string totalcnt)
+        {
+            DrugName = drugName;
+            One_Cnt = onecnt;
+            Total_Cnt = totalcnt;
+        }
+    }
+    public class LabelShop
+    {
+        public string Hp_Name { get; set; }
+        public string Hp_Tel { get; set; }
+        public string Hp_Address { get; set; }
+        public LabelShop(string hp_Name, string hp_Tel, string hp_Address1, string hp_Address2)
+        {
+            Hp_Name = hp_Name;
+            Hp_Tel = hp_Tel;
+            Hp_Address = hp_Address1 + ' ' + hp_Address2;
         }
     }
 }

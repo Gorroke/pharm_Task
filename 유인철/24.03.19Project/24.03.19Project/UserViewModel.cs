@@ -26,7 +26,9 @@ namespace _24._03._19Project
             PDRUDRUGList = new ObservableCollection<Medicine>();
             PCUSCUSTList = new ObservableCollection<Customer>();
             SelectedDates();
+            LabelButton = new RelayCommand(LabelButtonAction);
         }
+
         private DateTime _SelectDateTime = DateTime.Now;
         public DateTime SelectDateTime
         {
@@ -70,7 +72,7 @@ namespace _24._03._19Project
                 OnPropertyChanged("PCUSCUSTList");
             }
         }
-        Object _Selectlistview;
+/*        Object _Selectlistview;
         public Object Selectlistview
         {
             get { return _Selectlistview; }
@@ -79,7 +81,7 @@ namespace _24._03._19Project
                 _Selectlistview = value;
                 OnPropertyChanged("Selectlistview");
             }
-        }
+        }*/
         List<string> _Pres_IDlist;
         public List<string> Pres_IDlist
         {
@@ -114,6 +116,9 @@ namespace _24._03._19Project
                 $"Where PPRESCR4.Pres_ID = '{Pres_IDlist[Pres_ID]}'";
             DB db = DB.GetInstance();
             PDRUDRUGList = db.MedSelectDB(qurey);
+
+            SelectItem si = SelectItem.Getinstance();
+            si.SelectPres_ID = Pres_IDlist[Pres_ID];
         }
         public void SelectedPCUSCUST(int Pres_ID)
         {
@@ -124,6 +129,14 @@ namespace _24._03._19Project
             DB db = DB.GetInstance();
             PCUSCUSTList = db.CusSelectDB(qurey);
         }
+
+        public ICommand LabelButton { get; set; }
+        private void LabelButtonAction(object sender)
+        {
+            LabelWindow lw = new LabelWindow();
+            lw.ShowDialog();
+        }
+
 
     }
 }

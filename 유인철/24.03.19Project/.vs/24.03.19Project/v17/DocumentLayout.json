@@ -3,31 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\uC720\uC778\uCCA0\\AppData\\Local\\Temp\\5d8ce629-9e73-4645-a51e-a6bb74014d91_\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-18)-\uC720\uC778\uCCA0.zip.d91\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-15)\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelview.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelmodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelmodelview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\userview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\classcollect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\classcollect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\userview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19project\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\userviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19project\\classcollect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\classcollect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\labelwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\labelwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\24.03.19project\\24.03.19project\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BBAB3CA-5D18-4540-BBA9-235691610587}|24.03.19Project\\24.03.19Project.csproj|solutionrelative:24.03.19project\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,44 +54,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\AppData\\Local\\Temp\\5d8ce629-9e73-4645-a51e-a6bb74014d91_\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-18)-\uC720\uC778\uCCA0.zip.d91\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-15)\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\5d8ce629-9e73-4645-a51e-a6bb74014d91_\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-18)-\uC720\uC778\uCCA0.zip.d91\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-15)\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\AppData\\Local\\Temp\\5d8ce629-9e73-4645-a51e-a6bb74014d91_\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-18)-\uC720\uC778\uCCA0.zip.d91\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-15)\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI\\MainWindow.xaml.cs [\uC77D\uAE30 \uC804\uC6A9]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\5d8ce629-9e73-4645-a51e-a6bb74014d91_\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-18)-\uC720\uC778\uCCA0.zip.d91\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI(02-15)\\\uC11C\uC2DD\uC0DD\uC131\uAE30UI\\MainWindow.xaml.cs [\uC77D\uAE30 \uC804\uC6A9]",
-              "ViewState": "AQIAAGIEAAAAAAAAAAAiwHcEAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T07:50:41.733Z",
-              "EditorCaption": " [\uC77D\uAE30 \uC804\uC6A9]"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LabelModelView.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelModelView.cs",
-              "RelativeDocumentMoniker": "24.03.19Project\\LabelModelView.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelModelView.cs",
-              "RelativeToolTip": "24.03.19Project\\LabelModelView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T06:58:27.126Z",
+              "Title": "UserView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
+              "RelativeDocumentMoniker": "24.03.19Project\\UserView.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
+              "RelativeToolTip": "24.03.19Project\\UserView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-25T07:22:53.939Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LabelView.xaml",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml",
-              "RelativeDocumentMoniker": "24.03.19Project\\LabelView.xaml",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml",
-              "RelativeToolTip": "24.03.19Project\\LabelView.xaml",
+              "DocumentIndex": 7,
+              "Title": "UserView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\UserView.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml.cs",
+              "RelativeToolTip": "24.03.19Project\\UserView.xaml.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAA1wC4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T07:39:44.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "24.03.19Project\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\MainWindow.xaml",
+              "RelativeToolTip": "24.03.19Project\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-22T06:58:10.232Z",
+              "WhenOpened": "2024-03-25T06:10:21.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LabelWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelWindow.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\LabelWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelWindow.xaml.cs",
+              "RelativeToolTip": "24.03.19Project\\LabelWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T06:10:03.428Z",
               "EditorCaption": ""
             },
             {
@@ -86,43 +115,82 @@
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelWindow.xaml",
               "RelativeToolTip": "24.03.19Project\\LabelWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-22T06:57:43.733Z",
+              "WhenOpened": "2024-03-25T06:10:00.545Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserView.xaml",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
-              "RelativeDocumentMoniker": "24.03.19Project\\UserView.xaml",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserView.xaml",
-              "RelativeToolTip": "24.03.19Project\\UserView.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-22T02:19:32.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ClassCollect.cs",
-              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\ClassCollect.cs",
-              "RelativeDocumentMoniker": "24.03.19Project\\ClassCollect.cs",
-              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\ClassCollect.cs",
-              "RelativeToolTip": "24.03.19Project\\ClassCollect.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAQwEsAAAAcAAAA",
+              "DocumentIndex": 1,
+              "Title": "LabelView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\LabelView.xaml.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml.cs",
+              "RelativeToolTip": "24.03.19Project\\LabelView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T00:14:01.826Z",
+              "WhenOpened": "2024-03-25T05:41:58.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DB.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\DB.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\DB.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\DB.cs",
+              "RelativeToolTip": "24.03.19Project\\DB.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAwBcAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T04:47:10.518Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LabelView.xaml",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml",
+              "RelativeDocumentMoniker": "24.03.19Project\\LabelView.xaml",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelView.xaml",
+              "RelativeToolTip": "24.03.19Project\\LabelView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-03-25T05:19:45.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+              "Title": "ClassCollect.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\ClassCollect.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\ClassCollect.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\ClassCollect.cs",
+              "RelativeToolTip": "24.03.19Project\\ClassCollect.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAA3wHcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-25T01:00:13.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LabelViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelViewModel.cs",
+              "RelativeDocumentMoniker": "24.03.19Project\\LabelViewModel.cs",
+              "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\LabelViewModel.cs",
+              "RelativeToolTip": "24.03.19Project\\LabelViewModel.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAkwF8AAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T06:58:27.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UserViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserViewModel.cs",
               "RelativeDocumentMoniker": "24.03.19Project\\UserViewModel.cs",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\24.03.19Project\\24.03.19Project\\UserViewModel.cs",
               "RelativeToolTip": "24.03.19Project\\UserViewModel.cs",
-              "ViewState": "AQIAAEYAAAAAAAAAAAAwwGsAAAAJAAAA",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwBoAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T05:04:23.035Z",
               "EditorCaption": ""

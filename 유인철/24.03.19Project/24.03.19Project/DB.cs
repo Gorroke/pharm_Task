@@ -13,7 +13,7 @@ namespace _24._03._19Project
     internal class DB
     {
         string constr = "Data Source=BOOK-V6GV8E0ABL; Initial Catalog=Pharm; User ID=sa; Password=mammos3374;";
-        private static DB instance = new DB();
+        private static DB instance;
         public static DB GetInstance()
         {
             if (instance == null)
@@ -168,6 +168,93 @@ namespace _24._03._19Project
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+        }
+        public List<LabelUser> SelectDBUser(string query)
+        {
+            using(SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    LabelUser lu;
+                    List<LabelUser> labelUsers = new List<LabelUser>();
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection)) 
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                lu = new LabelUser(reader.GetString(0), reader.GetString(1), reader.GetString(2));
+                                labelUsers.Add(lu);
+                            }
+                        }
+                    }
+                    return labelUsers;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+        public List<LabelDrug> SelectDBDrug(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    LabelDrug ld;
+                    List<LabelDrug> labelDrugs = new List<LabelDrug>();
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ld = new LabelDrug(reader.GetString(0), reader.GetString(1), reader.GetString(2));
+                                labelDrugs.Add(ld);
+                            }
+                        }
+                    }
+                    return labelDrugs;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
+                }
+            }
+        }
+        public List<LabelShop> SelectDBShop(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    LabelShop ls;
+                    List<LabelShop> labelShops = new List<LabelShop>();
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                ls = new LabelShop(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                                labelShops.Add(ls);
+                            }
+                        }
+                    }
+                    return labelShops;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
                 }
             }
         }

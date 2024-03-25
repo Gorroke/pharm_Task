@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_24._03._19Project"
         mc:Ignorable="d"
-        Title="라벨 출력" Height="300" Width="400">
+        Title="라벨 출력" Height="600" Width="800">
     <Grid>
         <local:LabelView/>
     </Grid>
