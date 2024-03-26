@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\model\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|c:\\users\\\uAE40\uAE30\uB3D9\\documents\\github\\pharm_task\\\uAE40\uAE30\uB3D9\\24.03.05_wpf_controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3D9BC67F-665F-4617-8210-9BB7D7757EC4}|wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310.csproj|solutionrelative:wpf \uADF8\uB9BC\uD310\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,55 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\MainWindow.xaml",
               "RelativeDocumentMoniker": "wpf \uADF8\uB9BC\uD310\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\MainWindow.xaml",
               "RelativeToolTip": "wpf \uADF8\uB9BC\uD310\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-08T00:41:11.521Z",
+              "WhenOpened": "2024-03-11T04:04:00.258Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "wpf \uADF8\uB9BC\uD310\\RelayCommand.cs",
+              "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\RelayCommand.cs",
+              "RelativeToolTip": "wpf \uADF8\uB9BC\uD310\\RelayCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-11T00:36:52.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "wpf \uADF8\uB9BC\uD310\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "wpf \uADF8\uB9BC\uD310\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAhwIkAAAAhAAAA",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAkwKgAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T07:54:34.175Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainModel.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\Model\\MainModel.cs",
               "RelativeDocumentMoniker": "wpf \uADF8\uB9BC\uD310\\Model\\MainModel.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\Model\\MainModel.cs",
               "RelativeToolTip": "wpf \uADF8\uB9BC\uD310\\Model\\MainModel.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCIAAAAdAAAA",
+              "ViewState": "AQIAAG0AAAAAAAAAAAAgwIkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T08:00:29.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "wpf \uADF8\uB9BC\uD310\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\\uAE40\uAE30\uB3D9\\Documents\\GitHub\\pharm_Task\\\uAE40\uAE30\uB3D9\\24.03.05_WPF_Controls\\wpf \uADF8\uB9BC\uD310\\wpf \uADF8\uB9BC\uD310\\MainWindow.xaml.cs",
               "RelativeToolTip": "wpf \uADF8\uB9BC\uD310\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAIwAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-08T07:59:58.367Z",
               "EditorCaption": ""

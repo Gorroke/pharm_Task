@@ -17,6 +17,9 @@ namespace wpf_그림판
             MainViewModel viewModel = new MainViewModel(canvas);
 
             this.DataContext = viewModel;
+
+            Draw_R.Command = viewModel.DrawRectangleCommand;
+
             //canvas.PreviewMouseLeftButtonDown += viewModel.Canvas_PreviewMouseLeftButtonDown;
 
         }
