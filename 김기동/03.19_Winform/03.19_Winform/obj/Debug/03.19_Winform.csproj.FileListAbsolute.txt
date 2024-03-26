@@ -1,0 +1,10 @@
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\bin\Debug\03.19_Winform.exe.config
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\bin\Debug\03.19_Winform.exe
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\bin\Debug\03.19_Winform.pdb
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\03.19_Winform.csproj.AssemblyReference.cache
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\_03._19_Winform.Form1.resources
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\_03._19_Winform.Properties.Resources.resources
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\03.19_Winform.csproj.GenerateResource.cache
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\03.19_Winform.csproj.CoreCompileInputs.cache
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\03.19_Winform.exe
+C:\Users\김기동\source\repos\03.19_Winform\03.19_Winform\obj\Debug\03.19_Winform.pdb

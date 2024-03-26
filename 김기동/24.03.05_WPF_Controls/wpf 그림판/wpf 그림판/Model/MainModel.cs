@@ -48,21 +48,21 @@ namespace wpf_그림판.Model
 
         public void Canvas_MouseMove(object sender, MouseEventArgs e)
         {
-            //if (isDrawing)
-            //{
-            //    Line line = new Line();
-            //    line.Stroke = brush;
-            //    line.StrokeThickness = 2;
-            //    line.X1 = startPoint.X;
-            //    line.Y1 = startPoint.Y;
-            //    line.X2 = e.GetPosition(canvas).X;
-            //    line.Y2 = e.GetPosition(canvas).Y;
-         
-            //    canvas.Children.Add(line);
+        }
 
-            //    startPoint = e.GetPosition(canvas);
-            //}
-            
+        public string TempText { get; set; }
+
+        private string someStr;
+        public string SomeStr
+        {
+            get
+            {
+                return someStr;
+            }
+            set
+            {
+                someStr = value;
+            }
         }
 
         private SolidColorBrush penColor = new SolidColorBrush(Colors.Black);
@@ -84,7 +84,7 @@ namespace wpf_그림판.Model
             //isDrawing = false;
         }
 
-        public void DrawRectangle()
+        public void DrawRectangle(object obj)
         {
             // 네모 그리기
             Rectangle rectangle = new Rectangle();
@@ -93,13 +93,49 @@ namespace wpf_그림판.Model
             rectangle.Fill = PenColor; // PenColor 사용
 
             // 마우스 클릭 위치를 기준으로 사각형 위치 설정
+            
             Canvas.SetLeft(rectangle, startPoint.X);
             Canvas.SetTop(rectangle, startPoint.Y);
 
             canvas.Children.Add(rectangle);
         }
+        //public void DrawRectangle(object parameter)
+        //{
+        //    if (parameter is Canvas canvas)
+        //    {
+        //        // 네모를 그릴 중심점과 크기를 정의합니다.
+        //        Point center = new Point(50, 50); // 예시로 사용한 중심점
+        //        double size = 100; // 예시로 사용한 크기
 
-        public void DrawEllipse()
+        //        DrawSquare(canvas, center, size, Colors.Blue);
+        //    }
+        //}
+
+        //private void DrawSquare(Canvas canvas, Point center, double size, Color color)
+        //{
+        //    Point topLeft = new Point(center.X - size / 2, center.Y - size / 2);
+        //    Point topRight = new Point(center.X + size / 2, center.Y - size / 2);
+        //    Point bottomLeft = new Point(center.X - size / 2, center.Y + size / 2);
+        //    Point bottomRight = new Point(center.X + size / 2, center.Y + size / 2);
+
+        //    DrawPoint(canvas, topLeft, color);
+        //    DrawPoint(canvas, topRight, color);
+        //    DrawPoint(canvas, bottomLeft, color);
+        //    DrawPoint(canvas, bottomRight, color);
+        //}
+        //private void DrawPoint(Canvas canvas, Point point, Color color)
+        //{
+        //    Ellipse ellipse = new Ellipse
+        //    {
+        //        Width = 4,
+        //        Height = 4,
+        //        Fill = new SolidColorBrush(color)
+        //    };
+        //    Canvas.SetLeft(ellipse, point.X - ellipse.Width / 2);
+        //    Canvas.SetTop(ellipse, point.Y - ellipse.Height / 2);
+        //    canvas.Children.Add(ellipse);
+        //}
+        public void DrawEllipse(object obj)
         {
             // 원 그리기
             Ellipse ellipse = new Ellipse();
@@ -113,5 +149,19 @@ namespace wpf_그림판.Model
 
             canvas.Children.Add(ellipse);
         }
+        private void DrawPoint(Point point, Color color)
+        {
+            Ellipse ellipse = new Ellipse
+            {
+                Width = 4,
+                Height = 4,
+                Fill = new SolidColorBrush(color)
+            };
+            Canvas.SetLeft(ellipse, point.X - ellipse.Width / 2);
+            Canvas.SetTop(ellipse, point.Y - ellipse.Height / 2);
+            canvas.Children.Add(ellipse);
+        }
+
+
     }
 }

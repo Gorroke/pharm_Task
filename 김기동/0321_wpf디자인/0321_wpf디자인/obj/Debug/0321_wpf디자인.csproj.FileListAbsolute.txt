@@ -1,0 +1,17 @@
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\bin\Debug\0321_wpf디자인.exe.config
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\bin\Debug\0321_wpf디자인.exe
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\bin\Debug\0321_wpf디자인.pdb
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.csproj.AssemblyReference.cache
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\MainWindow.g.cs
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\App.g.cs
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인_MarkupCompile.cache
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인_MarkupCompile.lref
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\MainWindow.baml
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.g.resources
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\_0321_wpf디자인.Properties.Resources.resources
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.csproj.GenerateResource.cache
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.csproj.CoreCompileInputs.cache
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.exe
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\0321_wpf디자인.pdb
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\My_View.g.cs
+C:\Users\김기동\source\repos\0321_wpf디자인\0321_wpf디자인\obj\Debug\My_View.baml

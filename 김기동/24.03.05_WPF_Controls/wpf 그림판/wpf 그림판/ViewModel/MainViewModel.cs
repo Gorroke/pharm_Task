@@ -30,7 +30,6 @@ namespace wpf_그림판.ViewModel
             Canvas canvas = new Canvas();
             model = new Model.MainModel(canvas);
             model.isDrawing = false;
-
             MyCommand = new RelayCommand(MyMouseDown);
             CMD_CanvasLeftDown = new RelayCommand(CanvasLeftDown);
             CMD_MouseMove = new RelayCommand(MouseMove);
@@ -68,57 +67,39 @@ namespace wpf_그림판.ViewModel
                 Model.startPoint = p;
             }
         }
-
         private void MouseMove(object sender)
         {
             if (Model.isDrawing && sender is Canvas c)
             {
-                Line line = new Line();
-                line.Stroke = PenColor;
-                line.StrokeThickness = 2;
-                line.X1 = Model.startPoint.X;
-                line.Y1 = model.startPoint.Y;
+                // 네모 그리기
+                
+                // 선 그리기
+                
+                    Line line = new Line();
+                    line.Stroke = PenColor;
+                    line.StrokeThickness = 2;
+                    line.X1 = Model.startPoint.X;
+                    line.Y1 = model.startPoint.Y;
 
-                Point p = Mouse.GetPosition(App.Current.MainWindow);
+                    Point p = Mouse.GetPosition(App.Current.MainWindow);
 
-                line.X2 = p.X;
-                line.Y2 = p.Y;
+                    line.X2 = p.X;
+                    line.Y2 = p.Y;
 
-                c.Children.Add(line);
+                    c.Children.Add(line);
 
-                Model.startPoint = p;
+                    Model.startPoint = p;
 
-                int zIdx = c.Children.Count;
-                Canvas.SetZIndex(line, zIdx);
+                    int zIdx = c.Children.Count;
+                    Canvas.SetZIndex(line, zIdx);
+                
             }
         }
 
         public void CanvaLeftUp(object sender)
         {
             Model.isDrawing = false;
-            //if (sender is Canvas c)
-            //{
-            //    Model.isDrawing = false;
-
-            //    Line line = new Line();
-            //    line.Stroke = PenColor;
-            //    line.StrokeThickness = 2;
-            //    line.X1 = Model.startPoint.X;
-            //    line.Y1 = Model.startPoint.Y;
-
-            //    Point p = Mouse.GetPosition(App.Current.MainWindow);
-            //    line.X2 = p.X + 10;
-            //    line.Y2 = p.Y + 10;
-
-            //    c.Children.Add(line);
-
-            //    int zIdx = c.Children.Count;
-            //    Canvas.SetZIndex(line, zIdx);
-            //}
-
         }
-
-
 
         private MainModel model;
 
@@ -170,35 +151,34 @@ namespace wpf_그림판.ViewModel
                 }
             }
         }
-        public ICommand DrawRectangleCommand { get; }
+        public ICommand DrawRectangleCommand { get; set; }
         public ICommand DrawEllipseCommand { get; }
+
+        public ICommand ResetCommand { get; }
+
 
         public MainViewModel(Canvas canvas)
         {
             Model = new MainModel(canvas);
 
             // 네모 그리기 명령
-            DrawRectangleCommand = new RelayCommand(
-                param => Model.DrawRectangle(),
+            DrawRectangleCommand = new RelayCommand(Model.DrawRectangle,
                 param => true);
 
             // 원 그리기 명령
-            DrawEllipseCommand = new RelayCommand(
-                param => Model.DrawEllipse(),
+            DrawEllipseCommand = new RelayCommand(Model.DrawEllipse,
                 param => true);
-        }
-        //public MainViewModel(Canvas canvas)
-        //{
-        //    // 네모 그리기 명령
-        //    DrawRectangleCommand = new RelayCommand(
-        //        param => Model.DrawRectangle(),
-        //        param => true);
 
-        //    // 원 그리기 명령
-        //    DrawEllipseCommand = new RelayCommand(
-        //        param => Model.DrawEllipse(),
-        //        param => true);
-        //}
+            ResetCommand = new RelayCommand(ResetCanvas);
+        }
+
+        private void ResetCanvas(object parameter)
+        {
+            if (parameter is Canvas canvas)
+            {
+                canvas.Children.Clear();
+            }
+        }
 
         public void Canvas_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
@@ -233,5 +213,4 @@ namespace wpf_그림판.ViewModel
             execute(parameter);
         }
     }
-
 }

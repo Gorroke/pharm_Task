@@ -8,23 +8,24 @@
         xmlns:ie="http://schemas.microsoft.com/expression/2010/interactions"
         xmlns:local="clr-namespace:wpf_그림판"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="800">
 
-    <Grid Margin="0,0,-49,-103">
-        
-        <Grid.DataContext>
+    <Grid Margin="0,0,-143,-127">
+
+        <!--<Grid.DataContext>
             <ViewModel:MainViewModel/>
-        </Grid.DataContext>
-        
+        </Grid.DataContext>-->
+
+
+        <Button x:Name="Draw_R" Content="네모" Command="{Binding DrawRectangleCommand}" CommandParameter="{Binding ElementName=canvas}" Canvas.Left="254" Canvas.Top="30" RenderTransformOrigin="-0.014,2.259" Height="47" Width="68" Margin="252,65,623,599"/>
+        <Button x:Name="Draw_C" Content="원" Command="{Binding DrawEllipseCommand}" CommandParameter="{Binding ElementName=canvas}" Canvas.Left="362" Canvas.Top="21" Height="56" Width="58" Margin="386,65,499,590"/>
+        <Button x:Name="Draw_T" Content="세모" Command="{Binding DrawRectangleCommand}" CommandParameter="{Binding ElementName=canvas}" Canvas.Left="450" Canvas.Top="21" Height="56" Width="58" Margin="508,55,377,600"/>
+        <Button Content="리셋" Command="{Binding ResetCommand}" CommandParameter="{Binding ElementName=canvas}" Canvas.Left="550" Canvas.Top="21" Height="56" Width="58" Margin="643,65,242,590"/>
         <Canvas Name="canvas" 
                 Background="White" 
-                Margin="0,0,0,10">
-            
-            <Button Content="네모" Command="{Binding DrawRectangleCommand}" Canvas.Left="254" Canvas.Top="30" RenderTransformOrigin="-0.014,2.259" Height="47" Width="68"/>
-            <Button Content="원" Command="{Binding DrawEllipseCommand}" Canvas.Left="362" Canvas.Top="21" Height="56" Width="58"/>
-
+                Margin="0,152,143,131">
             <i:Interaction.Triggers>
-                
+
                 <i:EventTrigger EventName="MouseDown">
                     <i:InvokeCommandAction Command="{Binding MyCommand}" CommandParameter="{Binding ElementName=canvas}"/>
                 </i:EventTrigger>
@@ -36,7 +37,6 @@
                 <i:EventTrigger EventName="MouseMove">
                     <i:InvokeCommandAction Command="{Binding CMD_MouseMove}" CommandParameter="{Binding ElementName=canvas}"/>
                 </i:EventTrigger>
-
                 <i:EventTrigger EventName="MouseLeftButtonUp">
                     <i:InvokeCommandAction Command="{Binding CMD_CanvaLeftUp}" CommandParameter="{Binding ElementName=canvas}"/>
                 </i:EventTrigger>
@@ -44,8 +44,16 @@
             </i:Interaction.Triggers>
 
         </Canvas>
-        
-        <ComboBox ItemsSource="{Binding PenColors}" SelectedItem="{Binding PenColor}" Width="120" HorizontalAlignment="Left" Margin="85,40,0,448">
+
+        <ComboBox ItemsSource="{Binding PenColors}" SelectedItem="{Binding PenColor}" Width="111" HorizontalAlignment="Left" Margin="82,40,0,589" RenderTransformOrigin="0.5,0.5">
+            <ComboBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.823"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </ComboBox.RenderTransform>
             <ComboBox.ItemTemplate>
                 <DataTemplate>
                     <Rectangle Width="20" Height="20" Fill="{Binding}"/>
