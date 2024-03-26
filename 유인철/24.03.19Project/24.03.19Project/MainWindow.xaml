@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_24._03._19Project"
         mc:Ignorable="d"
-        Title="비즈팜테이블" Height="740" Width="1600">
+        Title="JParmCopy" Height="880" Width="1800" WindowStartupLocation="CenterScreen">
     <Grid>
         <local:UserView/>
     </Grid>

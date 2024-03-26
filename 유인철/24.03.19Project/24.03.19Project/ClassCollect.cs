@@ -22,7 +22,8 @@ namespace _24._03._19Project
 
         public Prescription(string num, string name, string birthday, string time)
         {
-            Number = num;
+            string[] num1 = num.Split(' ');
+            Number = num1[0];
             string[] name1 = name.Split(' ');
             Name = name1[0];
             string strings = birthday.Substring(0, 6);
@@ -36,10 +37,11 @@ namespace _24._03._19Project
     {
         public string Name { get; set; } // 약품명 Drug_Name
         public string DrugCode { get; set; } // 약품코드 Drug_ID
-        public float Eat { get; set; } // 1회 복용량 One_Qty
+        public string Eat { get; set; } // 1회 복용량 One_Qty
         public string Onedayeat { get; set; } // 1일 투여량 One_Cnt
         public string Alleat { get; set; } // 총투약일수 Total_Cnt
         public string DrugUnit { get; set; } // 약품 단위 Pres_Unit
+        public string AllDrug { get; set; } // 총 투약량
         /*public string EatCode { get; set; } // 복용 코드??
           public string EatHow { get; set; } // 복용법 ??*/
 
@@ -47,10 +49,13 @@ namespace _24._03._19Project
         {
             Name = name;
             DrugCode = drugcode;
-            Eat = eat;
+            Eat = eat.ToString();
             Onedayeat = onedayeat;
-            Alleat = alleat;
-            DrugUnit = drugunit;
+            string[] alleatlist = alleat.Split(' ');
+            Alleat = alleatlist[0];
+            string[] drugunitlist = drugunit.Split(' ');
+            DrugUnit = drugunitlist[0];
+            AllDrug = (int.Parse(onedayeat) * int.Parse(alleat) * eat).ToString();
             /*EatCode = eatcode;
             EatHow = eathow;*/
         }
@@ -141,6 +146,18 @@ namespace _24._03._19Project
             Hp_Name = hp_Name;
             Hp_Tel = hp_Tel;
             Hp_Address = hp_Address1 + ' ' + hp_Address2;
+        }
+    }
+
+    public class DRUGInfoName
+    {
+        public string DrugName { get; set; }
+        public string DrugBarcode { get; set; }
+        public DRUGInfoName(string drugName, string drugBarcode)
+        {
+            DrugName = drugName;
+            string[] drugbarcodelist = drugBarcode.Split(' ');
+            DrugBarcode = drugbarcodelist[0];
         }
     }
 }

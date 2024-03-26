@@ -258,5 +258,32 @@ namespace _24._03._19Project
                 }
             }
         }
+        public DRUGInfoName SelectDRUGInfoName(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    DRUGInfoName difn = null;
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                difn = new DRUGInfoName(reader.GetString(0), reader.GetString(1));
+                            }
+                        }
+                    }
+                    return difn;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
+                }
+            }
+        }
     }
 }
