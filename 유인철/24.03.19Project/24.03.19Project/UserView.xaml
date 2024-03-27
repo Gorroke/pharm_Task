@@ -14,7 +14,6 @@
     <UserControl.Resources>
         <Style TargetType="TextBlock" x:Key="Textblockstyle">
             <Setter Property="FontSize" Value="15"/>
-            <!--<Setter Property="Margin" Value="10"/>-->
         </Style>
     </UserControl.Resources>
 
@@ -93,24 +92,6 @@
                         <DataGridTextColumn Header="접수시간" Width="*" Binding="{Binding Pres_Time}"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <!--<ListView x:Name="PPRESCR" FontSize="15" Height="550" VerticalAlignment="Top" ItemsSource="{Binding PPRESCRList}" SelectionChanged="PPRESCR_SelectionChanged">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <EventSetter Event="MouseDoubleClick" Handler="ListViewItem_MouseDoubleClick"/>
-                        </Style>
-                    </ListView.ItemContainerStyle>
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:Name="LineTemplate" DataType="ListItem">
-                            <StackPanel AutomationProperties.Name="{Binding Number}" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
-                                <TextBlock Text="{Binding Number}" Style="{StaticResource Textblockstyle}"/>
-                                <TextBlock Text="{Binding Name}" Style="{StaticResource Textblockstyle}"/>
-                                <TextBlock Text="{Binding Birthday}" Style="{StaticResource Textblockstyle}"/>
-                                
-                                <TextBlock Text="{Binding Pres_Time}" Style="{StaticResource Textblockstyle}"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>-->
             </Grid>
         </Grid>
 
@@ -159,7 +140,7 @@
                     </Grid>
                 </Grid>
                 <Grid Grid.Row="1">
-                    
+
                     <Grid.Resources>
                         <Style TargetType="DataGridColumnHeader">
                             <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -171,43 +152,35 @@
                             <Setter Property="TextBlock.TextAlignment" Value="Center"/>
                         </Style>
                     </Grid.Resources>
-                    
+
                     <DataGrid x:Name="PDRUDRUG" FontSize="15" Height="320" VerticalAlignment="Top" 
                               ItemsSource="{Binding PDRUDRUGList}" CanUserAddRows="False" 
-                              AutoGenerateColumns="False" IsReadOnly="True"
-                              Background="#E5EEfA" SelectionChanged="PDRUDRUG_SelectionChanged">
+                              AutoGenerateColumns="False" IsReadOnly="False"
+                              Background="#E5EEfA" SelectionChanged="PDRUDRUG_SelectionChanged" SelectedItem="{Binding SelectedMedicine}"
+                               CurrentCellChanged="PDRUDRUG_CurrentCellChanged">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="약품명" Width="0.5*" Binding="{Binding Name}"/>
-                            <DataGridTextColumn Header="개수" Width="0.05*" Binding="{Binding Eat}"/>
-                            <DataGridTextColumn Header="단위" Width="0.05*" Binding="{Binding DrugUnit}"/>
-                            <DataGridTextColumn Header="회" Width="0.05*" Binding="{Binding Onedayeat}"/>
-                            <DataGridTextColumn Header="일" Width="0.05*" Binding="{Binding Alleat}"/>
-                            <DataGridTextColumn Header="총 투약량" Width="0.1*" Binding="{Binding AllDrug}"/>
-                            <DataGridTextColumn Header="복용법" Width="0.25*"/>
-                            <DataGridTextColumn Header="용법 1" Width="0.25*"/>
-                            <DataGridTextColumn Header="용법 2" Width="0.1*"/>
-                            <DataGridTextColumn Header="출력" Width="0.1*"/>
-                            <DataGridTextColumn Header="선택" Width="0.1*"/>
+                            <DataGridTextColumn Header="약품명" Width="0.5*" Binding="{Binding Name, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="개수" Width="0.05*" Binding="{Binding Eat, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="단위" Width="0.05*" Binding="{Binding DrugUnit, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="회" Width="0.05*" Binding="{Binding Onedayeat, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="일" Width="0.05*" Binding="{Binding Alleat, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="총 투약량" Width="0.1*" Binding="{Binding AllDrug, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="복용법" Width="0.25*" Binding="{Binding HTT, Mode=TwoWay}"/>
+                            <DataGridTextColumn Header="용법 1" Width="0.25*" Binding="{Binding Usage1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTextColumn Header="용법 2" Width="0.1*" Binding="{Binding Usage2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            <DataGridTemplateColumn Width="0.1*" Header="출력">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Width="50" Height="30" Content="출력" 
+                                                Command="{Binding Path=DataContext.PrintButton, 
+                                                          RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}"
+                                                CommandParameter="{Binding ElementName=PDRUDRUG, Path=SelectedIndex}"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridCheckBoxColumn Header="선택" Width="0.1*" Binding="{Binding IsChecked, UpdateSourceTrigger=PropertyChanged}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <!--<ListView x:Name="PDRUDRUG" FontSize="15" Height="310" VerticalAlignment="Bottom" ItemsSource="{Binding PDRUDRUGList}">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="약품명" Width="245" DisplayMemberBinding="{Binding Name}"/>
-                                <GridViewColumn Header="약품코드" Width="100" DisplayMemberBinding="{Binding DrugCode}"/>
-                                <GridViewColumn Header="1회복용량" Width="100" DisplayMemberBinding="{Binding Eat}"/>
-                                <GridViewColumn Header="하루N번" Width="100" DisplayMemberBinding="{Binding Onedayeat}"/>
-                                <GridViewColumn Header="복용일수" Width="100" DisplayMemberBinding="{Binding Alleat}"/>
-                                <GridViewColumn Header="약품단위" Width="100" DisplayMemberBinding="{Binding DrugUnit}"/>
-                                -->
-                    <!--
-                                <GridViewColumn Header="복용코드" Width="100" DisplayMemberBinding="{Binding EatCode}"/>
-                                <GridViewColumn Header="복용법" Width="340" DisplayMemberBinding="{Binding EatHow}"/>
-                                -->
-                    <!--
-                            </GridView>
-                        </ListView.View>
-                    </ListView>-->
                 </Grid>
             </Grid>
 
@@ -283,22 +256,22 @@
                                 </Grid.RowDefinitions>
 
                                 <Grid Grid.Row="0">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Drname}"/>
                                 </Grid>
                                 <Grid Grid.Row="1">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Dr_Code}"/>
                                 </Grid>
                                 <Grid Grid.Row="2">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Hs_Name}"/>
                                 </Grid>
                                 <Grid Grid.Row="3">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Hs_Code}"/>
                                 </Grid>
                                 <Grid Grid.Row="4">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Hs_Tel}"/>
                                 </Grid>
                                 <Grid Grid.Row="5">
-                                    <TextBox Margin="1"/>
+                                    <TextBox Margin="1" Text="{Binding Part_id}"/>
                                 </Grid>
                             </Grid>
                         </Grid>
@@ -330,7 +303,8 @@
                     <Grid Grid.Row="0">
                         <Button Content="선택 약품 용법 제거" Width="200" Height="30" 
                                 BorderBrush="DeepSkyBlue" Background="White" 
-                                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" Foreground="DeepSkyBlue" FontSize="14"/>
+                                VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" Foreground="DeepSkyBlue" FontSize="14"
+                                Command="{Binding SelectButton}" CommandParameter="UsageDel"/>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.RowDefinitions>
@@ -345,7 +319,7 @@
                                    VerticalContentAlignment="Center" HorizontalAlignment="Left"/>
                         </Grid>
                         <Grid Grid.Row="1">
-                            <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="500" Height="30" VerticalAlignment="Top" Background="DeepSkyBlue" Margin="5" ItemHeight="25" ItemWidth="100">
+                            <WrapPanel x:Name="Checkboxlist" Orientation="Horizontal" HorizontalAlignment="Center" Width="500" Height="30" VerticalAlignment="Top" Background="DeepSkyBlue" Margin="5" ItemHeight="25" ItemWidth="100">
                                 <CheckBox Content="없음" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
                                 <CheckBox Content="아침" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
                                 <CheckBox Content="점심" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
@@ -366,13 +340,13 @@
                             </Grid>
                             <Grid Grid.Row="1">
                                 <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="500" VerticalAlignment="Top" ItemWidth="150" Height="120" ItemHeight="35" Background="DeepSkyBlue" Margin="5">
-                                    <RadioButton Content="식후 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="식후 즉시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="식후 1시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="식전 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="식전 즉시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="식전 1시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                    <RadioButton Content="없음" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                                    <RadioButton Content="식후 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="식후 즉시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="식후 1시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="식전 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="식전 즉시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="식전 1시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
+                                    <RadioButton Content="없음" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked"/>
                                 </WrapPanel>
                             </Grid>
                         </Grid>
@@ -390,14 +364,14 @@
                         </Grid>
                         <Grid Grid.Row="1">
                             <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="500" VerticalAlignment="Top" ItemWidth="150" Height="160" ItemHeight="55" Background="DeepSkyBlue" Margin="5">
-                                <RadioButton Content="없음" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="매 식후 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="아침, 저녁 식사" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="의사 지시대로" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="같은 시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="아침 기상시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="아침 공복시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                                <RadioButton Content="필요 시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold"/>
+                                <RadioButton Content="없음" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="매 식후 30분" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="아침, 저녁 식사" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="의사 지시대로" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="같은 시간" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="아침 기상시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="아침 공복시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
+                                <RadioButton Content="필요 시" Margin="20,0" VerticalAlignment="Center" FontWeight="Bold" Checked="RadioButton_Checked_1"/>
                             </WrapPanel>
                         </Grid>
                     </Grid>
@@ -416,35 +390,17 @@
                             <ColumnDefinition Width="0.13*"/>
                             <ColumnDefinition Width="0.13*"/>
                         </Grid.ColumnDefinitions>
-                        <Grid Grid.Column="0">
-                            <Button Content="선택 약품 합치기" Width="160" Height="30" 
-                                    BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5,0,0,0" Foreground="DeepSkyBlue" FontSize="14"/>
-                        </Grid>
-                        <Grid Grid.Column="1">
-                            <Button Content="아침" Width="50" Height="30" 
-                                    BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"/>
-                        </Grid>
-                        <Grid Grid.Column="2">
-                            <Button Content="점심" Width="50" Height="30" 
-                                    BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"/>
-                        </Grid>
-                        <Grid Grid.Column="3">
-                            <Button Content="저녁" Width="50" Height="30" 
-                                    BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"/>
-                        </Grid>
                         <Grid Grid.Column="4">
                             <Button Content="전체 선택" Width="70" Height="30" 
                                     BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"/>
+                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"
+                                    Command="{Binding SelectButton}" CommandParameter="All"/>
                         </Grid>
                         <Grid Grid.Column="5">
                             <Button Content="선택 취소" Width="70" Height="30" 
                                     BorderBrush="DeepSkyBlue" Background="White" 
-                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"/>
+                                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="DeepSkyBlue" FontSize="14"
+                                    Command="{Binding SelectButton}" CommandParameter="NotAll"/>
                         </Grid>
                     </Grid>
                     <Grid Grid.Row="1">
@@ -575,19 +531,19 @@
                                         </Style>
                                     </Grid.Resources>
                                     <Grid Grid.Column="0">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.Eat, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.DrugUnit, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                     <Grid Grid.Column="2">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.Onedayeat, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                     <Grid Grid.Column="3">
                                         <Label Content="회"/>
                                     </Grid>
                                     <Grid Grid.Column="4">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.Alleat, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                     <Grid Grid.Column="5">
                                         <Label Content="일분"/>
@@ -596,7 +552,7 @@
                                         <Label Content="총"/>
                                     </Grid>
                                     <Grid Grid.Column="7">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.AllDrug, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                 </Grid>
                                 <Grid Grid.Row="3">
@@ -627,7 +583,7 @@
                                         <Label Content="용법1"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.Usage1, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                 </Grid>
                                 <Grid Grid.Row="4">
@@ -658,40 +614,14 @@
                                         <Label Content="용법2"/>
                                     </Grid>
                                     <Grid Grid.Column="1">
-                                        <TextBox />
+                                        <TextBox Text="{Binding SelectedMedicine.Usage2, UpdateSourceTrigger=PropertyChanged}"/>
                                     </Grid>
                                 </Grid>
                             </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
-        </Grid>
+            </Grid>
         </Grid>
     </Grid>
 </UserControl>
-<!--<Grid.RowDefinitions>
-    <RowDefinition Height="0.1*"/>
-    <RowDefinition Height="0.9*"/>
-</Grid.RowDefinitions>
-<Grid Grid.Row="0">
-    <Label Content="라베르"/>
-</Grid>
-<Grid Grid.Row="1">
-
-    <DataGrid x:Name="PCUSCUST" FontSize="15" Height="330" VerticalAlignment="Top" ItemsSource="{Binding PCUSCUSTList}" CanUserAddRows="False" AutoGenerateColumns="False" IsReadOnly="True">
-        <DataGrid.Columns>
-            <DataGridTextColumn Header="성명" Width="0.8*" Binding="{Binding CName}"/>
-            <DataGridTextColumn Header="생년월일" Width="1.1*" Binding="{Binding CBirthDay}"/>
-            <DataGridTextColumn Header="고객메모1" Width="1.2*" Binding="{Binding Memo3}"/>
-            <DataGridTextColumn Header="고객메모2" Width="1.2*" Binding="{Binding MeMo4}"/>
-            <DataGridTextColumn Header="전화번호" Width="1.1*" Binding="{Binding Hp}"/>
-            <DataGridTextColumn Header="질병코드" Width="0.8*" Binding="{Binding DiseaseCode}"/>
-            <DataGridTextColumn Header="병원명" Width="1.2*" Binding="{Binding HosName}"/>
-            <DataGridTextColumn Header="진료과" Width="*" Binding="{Binding Partid}"/>
-            <DataGridTextColumn Header="병원코드" Width="*" Binding="{Binding HosCode}"/>
-            <DataGridTextColumn Header="병원전화번호" Width="1.1*" Binding="{Binding HosTel}"/>
-            <DataGridTextColumn Header="의사명" Width="*" Binding="{Binding DrName}"/>
-            <DataGridTextColumn Header="의사코드" Width="*" Binding="{Binding DrCode}"/>
-        </DataGrid.Columns>
-    </DataGrid>
-</Grid>-->

@@ -75,3 +75,10 @@ Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID
    위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
 ClientConnectionId:37abdd26-a3d6-45f6-854a-80b8e8f700b0
 Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
+[2024-03-27 오후 3:12:50] [Form_Closing]
+[2024-03-27 오후 3:12:56] Common.EncryptionBizEnCode, BizEnCode 복호화 실패 => 원본 문자열 [등록 테스트]
+ 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-27 오후 3:12:56] [Form_Load]
+[2024-03-27 오후 3:13:02] Common.DercryptionBizEnCode, BizEnCode 암호화 실패 => 원본 문자열 []
+ 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-27 오후 5:59:04] [Form_Closing]

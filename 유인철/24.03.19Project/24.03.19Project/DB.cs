@@ -285,5 +285,36 @@ namespace _24._03._19Project
                 }
             }
         }
+        public HS_INFO SelectedHsinfo(string query)
+        {
+            using (SqlConnection connection = new SqlConnection(constr))
+            {
+                try
+                {
+                    HS_INFO hsin = null;
+                    connection.Open();
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                hsin = new HS_INFO(
+                                    reader.GetString(0), reader.GetString(1),
+                                    reader.GetString(2), reader.GetString(3),
+                                    reader.GetString(4), reader.GetString(5)
+                                    );
+                            }
+                        }
+                    }
+                    return hsin;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                    return null;
+                }
+            }
+        }
     }
 }

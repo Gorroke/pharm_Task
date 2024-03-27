@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
@@ -27,6 +28,8 @@ namespace _24._03._19Project
             PCUSCUSTList = new ObservableCollection<Customer>();
             SelectedDates();
             LabelButton = new RelayCommand(LabelButtonAction);
+            PrintButton = new RelayCommand(LabelPrintAction);
+            SelectButton = new RelayCommand(SelectButtonAction);
         }
 
         private DateTime _SelectDateTime1 = DateTime.Now;
@@ -57,6 +60,17 @@ namespace _24._03._19Project
             {
                 _PPRESCRList = value;
                 OnPropertyChanged("PPRESCRList");
+            }
+        }
+
+        private Medicine _SelectedMedicine;
+        public Medicine SelectedMedicine
+        {
+            get { return _SelectedMedicine; }
+            set
+            {
+                _SelectedMedicine = value;
+                OnPropertyChanged("SelectedMedicine");
             }
         }
 
@@ -110,6 +124,67 @@ namespace _24._03._19Project
                 OnPropertyChanged("Pres_id");
             }
         }
+        private string _Drname;
+        public string Drname
+        {
+            get { return _Drname; }
+            set
+            {
+                _Drname = value;
+                OnPropertyChanged("Drname");
+            }
+        }
+        private string _Dr_Code;
+        public string Dr_Code
+        {
+            get { return _Dr_Code; }
+            set
+            {
+                _Dr_Code = value;
+                OnPropertyChanged("Dr_Code");
+            }
+        }
+        private string _Hs_Name;
+        public string Hs_Name
+        {
+            get { return _Hs_Name; }
+            set
+            {
+                _Hs_Name = value;
+                OnPropertyChanged("Hs_Name");
+            }
+        }
+        private string _Hs_Code;
+        public string Hs_Code
+        {
+            get { return _Hs_Code; }
+            set
+            {
+                _Hs_Code = value;
+                OnPropertyChanged("Hs_Code");
+            }
+        }
+        private string _Hs_Tel;
+        public string Hs_Tel
+        {
+            get { return _Hs_Tel; }
+            set
+            {
+                _Hs_Tel = value;
+                OnPropertyChanged("Hs_Tel");
+            }
+        }
+        private string _Part_id;
+        public string Part_id
+        {
+            get { return _Part_id; }
+            set
+            {
+                _Part_id = value;
+                OnPropertyChanged("Part_id");
+            }
+        }
+
         public void SelectDatesPres_ID(string date1, string date2)
         {
             string qurey = $"Select Pres_ID from PPRESCR1 where Pres_Date Between '{date1}' And '{date2}'";
@@ -151,12 +226,52 @@ namespace _24._03._19Project
             DB db = DB.GetInstance();
             PCUSCUSTList = db.CusSelectDB(qurey);
         }
-
+        public void SelectedHS_INFO(int Pres_ID)
+        {
+            string qurey = $"Select Dr_Name, Dr_Code, Hs_Name, Hs_Code, Hs_Tel, Part_id from PPRESCR3 where Pres_ID = '{Pres_IDlist[Pres_ID]}'";
+            DB db = DB.GetInstance();
+            HS_INFO hsin = db.SelectedHsinfo(qurey);
+            Drname = hsin.Dr_Name;
+            Dr_Code = hsin.Dr_Code;
+            Hs_Name = hsin.Hs_Name;
+            Hs_Code = hsin.Hs_Code;
+            Hs_Tel = hsin.Hs_Tel;
+            Part_id = hsin.Part_id;
+        }
         public ICommand LabelButton { get; set; }
         private void LabelButtonAction(object sender)
         {
             LabelWindow lw = new LabelWindow();
             lw.ShowDialog();
+        }
+        public ICommand PrintButton { get; set; }
+        private void LabelPrintAction(object sender)
+        {
+            MessageBox.Show(sender.ToString());
+        }
+        public ICommand SelectButton { get; set; }
+        private void SelectButtonAction(object sender)
+        {
+            if ((string)sender == "All")
+            {
+                for (int i = 0; i < PDRUDRUGList.Count; i++)
+                {
+                    PDRUDRUGList[i].IsChecked = true;
+                }
+            }
+            else if((string)sender == "NotAll")
+            {
+                for(int i = 0; i < PDRUDRUGList.Count; i++)
+                {
+                    PDRUDRUGList[i].IsChecked = false;
+                }
+            }
+            else if((string)sender == "UsageDel")
+            {
+                SelectedMedicine.Usage1 = "";
+                SelectedMedicine.Usage2 = "";
+            }
+            CollectionViewSource.GetDefaultView(PDRUDRUGList).Refresh();
         }
         private string _DrugName;
         public string DrugName
@@ -185,6 +300,20 @@ namespace _24._03._19Project
             DRUGInfoName difo = db.SelectDRUGInfoName(qurey);
             DrugName = difo.DrugName;
             DrugBarCode = difo.DrugBarcode;
+        }
+
+        public void Usage1Changed(int index, string checkstring, string radiostring)
+        {    
+            PDRUDRUGList[index].Usage1 = checkstring + radiostring;
+        }
+        public void Usage2Changed(int index, string radiostring)
+        {
+            PDRUDRUGList[index].Usage2 = radiostring;
+        }
+        public void CellChangeAction()
+        {
+            SelectedMedicine.HTT = "1회 " + SelectedMedicine.DrugUnit + "씩 하루 " + SelectedMedicine.Onedayeat + "번";
+            SelectedMedicine.AllDrug = (int.Parse(SelectedMedicine.Onedayeat) * int.Parse(SelectedMedicine.Alleat) * int.Parse(SelectedMedicine.Eat)).ToString();
         }
     }
 }

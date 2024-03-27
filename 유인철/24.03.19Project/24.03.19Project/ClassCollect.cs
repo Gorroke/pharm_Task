@@ -42,10 +42,12 @@ namespace _24._03._19Project
         public string Alleat { get; set; } // 총투약일수 Total_Cnt
         public string DrugUnit { get; set; } // 약품 단위 Pres_Unit
         public string AllDrug { get; set; } // 총 투약량
-        /*public string EatCode { get; set; } // 복용 코드??
-          public string EatHow { get; set; } // 복용법 ??*/
+        public bool IsChecked { get; set; } // 선택 checkbox
+        public string HTT { get; set; } // 복용법
+        public string Usage1 { get; set; } // 용법1
+        public string Usage2 { get; set; } // 용법1
 
-        public Medicine(string name, string drugcode, float eat, string onedayeat, string alleat, string drugunit/*, string eatcode, string eathow*/)
+        public Medicine(string name, string drugcode, float eat, string onedayeat, string alleat, string drugunit)
         {
             Name = name;
             DrugCode = drugcode;
@@ -56,8 +58,8 @@ namespace _24._03._19Project
             string[] drugunitlist = drugunit.Split(' ');
             DrugUnit = drugunitlist[0];
             AllDrug = (int.Parse(onedayeat) * int.Parse(alleat) * eat).ToString();
-            /*EatCode = eatcode;
-            EatHow = eathow;*/
+            IsChecked = false;
+            HTT = "1회 " + DrugUnit + "씩 하루 " + Onedayeat + "번";
         }
     }
     public class Customer //PCUSCUST 와 PPRESCR3 Join
@@ -158,6 +160,25 @@ namespace _24._03._19Project
             DrugName = drugName;
             string[] drugbarcodelist = drugBarcode.Split(' ');
             DrugBarcode = drugbarcodelist[0];
+        }
+    }
+
+    public class HS_INFO
+    {
+        public string Dr_Name { get; set; }
+        public string Dr_Code { get; set; }
+        public string Hs_Name { get; set; }
+        public string Hs_Code { get; set; }
+        public string Hs_Tel { get; set; }
+        public string Part_id { get; set; }
+        public HS_INFO(string dr_Name, string dr_Code, string hs_Name, string hs_Code, string hs_Tel, string part_id)
+        {
+            Dr_Name = dr_Name;
+            Dr_Code = dr_Code;
+            Hs_Name = hs_Name;
+            Hs_Code = hs_Code;
+            Hs_Tel = hs_Tel;
+            Part_id = part_id;
         }
     }
 }

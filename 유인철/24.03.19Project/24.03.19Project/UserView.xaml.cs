@@ -55,6 +55,7 @@ namespace _24._03._19Project
                 userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
                 userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
+                userViewModel.SelectedHS_INFO(PPRESCR.SelectedIndex);
             }
         }
 
@@ -64,6 +65,45 @@ namespace _24._03._19Project
             {
                 userViewModel.SelectedDrugInfoName(PDRUDRUG.SelectedIndex);
             }
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            if(DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
+            {
+                string checkstring = "";
+                RadioButton rb = sender as RadioButton;
+                foreach (CheckBox cbx in Checkboxlist.Children.OfType<CheckBox>())
+                {
+                    if(cbx.IsChecked == true)
+                    {
+                        checkstring += cbx.Content.ToString() + ' ';
+                        cbx.IsChecked = false;
+                    }
+                }
+                userViewModel.Usage1Changed(PPRESCR.SelectedIndex, checkstring, rb.Content.ToString());
+                rb.IsChecked = false;
+                PDRUDRUG.Items.Refresh();
+            }
+        }
+
+        private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1) 
+            {
+                RadioButton rb = sender as RadioButton;
+                userViewModel.Usage2Changed(PPRESCR.SelectedIndex, rb.Content.ToString());
+                PDRUDRUG.Items.Refresh();
+            }
+        }
+
+        private void PDRUDRUG_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (DataContext is UserViewModel userViewModel && PDRUDRUG.SelectedIndex != -1)
+            {
+                userViewModel.CellChangeAction();
+            }
+            PDRUDRUG.Items.Refresh();
         }
     }
 }
