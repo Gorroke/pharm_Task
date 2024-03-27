@@ -40,8 +40,8 @@ namespace _24._03._19Project
         {
             if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
             {
-                PDRUDRUG = null;
-                PCUSCUST = null;
+                userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
+                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
                 userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
             }
@@ -51,10 +51,18 @@ namespace _24._03._19Project
         {
             if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
             {
-                PDRUDRUG = null;
-                PCUSCUST = null;
+                userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
+                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
                 userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
+            }
+        }
+
+        private void PDRUDRUG_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(DataContext is UserViewModel userViewModel && PDRUDRUG.SelectedIndex != -1)
+            {
+                userViewModel.SelectedDrugInfoName(PDRUDRUG.SelectedIndex);
             }
         }
     }

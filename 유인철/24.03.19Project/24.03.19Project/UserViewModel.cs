@@ -29,18 +29,27 @@ namespace _24._03._19Project
             LabelButton = new RelayCommand(LabelButtonAction);
         }
 
-        private DateTime _SelectDateTime = DateTime.Now;
-        public DateTime SelectDateTime
+        private DateTime _SelectDateTime1 = DateTime.Now;
+        public DateTime SelectDateTime1
         {
-            get { return _SelectDateTime; }
+            get { return _SelectDateTime1; }
             set
             {
-                _SelectDateTime = value;
-                OnPropertyChanged("SelectDateTime");
+                _SelectDateTime1 = value;
+                OnPropertyChanged("SelectDateTime1");
             }
         }
-
-        ObservableCollection<Prescription> _PPRESCRList;
+        private DateTime _SelectDateTime2 = DateTime.Now;
+        public DateTime SelectDateTime2
+        {
+            get { return _SelectDateTime2; }
+            set
+            {
+                _SelectDateTime2 = value;
+                OnPropertyChanged("SelectDateTime2");
+            }
+        }
+        private ObservableCollection<Prescription> _PPRESCRList;
         public ObservableCollection<Prescription> PPRESCRList
         {
             get { return _PPRESCRList; }
@@ -51,7 +60,7 @@ namespace _24._03._19Project
             }
         }
 
-        ObservableCollection<Medicine> _PDRUDRUGList;
+        private ObservableCollection<Medicine> _PDRUDRUGList;
         public ObservableCollection<Medicine> PDRUDRUGList
         {
             get { return _PDRUDRUGList; }
@@ -62,7 +71,7 @@ namespace _24._03._19Project
             }
         }
 
-        ObservableCollection<Customer> _PCUSCUSTList;
+        private ObservableCollection<Customer> _PCUSCUSTList;
         public ObservableCollection<Customer> PCUSCUSTList
         {
             get { return _PCUSCUSTList; }
@@ -72,16 +81,16 @@ namespace _24._03._19Project
                 OnPropertyChanged("PCUSCUSTList");
             }
         }
-/*        Object _Selectlistview;
-        public Object Selectlistview
+        private string _DrugCount = "0건";
+        public string DrugCount
         {
-            get { return _Selectlistview; }
+            get { return _DrugCount; }
             set
             {
-                _Selectlistview = value;
-                OnPropertyChanged("Selectlistview");
+                _DrugCount = value;
+                OnPropertyChanged("DrugCount");
             }
-        }*/
+        }
         List<string> _Pres_IDlist;
         public List<string> Pres_IDlist
         {
@@ -91,22 +100,33 @@ namespace _24._03._19Project
                 _Pres_IDlist = value;
             }
         }
-        public void SelectDatesPres_ID(string date)
+        private string _Pres_id;
+        public string Pres_id
         {
-            string qurey = $"Select Pres_ID from PPRESCR1 where Pres_Date = '{date}'";
+            get { return _Pres_id;}
+            set
+            {
+                _Pres_id = value;
+                OnPropertyChanged("Pres_id");
+            }
+        }
+        public void SelectDatesPres_ID(string date1, string date2)
+        {
+            string qurey = $"Select Pres_ID from PPRESCR1 where Pres_Date Between '{date1}' And '{date2}'";
             DB db = DB.GetInstance();
             Pres_IDlist = db.SelectPres_ID(qurey);
         }
         public void SelectedDates()
         {
-            string date = SelectDateTime.ToString("yyyyMMdd");
+            string date1 = SelectDateTime1.ToString("yyyyMMdd");
+            string date2 = SelectDateTime2.ToString("yyyyMMdd");
             string qurey = $"Select PPRESCR3.ChkNum, PPRESCR1.ct_name, PPRESCR1.Inhabitant_id, PPRESCR1.Pres_Time " +
                 $"from PPRESCR1 Join PPRESCR3 " +
                 $"On PPRESCR1.Pres_ID = PPRESCR3.Pres_ID " +
-                $"Where PPRESCR1.Pres_Date = '{date}'";
+                $"Where PPRESCR1.Pres_Date Between '{date1}' And '{date2}'";
             DB db = DB.GetInstance();
             PPRESCRList = db.PreSelectDB(qurey);
-            SelectDatesPres_ID(date);
+            SelectDatesPres_ID(date1, date2);
         }
         public void SelectedPDRUDRUG(int Pres_ID)
         {
@@ -119,6 +139,8 @@ namespace _24._03._19Project
 
             SelectItem si = SelectItem.Getinstance();
             si.SelectPres_ID = Pres_IDlist[Pres_ID];
+            Pres_id = PPRESCRList[Pres_ID].Number;
+            DrugCount = PDRUDRUGList.Count.ToString() + "건";
         }
         public void SelectedPCUSCUST(int Pres_ID)
         {
@@ -136,7 +158,33 @@ namespace _24._03._19Project
             LabelWindow lw = new LabelWindow();
             lw.ShowDialog();
         }
-
-
+        private string _DrugName;
+        public string DrugName
+        {
+            get { return _DrugName; } 
+            set
+            {
+                _DrugName = value;
+                OnPropertyChanged("DrugName");
+            }
+        }
+        private string _DrugBarCode;
+        public string DrugBarCode
+        {
+            get { return _DrugBarCode; }
+            set
+            {
+                _DrugBarCode = value;
+                OnPropertyChanged("DrugBarCode");
+            }
+        }
+        public void SelectedDrugInfoName(int index)
+        {
+            string qurey = $"Select Drug_Name, BarCode from PDRUDRUG Where Drug_ID = '{PDRUDRUGList[index].DrugCode}'";
+            DB db = DB.GetInstance();
+            DRUGInfoName difo = db.SelectDRUGInfoName(qurey);
+            DrugName = difo.DrugName;
+            DrugBarCode = difo.DrugBarcode;
+        }
     }
 }

@@ -1,0 +1,77 @@
+[2024-03-27 오전 8:53:36] Common.EncryptionBizEnCode, BizEnCode 복호화 실패 => 원본 문자열 [등록 테스트]
+ 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-27 오전 8:53:36] [Form_Load]
+[2024-03-27 오전 9:15:13] update PPRESCR3 set Chk2 = 'Y' where Pres_ID = ''
+[2024-03-27 오전 9:15:13] RequestQuery : System.Data.SqlClient.SqlException (0x80131904): 개체 이름 'PPRESCR3'이(가) 유효하지 않습니다.
+   위치: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   위치: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   위치: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   위치: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   위치: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader()
+   위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
+ClientConnectionId:e05861d5-fbcd-4a0c-ad56-fde28c02512b
+Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = ''
+[2024-03-27 오전 9:15:19] update PPRESCR3 set Chk2 = 'Y' where Pres_ID = ''
+[2024-03-27 오전 9:15:19] RequestQuery : System.Data.SqlClient.SqlException (0x80131904): 개체 이름 'PPRESCR3'이(가) 유효하지 않습니다.
+   위치: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   위치: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   위치: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   위치: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   위치: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader()
+   위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
+ClientConnectionId:e05861d5-fbcd-4a0c-ad56-fde28c02512b
+Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = ''
+[2024-03-27 오전 9:21:42] [Form_Closing]
+[2024-03-27 오전 9:21:58] Common.EncryptionBizEnCode, BizEnCode 복호화 실패 => 원본 문자열 [등록 테스트]
+ 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-27 오전 9:21:58] [Form_Load]
+[2024-03-27 오전 9:27:08] Common.DercryptionBizEnCode, BizEnCode 암호화 실패 => 원본 문자열 []
+ 80040154 클래스가 등록되지 않았습니다. (예외가 발생한 HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)) 오류로 인해 CLSID가 {7156F7C2-F370-422E-84A1-0A19F1AB42E5}인 구성 요소의 COM 클래스 팩터리를 검색하지 못했습니다.
+[2024-03-27 오전 10:33:44] update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
+[2024-03-27 오전 10:33:44] RequestQuery : System.Data.SqlClient.SqlException (0x80131904): 개체 이름 'PPRESCR3'이(가) 유효하지 않습니다.
+   위치: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   위치: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   위치: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   위치: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   위치: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader()
+   위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
+ClientConnectionId:37abdd26-a3d6-45f6-854a-80b8e8f700b0
+Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
+[2024-03-27 오전 10:33:46] update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
+[2024-03-27 오전 10:33:46] RequestQuery : System.Data.SqlClient.SqlException (0x80131904): 개체 이름 'PPRESCR3'이(가) 유효하지 않습니다.
+   위치: System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   위치: System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   위치: System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   위치: System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   위치: System.Data.SqlClient.SqlDataReader.get_MetaData()
+   위치: System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry)
+   위치: System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   위치: System.Data.SqlClient.SqlCommand.ExecuteReader()
+   위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
+ClientConnectionId:37abdd26-a3d6-45f6-854a-80b8e8f700b0
+Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
