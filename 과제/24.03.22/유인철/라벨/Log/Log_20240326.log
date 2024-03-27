@@ -126,3 +126,4 @@ Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID
    위치: JPharm._00_DB.PharmDataDB.RequestQuery(String query) 파일 C:\Users\bitks\source\repos\Git_Projects\pharm-JPharm\JPharm\JPharm\00_DB\PharmDataDB.cs:줄 60
 ClientConnectionId:32fcb1cf-40e9-4819-9296-7b766af83e54
 Error Number:208,State:1,Class:16 | update PPRESCR3 set Chk2 = 'Y' where Pres_ID = '000010000000010'
+[2024-03-26 오후 6:00:21] [Form_Closing]

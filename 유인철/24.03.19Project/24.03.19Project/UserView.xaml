@@ -78,7 +78,7 @@
             </Grid>
 
             <Grid Grid.Row="2">
-                <DataGrid x:Name="PPRESCR" Margin="5,0,5,10" FontSize="15" Height="655" VerticalAlignment="Top" 
+                <DataGrid x:Name="PPRESCR" Margin="5,0,5,10" FontSize="15" Height="660" VerticalAlignment="Top" 
                           ItemsSource="{Binding PPRESCRList}" CanUserAddRows="False" AutoGenerateColumns="False" 
                           IsReadOnly="True" SelectionChanged="PPRESCR_SelectionChanged" Background="#E5EEfA">
                     <DataGrid.ItemContainerStyle>
@@ -328,7 +328,7 @@
                     </Grid.RowDefinitions>
 
                     <Grid Grid.Row="0">
-                        <Button Content="선택 약품 복용법 제거" Width="200" Height="30" 
+                        <Button Content="선택 약품 용법 제거" Width="200" Height="30" 
                                 BorderBrush="DeepSkyBlue" Background="White" 
                                 VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0" Foreground="DeepSkyBlue" FontSize="14"/>
                     </Grid>
@@ -463,6 +463,205 @@
                                 <RowDefinition Height="0.55*"/>
                                 <RowDefinition Height="0.45*"/>
                             </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.Resources>
+                                    <Style TargetType="Button">
+                                        <Setter Property="Background" Value="White"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="FontSize" Value="13"/>
+                                    </Style>
+                                </Grid.Resources>
+                                <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" 
+                                           Width="620" VerticalAlignment="Top" ItemWidth="120" 
+                                           Height="220" ItemHeight="44" Background="DeepSkyBlue">
+                                    <Button Content="버튼 출력" Width="80" Height="35"/>
+                                    <Button Content="아점저 30" Width="80" Height="35"/>
+                                    <Button Content="아점저 테스" Width="80" Height="35"/>
+                                    <Button Content="아침 후 30" Width="80" Height="35"/>
+                                    <Button Content="점심 후 30" Width="80" Height="35"/>
+                                    <Button Content="저녁 후 30" Width="80" Height="35"/>
+                                    <Button Content="아저 후 30" Width="80" Height="35"/>
+                                    <Button Content="식후 30" Width="80" Height="35"/>
+                                    <Button Content="아침 전 30" Width="80" Height="35"/>
+                                    <Button Content="점심 전 30" Width="80" Height="35"/>
+                                    <Button Content="저녁 전 30" Width="80" Height="35"/>
+                                    <Button Content="아저 전 30" Width="80" Height="35"/>
+                                    <Button Content="식전 30" Width="80" Height="35"/>
+                                    <Button Content="필요 시" Width="80" Height="35"/>
+                                    <Button Content="자기 전" Width="80" Height="35"/>
+                                    <Button Content="일정시간에" Width="80" Height="35"/>
+                                    <Button Content="하루 한번" Width="80" Height="35"/>
+                                    <Button Content="한달에 한번" Width="80" Height="35"/>
+                                    <Button Content="좌안 점안" Width="80" Height="35"/>
+                                    <Button Content="우안 점안" Width="80" Height="35"/>
+                                    <Button Content="8시간마다" Width="80" Height="35"/>
+                                    <Button Content="12시간마다" Width="80" Height="35"/>
+                                    <Button Content="오전 8시" Width="80" Height="35"/>
+                                    <Button Content="" Width="80" Height="35"/>
+                                    <Button Content="" Width="80" Height="35"/>
+                                </WrapPanel>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.225*"/>
+                                    <RowDefinition Height="0.1*"/>
+                                    <RowDefinition Height="0.225*"/>
+                                    <RowDefinition Height="0.225*"/>
+                                    <RowDefinition Height="0.225*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Row="0">
+                                    <Grid.Resources>
+                                        <Style TargetType="Button">
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter Property="FontSize" Value="13"/>
+                                            <Setter Property="Foreground" Value="DeepSkyBlue"/>
+                                            <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid Grid.Column="0">
+                                        <Button Content="겉 봉투 출력(약품명X)" Margin="3" Width="235"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Button Content="초기화" Margin="3"/>
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <Button Content="겉 봉투 출력(약품명O)" Margin="3" Width="235"/>
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <WrapPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="500" 
+                                               VerticalAlignment="Top" ItemWidth="100" Margin="20,0,0,0">
+                                        <RadioButton Content="정"/>
+                                        <RadioButton Content="포"/>
+                                        <RadioButton Content="하루"/>
+                                    </WrapPanel>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                        <ColumnDefinition Width="0.15*"/>
+                                        <ColumnDefinition Width="0.1*"/>
+                                        <ColumnDefinition Width="0.4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="11,0"/>
+                                            <Setter Property="Height" Value="30"/>
+                                        </Style>
+                                        <Style TargetType="Label">
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid Grid.Column="0">
+                                        <TextBox />
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBox />
+                                    </Grid>
+                                    <Grid Grid.Column="2">
+                                        <TextBox />
+                                    </Grid>
+                                    <Grid Grid.Column="3">
+                                        <Label Content="회"/>
+                                    </Grid>
+                                    <Grid Grid.Column="4">
+                                        <TextBox />
+                                    </Grid>
+                                    <Grid Grid.Column="5">
+                                        <Label Content="일분"/>
+                                    </Grid>
+                                    <Grid Grid.Column="6">
+                                        <Label Content="총"/>
+                                    </Grid>
+                                    <Grid Grid.Column="7">
+                                        <TextBox />
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="3">
+                                    <Grid.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="5,0,11,0"/>
+                                            <Setter Property="Height" Value="35"/>
+                                        </Style>
+                                        <Style TargetType="Label">
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Label Content="용법1"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBox />
+                                    </Grid>
+                                </Grid>
+                                <Grid Grid.Row="4">
+                                    <Grid.Resources>
+                                        <Style TargetType="TextBox">
+                                            <Setter Property="Background" Value="White"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
+                                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="Margin" Value="5,0,11,0"/>
+                                            <Setter Property="Height" Value="35"/>
+                                        </Style>
+                                        <Style TargetType="Label">
+                                            <Setter Property="VerticalAlignment" Value="Center"/>
+                                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                                            <Setter Property="FontSize" Value="15"/>
+                                            <Setter Property="FontWeight" Value="Bold"/>
+                                        </Style>
+                                    </Grid.Resources>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="0.2*"/>
+                                        <ColumnDefinition Width="0.8*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0">
+                                        <Label Content="용법2"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <TextBox />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
