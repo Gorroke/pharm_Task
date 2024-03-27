@@ -1,0 +1,15 @@
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\bin\Debug\wpf_복약비교프로그램.exe.config
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\bin\Debug\wpf_복약비교프로그램.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\bin\Debug\wpf_복약비교프로그램.pdb
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.csproj.AssemblyReference.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\MainWindow.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\App.g.cs
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램_MarkupCompile.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램_MarkupCompile.lref
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\MainWindow.baml
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.g.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.Properties.Resources.resources
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.csproj.GenerateResource.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.csproj.CoreCompileInputs.cache
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.exe
+C:\Users\김기동\Documents\GitHub\pharm_Task\김기동\wpf_복약비교프로그램\wpf_복약비교프로그램\obj\Debug\wpf_복약비교프로그램.pdb
