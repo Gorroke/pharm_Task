@@ -12,38 +12,8 @@
             <ColumnDefinition Width="0.2*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0">
-            <FlowDocumentReader Margin="5">
-                <FlowDocument x:Name="LabelPage" PageHeight="300" PageWidth="500">
-                    <!--<Paragraph TextAlignment="Center" FontSize="20">
-                        <TextBlock x:Name="Number" Text="{Binding UserNumber}"/>
-                        <TextBlock x:Name="Name" Text="{Binding UserName}"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="16">
-                        <TextBlock x:Name="DrugName" Text="asd"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="16">
-                        <TextBlock Text="1일 "/>
-                        <TextBlock x:Name="OneTime" Text="{Binding OneTime}"/>
-                        <TextBlock Text="회 복용("/>
-                        <TextBlock x:Name="AllDay" Text="{Binding AllDay}"/>
-                        <TextBlock Text="일분)"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="10">
-                        <TextBlock x:Name="Total" Text="{Binding Total}"/>
-                        <TextBlock Text="알"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="13">
-                        <TextBlock x:Name="Date" Text="{Binding NowDate}"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="13">
-                        <TextBlock x:Name="StoreName" Text="{Binding StoreName}"/>
-                        <TextBlock Text="Tel:"/>
-                        <TextBlock x:Name="StoreNum" Text="{Binding StoreNum}"/>
-                    </Paragraph>
-                    <Paragraph TextAlignment="Center" FontSize="10">
-                        <TextBlock x:Name="Address" Text="{Binding Address}"/>
-                    </Paragraph>-->
-                </FlowDocument>
+            <FlowDocumentReader Margin="5" Zoom="10">
+                <FlowDocument x:Name="LabelPage" PageHeight="300" PageWidth="550" MaxPageHeight="1122" MaxPageWidth="793"/>
             </FlowDocumentReader>
         </Grid>
 

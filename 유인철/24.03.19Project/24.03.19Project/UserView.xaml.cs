@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace _24._03._19Project
 {
@@ -31,7 +33,6 @@ namespace _24._03._19Project
             if(DataContext is UserViewModel userViewModel)
             {
                 userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
-                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedDates();
             }
         }
@@ -41,9 +42,7 @@ namespace _24._03._19Project
             if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
             {
                 userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
-                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
-                userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
             }
         }
 
@@ -52,9 +51,7 @@ namespace _24._03._19Project
             if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
             {
                 userViewModel.PDRUDRUGList = new ObservableCollection<Medicine>();
-                userViewModel.PCUSCUSTList = new ObservableCollection<Customer>();
                 userViewModel.SelectedPDRUDRUG(PPRESCR.SelectedIndex);
-                userViewModel.SelectedPCUSCUST(PPRESCR.SelectedIndex);
                 userViewModel.SelectedHS_INFO(PPRESCR.SelectedIndex);
             }
         }
@@ -69,7 +66,7 @@ namespace _24._03._19Project
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
-            if(DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1)
+            if(DataContext is UserViewModel userViewModel && PDRUDRUG.SelectedIndex != -1)
             {
                 string checkstring = "";
                 RadioButton rb = sender as RadioButton;
@@ -81,7 +78,7 @@ namespace _24._03._19Project
                         cbx.IsChecked = false;
                     }
                 }
-                userViewModel.Usage1Changed(PPRESCR.SelectedIndex, checkstring, rb.Content.ToString());
+                userViewModel.Usage1Changed(PDRUDRUG.SelectedIndex, checkstring, rb.Content.ToString());
                 rb.IsChecked = false;
                 PDRUDRUG.Items.Refresh();
             }
@@ -89,21 +86,37 @@ namespace _24._03._19Project
 
         private void RadioButton_Checked_1(object sender, RoutedEventArgs e)
         {
-            if (DataContext is UserViewModel userViewModel && PPRESCR.SelectedIndex != -1) 
+            if (DataContext is UserViewModel userViewModel && PDRUDRUG.SelectedIndex != -1) 
             {
                 RadioButton rb = sender as RadioButton;
-                userViewModel.Usage2Changed(PPRESCR.SelectedIndex, rb.Content.ToString());
+                userViewModel.Usage2Changed(PDRUDRUG.SelectedIndex, rb.Content.ToString());
                 PDRUDRUG.Items.Refresh();
             }
         }
 
-        private void PDRUDRUG_CurrentCellChanged(object sender, EventArgs e)
+        private void PDRUDRUG_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
             if (DataContext is UserViewModel userViewModel && PDRUDRUG.SelectedIndex != -1)
             {
-                userViewModel.CellChangeAction();
+                userViewModel.CellChangeAction(PDRUDRUG.SelectedIndex);
             }
-            PDRUDRUG.Items.Refresh();
+            DataGrid grid = sender as DataGrid;
+            grid.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                grid.Items.Refresh();
+            }), DispatcherPriority.Background); // 수정 트랜잭션이 완료된 후에 실행하는 코드
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            int i = 0;
+            TextBox tb = sender as TextBox;
+            string te = tb.Text;
+            bool result = int.TryParse(te, out i);
+            if(DataContext is UserViewModel userViewModel && result)
+            {
+                userViewModel.BagMedicineAllDrug();
+            }
         }
     }
 }

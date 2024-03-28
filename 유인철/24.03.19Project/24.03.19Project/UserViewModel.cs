@@ -5,12 +5,15 @@ using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Xml.Linq;
 
 namespace _24._03._19Project
 {
@@ -25,11 +28,11 @@ namespace _24._03._19Project
         {
             PPRESCRList = new ObservableCollection<Prescription>();
             PDRUDRUGList = new ObservableCollection<Medicine>();
-            PCUSCUSTList = new ObservableCollection<Customer>();
             SelectedDates();
             LabelButton = new RelayCommand(LabelButtonAction);
             PrintButton = new RelayCommand(LabelPrintAction);
             SelectButton = new RelayCommand(SelectButtonAction);
+            BagButton = new RelayCommand(BagCase);
         }
 
         private DateTime _SelectDateTime1 = DateTime.Now;
@@ -63,6 +66,16 @@ namespace _24._03._19Project
             }
         }
 
+        private Medicine _BagMedicine;
+        public Medicine BagMedicine
+        {
+            get { return _BagMedicine; }
+            set
+            {
+                _BagMedicine = value;
+                OnPropertyChanged("BagMedicine");
+            }
+        }
         private Medicine _SelectedMedicine;
         public Medicine SelectedMedicine
         {
@@ -85,16 +98,6 @@ namespace _24._03._19Project
             }
         }
 
-        private ObservableCollection<Customer> _PCUSCUSTList;
-        public ObservableCollection<Customer> PCUSCUSTList
-        {
-            get { return _PCUSCUSTList; }
-            set
-            {
-                _PCUSCUSTList = value;
-                OnPropertyChanged("PCUSCUSTList");
-            }
-        }
         private string _DrugCount = "0건";
         public string DrugCount
         {
@@ -108,7 +111,7 @@ namespace _24._03._19Project
         List<string> _Pres_IDlist;
         public List<string> Pres_IDlist
         {
-            get { return _Pres_IDlist;}
+            get { return _Pres_IDlist; }
             set
             {
                 _Pres_IDlist = value;
@@ -117,7 +120,7 @@ namespace _24._03._19Project
         private string _Pres_id;
         public string Pres_id
         {
-            get { return _Pres_id;}
+            get { return _Pres_id; }
             set
             {
                 _Pres_id = value;
@@ -184,7 +187,11 @@ namespace _24._03._19Project
                 OnPropertyChanged("Part_id");
             }
         }
-
+        public void BagMedicineAllDrug()
+        {
+            BagMedicine.AllDrug = (int.Parse(BagMedicine.Onedayeat) * int.Parse(BagMedicine.Alleat) * int.Parse(BagMedicine.Eat)).ToString();
+            OnPropertyChanged("BagMedicine");
+        }
         public void SelectDatesPres_ID(string date1, string date2)
         {
             string qurey = $"Select Pres_ID from PPRESCR1 where Pres_Date Between '{date1}' And '{date2}'";
@@ -217,15 +224,6 @@ namespace _24._03._19Project
             Pres_id = PPRESCRList[Pres_ID].Number;
             DrugCount = PDRUDRUGList.Count.ToString() + "건";
         }
-        public void SelectedPCUSCUST(int Pres_ID)
-        {
-            string qurey = $"Select PCUSCUST.Ct_Name, PCUSCUST.Inhabitant_ID, PCUSCUST.Ct_Special1, PCUSCUST.Ct_Special2, PCUSCUST.Ct_Hp, PPRESCR3.Sb_Cd1, PPRESCR3.Hs_Name, PPRESCR3.Part_id, " +
-                $"PPRESCR3.Hs_Code, PPRESCR3.Hs_Tel, PPRESCR3.Dr_Name, PPRESCR3.Dr_Code from PCUSCUST Join PPRESCR3 " +
-                $"On PPRESCR3.ChkUserid1 = PCUSCUST.Ds_Id " +
-                $"Where PPRESCR3.Pres_ID = '{Pres_IDlist[Pres_ID]}'";
-            DB db = DB.GetInstance();
-            PCUSCUSTList = db.CusSelectDB(qurey);
-        }
         public void SelectedHS_INFO(int Pres_ID)
         {
             string qurey = $"Select Dr_Name, Dr_Code, Hs_Name, Hs_Code, Hs_Tel, Part_id from PPRESCR3 where Pres_ID = '{Pres_IDlist[Pres_ID]}'";
@@ -247,7 +245,189 @@ namespace _24._03._19Project
         public ICommand PrintButton { get; set; }
         private void LabelPrintAction(object sender)
         {
-            MessageBox.Show(sender.ToString());
+            if(PDRUDRUGList.Count != 0)
+            {
+                SelectDB();
+                Document = new FlowDocument();
+                Drugs = new List<LabelDrug>();
+                switch (sender)
+                {
+                    case "All":
+                        LoadAllDB();
+                        break;
+                    case "Select":
+                        LoadSelectDB();
+                        break;
+                    case "NotDrug":
+                        if (SelectedMedicine != null)
+                        {
+                            LoadNotDrugDB();
+                        }
+                        else
+                        {
+                            MessageBox.Show("원하는 약품을 선택하세요.");
+                        }
+                        break;
+                    case "AllDrug":
+                        if (SelectedMedicine != null)
+                        {
+                            LoadAllDrugDB();
+                        }
+                        else
+                        {
+                            MessageBox.Show("원하는 약품을 선택하세요.");
+                        }
+                        break;
+                    case "Selecteditem":
+                        LoadSelecteditem();
+                        break;
+                }
+                for(int i = 0; i < Drugs.Count; i++)
+                {
+                    CreateLabel(Drugs[i]);
+                    PrintLabel();
+                    Document.Blocks.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("처방전을 선택하세요.");
+            }
+        }
+        FlowDocument Document;
+        List<LabelUser> Users { get; set; }
+        List<LabelDrug> Drugs { get; set; }
+        List<LabelShop> Shops { get; set; }
+        private void SelectDB()
+        {
+            SelectItem si = SelectItem.Getinstance();
+            string Presid = si.SelectPres_ID;
+            DB db = DB.GetInstance();
+            string qurey = $"Select PPRESCR1.Ct_Name, PPRESCR3.ChkNum, PPRESCR1.Pres_Date " +
+                $"from PPRESCR1 join PPRESCR3 " +
+                $"On PPRESCR1.Pres_ID = PPRESCR3.Pres_ID " +
+                $"Where PPRESCR1.Pres_ID = '{Presid}'";
+            Users = db.SelectDBUser(qurey);
+            qurey = $"Select Hp_Name, Hp_Tel, Hp_Address1, Hp_Address2 From PCOMSHOP";
+            Shops = db.SelectDBShop(qurey);
+        }
+        private void LoadAllDB()
+        {
+            SelectItem si = SelectItem.Getinstance();
+            string Presid = si.SelectPres_ID;
+            DB db = DB.GetInstance();
+            string qurey = $"Select PPRESCR4.Drug_Name, PPRESCR4.One_Cnt, PPRESCR4.Total_Cnt, PPRESCR4.One_Qty, PDRUDRUG.Pres_Unit " +
+                $"From PPRESCR4 Join PDRUDRUG " +
+                $"On PPRESCR4.Drug_Name = PDRUDRUG.Drug_Name " +
+                $"Where PPRESCR4.Pres_ID = '{Presid}'";
+            Drugs = db.SelectDBDrug(qurey);
+        }
+        private void LoadSelecteditem()
+        {
+            LabelDrug ld = new LabelDrug(SelectedMedicine.Name, SelectedMedicine.Onedayeat, SelectedMedicine.Alleat,
+                int.Parse(SelectedMedicine.Eat), SelectedMedicine.DrugUnit);
+            Drugs.Add(ld);
+        }
+        private void LoadSelectDB()
+        {
+            LabelDrug ld;
+            for (int i = 0; i < PDRUDRUGList.Count; i++)
+            {
+                if (PDRUDRUGList[i].IsChecked)
+                {
+                    ld = new LabelDrug(PDRUDRUGList[i].Name, PDRUDRUGList[i].Onedayeat, PDRUDRUGList[i].Alleat, int.Parse(PDRUDRUGList[i].Eat), PDRUDRUGList[i].DrugUnit);
+                    Drugs.Add(ld);
+                }
+            }
+        }
+        private void LoadNotDrugDB()
+        {
+            LabelDrug ld = new LabelDrug(null, BagMedicine.Onedayeat, BagMedicine.Alleat, int.Parse(BagMedicine.Eat), BagMedicine.DrugUnit);
+            Drugs.Add(ld);
+        }
+        private void LoadAllDrugDB()
+        {
+            LabelDrug ld = new LabelDrug(BagMedicine.Name, BagMedicine.Onedayeat, BagMedicine.Alleat, int.Parse(BagMedicine.Eat), BagMedicine.DrugUnit);
+            Drugs.Add(ld);
+        }
+        private void PrintLabel()
+        {
+            PrintDialog pd = new PrintDialog();
+            DocumentPaginator paginator = ((IDocumentPaginatorSource)Document).DocumentPaginator;
+            string fileName = "Label";
+            pd.PrintDocument(paginator, fileName);
+            MessageBox.Show("저장 완료");
+        }
+        private void CreateLabel(LabelDrug md)
+        {
+            Paragraph para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 20
+            };
+            TextBlock Tb = new TextBlock(new Run(Users[0].ChkNum + ' ' + Users[0].UserName));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
+
+            if (md.DrugName != null)
+            {
+                para = new Paragraph
+                {
+                    TextAlignment = System.Windows.TextAlignment.Center,
+                    FontSize = 13
+                };
+                Tb = new TextBlock(new Run(md.DrugName));
+                para.Inlines.Add(Tb);
+                Document.Blocks.Add(para);
+            }
+
+            para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 17
+            };
+            Tb = new TextBlock(new Run("1일 "+ md.OneDayEat + " * "+ md.Pres_Unit+ ' ' + md.One_Cnt + "회 복용(" + md.Total_Cnt + "일분)"));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
+
+            para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 16
+            };
+            int oc = int.Parse(md.One_Cnt);
+            int tc = int.Parse(md.Total_Cnt);
+            int ode = int.Parse(md.OneDayEat);
+            Tb = new TextBlock(new Run((oc * tc * ode).ToString() + "알"));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
+
+            para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 18
+            };
+            Tb = new TextBlock(new Run(Users[0].NowDate));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
+
+            para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 15
+            };
+            Tb = new TextBlock(new Run(Shops[0].Hp_Name + " Tel: " + Shops[0].Hp_Tel));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
+
+            para = new Paragraph
+            {
+                TextAlignment = System.Windows.TextAlignment.Center,
+                FontSize = 14
+            };
+            Tb = new TextBlock(new Run(Shops[0].Hp_Address));
+            para.Inlines.Add(Tb);
+            Document.Blocks.Add(para);
         }
         public ICommand SelectButton { get; set; }
         private void SelectButtonAction(object sender)
@@ -259,24 +439,30 @@ namespace _24._03._19Project
                     PDRUDRUGList[i].IsChecked = true;
                 }
             }
-            else if((string)sender == "NotAll")
+            else if ((string)sender == "NotAll")
             {
-                for(int i = 0; i < PDRUDRUGList.Count; i++)
+                for (int i = 0; i < PDRUDRUGList.Count; i++)
                 {
                     PDRUDRUGList[i].IsChecked = false;
                 }
             }
-            else if((string)sender == "UsageDel")
+            else if ((string)sender == "UsageDel")
             {
                 SelectedMedicine.Usage1 = "";
                 SelectedMedicine.Usage2 = "";
+                OnPropertyChanged("SelectedMedicine");
+            }
+            else if((string)sender == "Clear")
+            {
+                SelectedMedicine = null;
+                OnPropertyChanged("SelectedMedicine");
             }
             CollectionViewSource.GetDefaultView(PDRUDRUGList).Refresh();
         }
         private string _DrugName;
         public string DrugName
         {
-            get { return _DrugName; } 
+            get { return _DrugName; }
             set
             {
                 _DrugName = value;
@@ -300,20 +486,109 @@ namespace _24._03._19Project
             DRUGInfoName difo = db.SelectDRUGInfoName(qurey);
             DrugName = difo.DrugName;
             DrugBarCode = difo.DrugBarcode;
+            BagMedicine = CopyMedicine();
         }
-
+        private Medicine CopyMedicine()
+        {
+            Medicine mdi = new Medicine(SelectedMedicine.Name, SelectedMedicine.DrugCode, SelectedMedicine.Eat, SelectedMedicine.Onedayeat,
+                SelectedMedicine.Alleat, SelectedMedicine.DrugUnit, SelectedMedicine.AllDrug, 
+                SelectedMedicine.IsChecked, SelectedMedicine.HTT, SelectedMedicine.Usage1, SelectedMedicine.Usage2);
+            return mdi;
+        }
         public void Usage1Changed(int index, string checkstring, string radiostring)
-        {    
-            PDRUDRUGList[index].Usage1 = checkstring + radiostring;
+        {
+            SelectedMedicine.Usage1 = checkstring + radiostring;
+            PDRUDRUGList[index] = SelectedMedicine;
         }
         public void Usage2Changed(int index, string radiostring)
         {
-            PDRUDRUGList[index].Usage2 = radiostring;
+            SelectedMedicine.Usage2 = radiostring;
+            PDRUDRUGList[index] = SelectedMedicine;
         }
-        public void CellChangeAction()
+        public void CellChangeAction(int index)
         {
-            SelectedMedicine.HTT = "1회 " + SelectedMedicine.DrugUnit + "씩 하루 " + SelectedMedicine.Onedayeat + "번";
+            SelectedMedicine.HTT = "1회 " + SelectedMedicine.Eat + "*" + SelectedMedicine.DrugUnit + "씩 하루 " + SelectedMedicine.Onedayeat + "번";
             SelectedMedicine.AllDrug = (int.Parse(SelectedMedicine.Onedayeat) * int.Parse(SelectedMedicine.Alleat) * int.Parse(SelectedMedicine.Eat)).ToString();
+            PDRUDRUGList[index] = SelectedMedicine;
+            OnPropertyChanged("PDRUDRUGList");
         }
+
+        public ICommand BagButton { get; set; }
+        private void BagCase(object sender)
+        {
+            switch (sender)
+            {
+                case "1":
+                    BagMedicine.Usage1 = "아침 점심 저녁 식후 30분";
+                    break;
+                case "2":
+                    BagMedicine.Usage1 = "아침 점심 저녁";
+                    break;
+                case "3":
+                    BagMedicine.Usage1 = "아침 식후 30분 복용";
+                    break;
+                case "4":
+                    BagMedicine.Usage1 = "점심 식후 30분 복용";
+                    break;
+                case "5":
+                    BagMedicine.Usage1 = "저녁 식후 30분 복용";
+                    break;
+                case "6":
+                    BagMedicine.Usage1 = "아침 저녁 식후 30분";
+                    break;
+                case "7":
+                    BagMedicine.Usage1 = "매 식후 30분 복용";
+                    break;
+                case "8":
+                    BagMedicine.Usage1 = "아침 식전 30분 복용";
+                    break;
+                case "9":
+                    BagMedicine.Usage1 = "점심 식전 30분 복용";
+                    break;
+                case "10":
+                    BagMedicine.Usage1 = "저녁 식전 30분 복용";
+                    break;
+                case "11":
+                    BagMedicine.Usage1 = "아침 저녁 식전 30분";
+                    break;
+                case "12":
+                    BagMedicine.Usage1 = "매 식전 30분 복용";
+                    break;
+                case "13":
+                    BagMedicine.Usage1 = "필요 시 복용";
+                    break;
+                case "14":
+                    BagMedicine.Usage1 = "자기 전 복용";
+                    break;
+                case "15":
+                    BagMedicine.Usage1 = "일정 시간 복용";
+                    break;
+                case "16":
+                    BagMedicine.Usage1 = "하루 한번 복용";
+                    break;
+                case "17":
+                    BagMedicine.Usage1 = "한달에 한번 복용";
+                    break;
+                case "18":
+                    BagMedicine.Usage1 = "왼쪽 눈에 넣으세요";
+                    break;
+                case "19":
+                    BagMedicine.Usage1 = "오른쪽 눈에 넣으세요";
+                    break;
+                case "20":
+                    BagMedicine.Usage1 = "8시간마다 복용";
+                    break;
+                case "21":
+                    BagMedicine.Usage1 = "12시간마다 복용";
+                    break;
+                case "22":
+                    BagMedicine.Usage1 = "오전 8시 복용";
+                    break;
+            }
+            OnPropertyChanged("BagMedicine");
+            CollectionViewSource.GetDefaultView(PDRUDRUGList).Refresh();
+        }
+
+
     }
 }

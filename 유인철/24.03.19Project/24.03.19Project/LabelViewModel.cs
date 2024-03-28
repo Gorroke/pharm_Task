@@ -124,6 +124,8 @@ namespace _24._03._19Project
         {
             PrintDialog pd = new PrintDialog();
             DocumentPaginator paginator = ((IDocumentPaginatorSource)Document).DocumentPaginator;
+            MessageBox.Show(paginator.PageSize.ToString());
+            /*paginator.PageSize = new Size(794, 1123);*/
             string fileName = "Label";
             pd.PrintDocument(paginator, fileName);
             MessageBox.Show("저장 완료");

@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\bindingproject\\bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\bindingproject\\bindingproject\\testviewtwo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\testviewtwo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testviewtwo.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|c:\\users\\\uC720\uC778\uCCA0\\documents\\github\\pharm_task\\\uC720\uC778\uCCA0\\bindingproject\\bindingproject\\testview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\bindingproject\\testview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{8E0DEE60-E2BE-494C-90D6-AAAFB21929B4}|BindingProject\\BindingProject.csproj|solutionrelative:bindingproject\\testview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -41,8 +41,7 @@
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestViewTwo.xaml",
               "RelativeToolTip": "BindingProject\\TestViewTwo.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-27T05:00:38.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-27T05:00:38.645Z"
             },
             {
               "$type": "Document",
@@ -75,7 +74,7 @@
               "RelativeDocumentMoniker": "BindingProject\\TestViewModel.cs",
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestViewModel.cs",
               "RelativeToolTip": "BindingProject\\TestViewModel.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAwwCkAAAAcAAAA",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA/wCkAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-07T01:04:12.575Z",
               "EditorCaption": ""
@@ -89,8 +88,7 @@
               "ToolTip": "C:\\Users\\\uC720\uC778\uCCA0\\Documents\\GitHub\\pharm_Task\\\uC720\uC778\uCCA0\\BindingProject\\BindingProject\\TestView.xaml",
               "RelativeToolTip": "BindingProject\\TestView.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-03-07T01:00:48.784Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T01:00:48.784Z"
             }
           ]
         }

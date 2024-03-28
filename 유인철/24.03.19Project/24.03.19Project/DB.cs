@@ -116,43 +116,7 @@ namespace _24._03._19Project
                 }
             }
         }
-        public ObservableCollection<Customer> CusSelectDB(string query)
-        {
-            using (SqlConnection connection = new SqlConnection(constr))
-            {
-                try
-                {
-                    Customer cus;
-                    ObservableCollection<Customer> clist = new ObservableCollection<Customer>();
-                    connection.Open();
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        using (SqlDataReader reader = command.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                cus = new Customer
-                                (
-                                    reader.GetString(0), reader.GetString(1),
-                                    reader.GetString(2), reader.GetString(3), 
-                                    reader.GetString(4), reader.GetString(5), 
-                                    reader.GetString(6), reader.GetString(7), 
-                                    reader.GetString(8), reader.GetString(9), 
-                                    reader.GetString(10), reader.GetString(11)
-                                );
-                                clist.Add(cus);
-                            }
-                        }
-                    }
-                    return clist;
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                    return null;
-                }
-            }
-        }
+        
         public void UpdateDB(string query)
         {
             using (SqlConnection connection = new SqlConnection(constr))
@@ -215,7 +179,8 @@ namespace _24._03._19Project
                         {
                             while (reader.Read())
                             {
-                                ld = new LabelDrug(reader.GetString(0), reader.GetString(1), reader.GetString(2));
+                                ld = new LabelDrug(reader.GetString(0), reader.GetString(1), 
+                                    reader.GetString(2), reader.GetFloat(3), reader.GetString(4));
                                 labelDrugs.Add(ld);
                             }
                         }

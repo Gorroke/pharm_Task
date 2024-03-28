@@ -16,7 +16,7 @@ namespace _24._03._19Project
     public class Prescription // PPRESCR1
     {
         public string Number { get; set; } // 조제번호
-        public string Name { get; set; } // 고객 이름
+        public string Name { get; set; } // 고객 이름 ct_Name
         public string Birthday { get; set; } // 주민등록번호
         public string Pres_Time { get; set; } // 조제 시간
 
@@ -59,44 +59,24 @@ namespace _24._03._19Project
             DrugUnit = drugunitlist[0];
             AllDrug = (int.Parse(onedayeat) * int.Parse(alleat) * eat).ToString();
             IsChecked = false;
-            HTT = "1회 " + DrugUnit + "씩 하루 " + Onedayeat + "번";
+            HTT = "1회 " + Eat + "*" + DrugUnit + "씩 하루 " + Onedayeat + "번";
         }
-    }
-    public class Customer //PCUSCUST 와 PPRESCR3 Join
-    {
-        public string CName { get; set; } //이름
-        //public string Birth { get; set; } //나이
-        public string CBirthDay { get; set; } // 생년월일
-        public string Memo3 { get; set; } // 고객 메모3
-        public string MeMo4 { get; set; } // 고객 메모4
-        public string Hp { get; set; } // 휴대폰 번호
-        public string DiseaseCode { get; set; } //질병코드
-        public string HosName { get; set; } // 병원이름
-        public string Partid { get; set; } //진료과
-        public string HosCode { get; set; } // 병원 코드
-        public string HosTel { get; set; } // 병원 전화번호
-        public string DrName { get; set; } // 의사 이름
-        public string DrCode { get; set; } // 의사 코드
-
-        public Customer(string name, /*string age,*/ string birthDay, string memo3, string meMo4, string hp, string diseaseCode, string hosName, string partid, string hosCode, string hosTel, string drName, string drCode)
+        public Medicine(string name, string drugCode, string eat, string onedayeat, string alleat, string drugUnit, string allDrug, bool isChecked, string hTT, string usage1, string usage2)
         {
-            string[] name1 = name.Split(' ');
-            CName = name1[0];
-            //Birth = age;
-            string strings = birthDay.Substring(0,6);
-            CBirthDay = strings;
-            Memo3 = memo3;
-            MeMo4 = meMo4;
-            Hp = hp;
-            DiseaseCode = diseaseCode;
-            HosName = hosName;
-            Partid = partid;
-            HosCode = hosCode;
-            HosTel = hosTel;
-            DrName = drName;
-            DrCode = drCode;
+            Name = name;
+            DrugCode = drugCode;
+            Eat = eat;
+            Onedayeat = onedayeat;
+            Alleat = alleat;
+            DrugUnit = drugUnit;
+            AllDrug = allDrug;
+            IsChecked = isChecked;
+            HTT = hTT;
+            Usage1 = usage1;
+            Usage2 = usage2;
         }
     }
+    
     public class SelectItem
     {
         private static SelectItem instance;
@@ -131,11 +111,16 @@ namespace _24._03._19Project
         public string DrugName { get; set; }
         public string One_Cnt { get; set; }
         public string Total_Cnt { get; set; }
-        public LabelDrug(string drugName, string onecnt, string totalcnt)
+        public string OneDayEat { get; set; }
+        public string Pres_Unit { get; set; }
+        public LabelDrug(string drugName, string onecnt, string totalcnt, float oneDayEat, string pres_Unit)
         {
             DrugName = drugName;
             One_Cnt = onecnt;
             Total_Cnt = totalcnt;
+            OneDayEat = oneDayEat.ToString();
+            string[] presunitlist = pres_Unit.Split(' ');
+            Pres_Unit = presunitlist[0];
         }
     }
     public class LabelShop
@@ -173,11 +158,14 @@ namespace _24._03._19Project
         public string Part_id { get; set; }
         public HS_INFO(string dr_Name, string dr_Code, string hs_Name, string hs_Code, string hs_Tel, string part_id)
         {
-            Dr_Name = dr_Name;
-            Dr_Code = dr_Code;
+            string[] drnamelist = dr_Name.Split(' ');
+            Dr_Name = drnamelist[0];
+            string[] drcodelist = dr_Code.Split(' ');
+            Dr_Code = drcodelist[0];
             Hs_Name = hs_Name;
             Hs_Code = hs_Code;
-            Hs_Tel = hs_Tel;
+            string[] hstellist = hs_Tel.Split(' ');
+            Hs_Tel = hstellist[0];
             Part_id = part_id;
         }
     }
